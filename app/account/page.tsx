@@ -11,8 +11,10 @@ import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import { 
 
-  
+
+
   User, 
+  
   Package, 
   MapPin, 
   Lock, 
