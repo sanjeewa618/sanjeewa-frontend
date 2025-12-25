@@ -1,0 +1,1145 @@
+[00:00:25.230] Server  LOG      ✓ Ready in 24.2s
+[00:00:28.317] Server  LOG      ○ Compiling / ...
+[00:00:43.237] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:00.275] Browser LOG     Order placed: {"cartItems":[{"id":1,"image":"/placeholder.svg?key=6xdaw","name":"Dell XPS 13 Plus","price":1299,"quantity":1},{"id":2,"image":"/placeholder.svg?key=88r7h","name":"MacBook Air M2","price":1199,"quantity":1}],"orderDate":"2025-12-25T06:35:19.215Z","paymentMethod":"card","shipping":0,"shippingInfo":{"address":"Thudugala RD, Dodangoda, Kalutara.","city":"kalutara","country":"United States","email":"sanjeewasandaruwan477@gmail.com","firstName":"Sanjeewa","lastName":"Sandaruwan","phone":"+94763779440","state":"western","zipCode":"1220"},"subtotal":2498,"tax":199.84,"total":2697.84,"transactionId":"TXN-1766644518206-E8SETGOZJ"}
+[00:04:26.402] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:29.112] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:31.234] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:37.627] Server  LOG      ✓ Compiled in 768ms
+[00:11:55.904] Server  LOG      ○ Compiling /admin/users ...
+[00:12:42.444] Server  LOG      ✓ Compiled in 864ms
+[00:13:33.302] Browser LOG     Viewing seller profile: SLR-901
+[00:13:34.572] Browser LOG     Auditing seller: SLR-901
+[00:14:13.091] Server  LOG      ✓ Compiled in 869ms
+[00:15:54.348] Server  LOG      ✓ Compiled in 895ms
+[00:15:57.377] Browser LOG     Approving selected products: [{"id":"PRD-4511","name":"Dell XPS 13 Plus","price":"$1,299","selected":true,"seller":"TechStore_Pro","status":"Active","stock":42}]
+[00:16:30.601] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:33.737] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:58.817] Server  LOG      ✓ Compiled in 470ms
+[00:22:19.324] Server  LOG      ✓ Compiled in 370ms
+[00:23:05.145] Server  LOG      ○ Compiling /admin/reports ...
+[00:23:20.248] Browser LOG     Downloading report: RPT-003 - Product Performance Report
+[00:23:22.132] Browser LOG     Viewing report: RPT-003
+[00:23:48.512] Server  LOG      ✓ Compiled in 389ms
+[00:25:14.891] Server  LOG      ✓ Compiled in 1052ms
+[00:25:25.459] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:52.320] Server  LOG      ○ Compiling /seller/analytics ...
+[00:26:29.969] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:16.082] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:37.719] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:37.992] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/admin/rep..." tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+          <SegmentViewNode type="page" pagePath="admin/anal...">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function AnalyticsPage} serverProvidedParams={{...}}>
+              <AnalyticsPage params={Promise} searchParams={Promise}>
+                <main className="min-h-scre...">
+                  <AdminSidebar>
+                    <aside className="w-64 bg-si...">
+                      <div className="p-4">
+                        <div>
+                        <nav className="space-y-1">
+                          <LinkComponent>
+                          <LinkComponent>
+                          <LinkComponent>
+                          <LinkComponent>
+                          <LinkComponent>
+                          <LinkComponent>
+                          <LinkComponent>
+                          <LinkComponent href="/admin/rep..." className="flex items...">
+                            <a
++                             className="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors bg-sidebar-pri..."
+-                             className="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors text-sidebar-f..."
+                              ref={function}
+                              onClick={function onClick}
+                              onMouseEnter={function onMouseEnter}
+                              onTouchStart={function onTouchStart}
+                              href="/admin/reports"
+                            >
+                          <LinkComponent href="/admin/ana..." className="flex items...">
+                            <a
++                             className="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors text-sidebar-f..."
+-                             className="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors bg-sidebar-pri..."
+                              ref={function}
+                              onClick={function onClick}
+                              onMouseEnter={function onMouseEnter}
+                              onTouchStart={function onTouchStart}
+                              href="/admin/analytics"
+                            >
+                          ...
+                  ...
+          ...
+        ...
+
+[00:27:54.906] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:58.599] Server  LOG      ✓ Compiled in 599ms
+[00:31:47.394] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:31:49.399] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:32:05.400] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:32:05.400] Browser ERROR   ./app/admin/products/page.tsx:290:1
+Parsing ecmascript source code failed
+  288 |     </main>
+  289 |   )
+> 290 | }
+      | ^
+  291 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/products/page.tsx [Client Component Browser]
+    ./app/admin/products/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/products/page.tsx [Client Component SSR]
+    ./app/admin/products/page.tsx [Server Component]
+[00:32:05.400] Browser ERROR   ./app/admin/auctions/page.tsx:281:1
+Parsing ecmascript source code failed
+  279 |     </main>
+  280 |   )
+> 281 | }
+      | ^
+  282 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/auctions/page.tsx [Client Component Browser]
+    ./app/admin/auctions/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/auctions/page.tsx [Client Component SSR]
+    ./app/admin/auctions/page.tsx [Server Component]
+[00:32:05.400] Browser ERROR   ./app/admin/orders/page.tsx:272:1
+Parsing ecmascript source code failed
+  270 |     </main>
+  271 |   )
+> 272 | }
+      | ^
+  273 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/orders/page.tsx [Client Component Browser]
+    ./app/admin/orders/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/orders/page.tsx [Client Component SSR]
+    ./app/admin/orders/page.tsx [Server Component]
+[00:32:18.388] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:32:18.388] Browser ERROR   ./app/admin/products/page.tsx:290:1
+Parsing ecmascript source code failed
+  288 |     </main>
+  289 |   )
+> 290 | }
+      | ^
+  291 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/products/page.tsx [Client Component Browser]
+    ./app/admin/products/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/products/page.tsx [Client Component SSR]
+    ./app/admin/products/page.tsx [Server Component]
+[00:32:18.388] Browser ERROR   ./app/admin/auctions/page.tsx:281:1
+Parsing ecmascript source code failed
+  279 |     </main>
+  280 |   )
+> 281 | }
+      | ^
+  282 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/auctions/page.tsx [Client Component Browser]
+    ./app/admin/auctions/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/auctions/page.tsx [Client Component SSR]
+    ./app/admin/auctions/page.tsx [Server Component]
+[00:32:18.388] Browser ERROR   ./app/admin/orders/page.tsx:272:1
+Parsing ecmascript source code failed
+  270 |     </main>
+  271 |   )
+> 272 | }
+      | ^
+  273 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/orders/page.tsx [Client Component Browser]
+    ./app/admin/orders/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/orders/page.tsx [Client Component SSR]
+    ./app/admin/orders/page.tsx [Server Component]
+[00:32:24.074] Server  LOG      ✓ Compiled in 335ms
+[00:32:24.400] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:32:26.392] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:32:46.393] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:32:49.392] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:33:04.398] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:33:04.398] Browser ERROR   ./app/seller/dashboard/page.tsx:172:1
+Parsing ecmascript source code failed
+  170 |     </main>
+  171 |   )
+> 172 | }
+      | ^
+  173 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/dashboard/page.tsx [Client Component Browser]
+    ./app/seller/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/dashboard/page.tsx [Client Component SSR]
+    ./app/seller/dashboard/page.tsx [Server Component]
+[00:33:09.390] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:33:09.390] Browser ERROR   ./app/seller/dashboard/page.tsx:172:1
+Parsing ecmascript source code failed
+  170 |     </main>
+  171 |   )
+> 172 | }
+      | ^
+  173 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/dashboard/page.tsx [Client Component Browser]
+    ./app/seller/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/dashboard/page.tsx [Client Component SSR]
+    ./app/seller/dashboard/page.tsx [Server Component]
+[00:33:42.110] Server  LOG      ✓ Compiled in 348ms
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+  347 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:346:1
+Parsing ecmascript source code failed
+  344 |   )
+  345 | }
+> 346 | }
+      | ^
+  347 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:346:1
+Parsing ecmascript source code failed
+  344 |   )
+  345 |
+> 346 |
+      | ^
+
+Expected '</', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:346:1
+Parsing ecmascript source code failed
+  344 |   )
+  345 | ]
+> 346 |
+      | ^
+
+Expected '</', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:348:1
+Parsing ecmascript source code failed
+  346 |
+  347 | ]
+> 348 |
+      | ^
+
+Expected '</', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:348:1
+Parsing ecmascript source code failed
+  346 |
+  347 |
+> 348 |
+      | ^
+
+Expected '</', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:348:1
+Parsing ecmascript source code failed
+  346 |
+  347 | ]
+> 348 |
+      | ^
+
+Expected '</', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:346:1
+Parsing ecmascript source code failed
+  344 |   )
+  345 |
+> 346 |
+      | ^
+
+Expected '</', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:155:13
+Parsing ecmascript source code failed
+  153 |     
+  154 |       <Navbar />
+> 155 |       <main className="min-h-screen bg-gray-50">
+      |             ^^^^^^^^^
+  156 |         <AdminSidebar />
+  157 |
+  158 |       {/* Header */}
+
+Expected ',', got 'className'
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:154:16
+Parsing ecmascript source code failed
+  152 |   return (
+  153 |     <></>
+> 154 |       <Navbar />
+      |                ^
+  155 |       <main className="min-h-screen bg-gray-50">
+  156 |         <AdminSidebar />
+  157 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:35:48.240] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:36:43.393] Browser ERROR   ./app/admin/users/page.tsx:99:1
+Parsing ecmascript source code failed
+   97 |     return matchesSearch && matchesRole
+   98 |   })
+>  99 | ]
+      | ^
+  100 |   const getStatusBadgeVariant = (status: string) => {
+  101 |     switch (status) {
+  102 |       case 'Active':
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:36:45.401] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:36:46.388] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:37:13.391] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:37:24.392] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:37:29.389] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:37:33.399] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:39:07.123] Server  LOG      ✓ Compiled in 226ms
+[00:39:07.398] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:39:11.388] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:41:32.451] Browser ERROR   ./app/admin/users/page.tsx:345:1
+Parsing ecmascript source code failed
+  343 |     </main>
+  344 |   )
+> 345 | }
+      | ^
+  346 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/users/page.tsx [Client Component Browser]
+    ./app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/users/page.tsx [Client Component SSR]
+    ./app/admin/users/page.tsx [Server Component]
+[00:42:07.719] Server  LOG      ✓ Compiled in 402ms
+[01:00:07.437] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:44.615] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:07:08.830] Server  LOG      ✓ Compiled in 645ms
+[01:07:51.470] Server  LOG      ✓ Compiled in 664ms
+[01:08:05.016] Server  LOG      ✓ Compiled in 215ms
+[01:08:39.278] Server  LOG      ✓ Compiled in 231ms
+[01:08:58.503] Server  LOG      ✓ Compiled in 199ms
+[01:12:30.519] Server  LOG      ✓ Compiled in 531ms
+[01:13:10.938] Server  LOG      ✓ Compiled in 444ms
+[01:15:03.064] Server  LOG      ✓ Compiled in 1486ms
+[01:16:08.531] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:17:51.864] Server  LOG      ✓ Compiled in 1339ms
+[01:19:58.074] Server  LOG      ✓ Compiled in 917ms
+[01:21:42.538] Server  LOG      ✓ Compiled in 1022ms
+[01:21:53.855] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:22:28.332] Server  LOG      ✓ Compiled in 244ms
+[01:24:20.086] Server  LOG      ✓ Compiled in 293ms
+[01:25:07.373] Server  LOG      ✓ Compiled in 150ms
+[01:26:08.679] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:26:17.266] Server  LOG      ✓ Compiled in 169ms
+[01:27:02.650] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:29:03.675] Server  LOG      ✓ Compiled in 2.2s
+[01:29:05.403] Browser ERROR   ./app/page.tsx:196:11
+Parsing ecmascript source code failed
+  194 | 						</div>
+  195 | 					</div>
+> 196 | 				</div>
+      | 				      ^
+> 197 | 			</section>
+      | ^^^^
+  198 |
+  199 | 			{/* Footer */}
+  200 | 			<footer className="bg-primary text-primary-foreground mt-16">
+
+Expected '</', got 'jsx text (
+			)'
+[01:29:05.404] Browser ERROR   ./app/page.tsx:196:11
+Parsing ecmascript source code failed
+  194 | 						</div>
+  195 | 					</div>
+> 196 | 				</div>
+      | 				      ^
+> 197 | 			</section>
+      | ^^^^
+  198 |
+  199 | 			{/* Footer */}
+  200 | 			<footer className="bg-primary text-primary-foreground mt-16">
+
+Expected '</', got 'jsx text (
+			)'
+[01:30:50.550] Server  LOG      ✓ Compiled in 310ms
+[01:32:13.888] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:35:13.771] Server  LOG      ✓ Compiled in 458ms
+[01:35:31.087] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[01:35:39.497] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[01:35:44.387] Server  LOG      ✓ Compiled in 618ms
+[01:35:44.522] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:35:47.423] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:35:50.317] Server  LOG      ○ Compiling /_error ...
+[01:35:51.388] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:35:52.399] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:35:54.398] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:35:54.398] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:37:39.592] Server  ERROR    ⨯ ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+
+
+[01:37:39.784] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:37:39.784] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:37:41.710] Browser ERROR   uncaughtError: Error: ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+
+
+[01:37:41.888] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:37:41.995] Browser ERROR   ./components/product-card.tsx:8:10
+Ecmascript file had an error
+   6 | import { useState } from 'react'
+   7 | import { useRouter } from 'next/navigation'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 |
+  10 | interface ProductCardProps {
+  11 |   id: string
+
+the name `useRouter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/product-card.tsx
+    ./app/page.tsx
+[01:39:21.990] Server  LOG      ✓ Compiled in 333ms
+[01:39:24.431] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:39:55.368] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[01:42:46.130] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:44:40.634] Server  LOG      ✓ Compiled in 214ms
+[01:46:06.558] Server  LOG      ✓ Compiled in 438ms
