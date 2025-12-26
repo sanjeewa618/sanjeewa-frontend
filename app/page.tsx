@@ -87,6 +87,17 @@ const featuredProducts = [
 		reviews: 95,
 		stock: 14,
 	},
+	{
+		id: '9',
+		name: 'HP Envy x360 Laptop - 15.6" 2K Touch, Intel Core i7, 16GB RAM',
+		brand: 'HP',
+		price: 1099,
+		image: '/hp-envy-laptop.jpg',
+		rating: 4.6,
+		reviews: 142,
+		stock: 7,
+		badge: 'Popular',
+	},
 ]
 
 export default function HomePage() {
