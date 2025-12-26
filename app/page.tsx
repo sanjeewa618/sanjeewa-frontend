@@ -1,7 +1,11 @@
+'use client'
+
 import { Navbar } from '@/components/navbar'
 import { ProductFilters } from '@/components/product-filters'
 import { ProductCard } from '@/components/product-card'
+import { Footer } from '@/components/footer'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
 const featuredProducts = [
 	{
@@ -101,6 +105,29 @@ const featuredProducts = [
 ]
 
 export default function HomePage() {
+	const [currentSlide, setCurrentSlide] = useState(0)
+	const totalSlides = 4
+
+	// Auto-rotate carousel every 5 seconds
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setCurrentSlide((prev) => (prev + 1) % totalSlides)
+		}, 5000)
+		return () => clearInterval(timer)
+	}, [])
+
+	const nextSlide = () => {
+		setCurrentSlide((prev) => (prev + 1) % totalSlides)
+	}
+
+	const prevSlide = () => {
+		setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
+	}
+
+	const goToSlide = (index: number) => {
+		setCurrentSlide(index)
+	}
+
 	return (
 		<main className="min-h-screen bg-background">
 			<Navbar />
@@ -118,52 +145,332 @@ export default function HomePage() {
 					<source src="/laptopvideo.mp4" type="video/mp4" />
 					Your browser does not support the video tag.
 				</video>
+				{/* Background Image Fallback */}
+				<div 
+					className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+					style={{ backgroundImage: "url('/asus-rog-gaming-laptop.jpg')" }}
+				></div>
 
 				{/* Overlay to darken video */}
 				<div className="absolute inset-0 bg-black/50"></div>
 
 				{/* Content */}
-				<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-19">
-					<div className="flex flex-col items-center justify-center text-center gap-8">
-						<div className="max-w-3xl">
-							<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-								Premium Laptops at Unbeatable Prices
+				<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-34">
+					<div className="flex flex-col md:flex-row items-center justify-between gap-8">
+						<div className="max-w-xl text-left">
+							<h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+								Powerful & Sleek<br />Laptops
 							</h1>
-							<p className="text-lg text-white/90 mb-6">
-								Discover the latest laptops from top brands. Compare, bid, and buy
-								with confidence.
+							<p className="text-lg md:text-xl text-white/90 mb-6">
+								Find the perfect laptop<br />for education, gaming, and more!
 							</p>
-							<div className="flex gap-4 justify-center">
-								<Link
-									href="/auctions"
-									className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors"
-								>
-									Explore Auctions
-								</Link>
-								<Link
-									href="#products"
-									className="border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-colors"
-								>
-									Browse Now
-								</Link>
+							<Link
+								href="#products"
+								className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+							>
+								Shop Now
+							</Link>
+							<p className="text-sm text-white/80 mt-4">
+								Limited Time Offers • Free Shipping
+							</p>
+						</div>
+						
+						{/* Laptop Images on the right */}
+						<div className="hidden md:flex flex-col gap-4">
+							<div className="relative w-[280px] h-[180px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-xl border border-white/20 shadow-2xl overflow-hidden group hover:scale-105 transition-transform duration-300">
+								<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"></div>
+								<div className="relative flex items-center justify-center h-full p-4">
+									<svg className="w-32 h-32 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+									</svg>
+								</div>
+								<div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+									<p className="text-white text-sm font-semibold">Premium Collection</p>
+								</div>
+							</div>
+							<div className="relative w-[280px] h-[180px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-xl border border-white/20 shadow-2xl overflow-hidden group hover:scale-105 transition-transform duration-300">
+								<div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10"></div>
+								<div className="relative flex items-center justify-center h-full p-4">
+									<svg className="w-32 h-32 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+									</svg>
+								</div>
+								<div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+									<p className="text-white text-sm font-semibold">Gaming Series</p>
+								</div>
 							</div>
 						</div>
-						<div className="hidden md:flex justify-center mt-8">
-							<div className="w-[450px] h-[280px] bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
-								<svg
-									className="w-32 h-32 text-white/70"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth={1.5}
-										d="M9 3v2m6-2v2M9 5h6m-6 4h12M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-									/>
+					</div>
+					
+					{/* Feature Badges at Bottom */}
+					<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-12 text-white">
+						<div className="flex items-center gap-3">
+							<div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+								<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
 								</svg>
 							</div>
+							<span className="font-semibold">Top Brands</span>
+						</div>
+						<div className="flex items-center gap-3">
+							<div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+								<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+								</svg>
+							</div>
+							<span className="font-semibold">Best Deals</span>
+						</div>
+						<div className="flex items-center gap-3">
+							<div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+								<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+								</svg>
+							</div>
+							<span className="font-semibold">Fast Delivery</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Advertisement Banner Section */}
+			<section className="w-full bg-background py-10 border-b border-border">
+				<div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="relative overflow-hidden rounded-2xl">
+						{/* Banner Carousel */}
+						<div 
+							className="flex transition-transform duration-500 ease-in-out"
+							style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+						>
+							{/* Lenovo IdeaPad Banner */}
+							<div className="min-w-full relative h-[300px] bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
+								<div className="absolute inset-0 flex items-center justify-between px-12">
+									<div className="text-white space-y-3">
+										<div className="flex items-center gap-2">
+											<span className="text-sm font-semibold tracking-wide">Lenovo</span>
+										</div>
+										<h2 className="text-5xl font-bold mb-2">
+											IdeaPad 1
+										</h2>
+										<p className="text-3xl font-light italic">Budget friendly</p>
+										<div className="flex gap-6 text-sm mt-3">
+											<div className="font-bold">AMD Ryzen 3 7320U Processor</div>
+											<div className="font-bold">512GB M.2 NVMe SSD</div>
+										</div>
+										<div className="flex gap-6 text-sm">
+											<div className="font-bold">16GB LPDDR5 RAM</div>
+											<div className="font-bold">15.6" FHD Display</div>
+										</div>
+										<div className="text-sm font-bold">AMD Radeon 610M Graphics</div>
+									</div>
+									<div className="relative">
+										<div className="absolute -top-8 -right-8 bg-red-600 text-white px-4 py-2 text-sm font-bold rounded z-10">
+											NEW<br />ARRIVALS
+										</div>
+										<div className="w-[400px] h-[200px] bg-slate-700/30 rounded-2xl flex items-center justify-center border border-slate-600/30">
+											<svg className="w-48 h-48 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+											</svg>
+										</div>
+										<div className="absolute top-2 right-2 text-red-600 font-bold text-2xl">
+											Lenovo
+										</div>
+									</div>
+								</div>
+								<div className="absolute top-4 left-20 text-red-600 text-xl">❄</div>
+								<div className="absolute top-8 right-32 text-red-600 text-xl">❄</div>
+								<div className="absolute bottom-12 left-32 text-red-600 text-xl">❄</div>
+							</div>
+
+							{/* MSI Summit Banner */}
+							<div className="min-w-full relative h-[300px] bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-900">
+								<div className="absolute inset-0 flex items-center justify-between px-12">
+									<div className="text-white space-y-3">
+										<p className="text-sm font-semibold tracking-wide">New Amplify AI Power 2 in 1 - Ultra 7</p>
+										<h2 className="text-5xl font-bold mb-2">
+											Summit 16 AI Evo A2HM
+										</h2>
+										<p className="text-2xl font-light">Determined to Succeed</p>
+										<div className="mt-4">
+											<div className="inline-block bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+												FREE!
+											</div>
+										</div>
+										<div className="flex items-center gap-4 mt-4">
+											<svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+												<rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="2"/>
+												<path d="M8 10h8M8 14h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+											</svg>
+											<span className="text-xs">Windows 11</span>
+										</div>
+									</div>
+									<div className="relative">
+										<div className="absolute -top-8 -right-8 bg-red-600 text-white px-4 py-2 text-sm font-bold rounded z-10">
+											NEW<br />ARRIVAL
+										</div>
+										<div className="w-[450px] h-[200px] bg-blue-800/30 rounded-2xl flex items-center justify-center border border-blue-600/30 relative">
+											<div className="absolute inset-0 flex items-center justify-center">
+												<div className="w-32 h-32 rounded-full bg-blue-500/30 flex items-center justify-center">
+													<span className="text-6xl font-bold text-blue-300">AI</span>
+												</div>
+											</div>
+										</div>
+										<div className="absolute top-2 right-2 font-bold text-2xl text-white">
+											MSI
+										</div>
+									</div>
+								</div>
+								<div className="absolute top-4 left-20 text-red-500 text-xl">❄</div>
+								<div className="absolute top-8 right-32 text-red-500 text-xl">❄</div>
+								<div className="absolute bottom-12 left-32 text-red-500 text-xl">❄</div>
+							</div>
+
+							{/* ASUS TUF Gaming Banner */}
+							<div className="min-w-full relative h-[300px] bg-gradient-to-r from-orange-950 via-orange-900 to-red-950">
+								<div className="absolute inset-0 flex items-center justify-between px-12">
+									<div className="text-white space-y-3">
+										<p className="text-sm font-light italic">best gaming experience</p>
+										<h2 className="text-5xl font-bold mb-2">
+											ASUS TUF GAMING A16
+										</h2>
+										<p className="text-xl font-semibold text-orange-400">EXPANSIVE IMMERSION. MECHANIZED PERFORMANCE.</p>
+										<div className="grid grid-cols-2 gap-4 text-sm mt-3">
+											<div>
+												<div className="font-bold text-orange-400">AMD RYZEN 7 7445HS</div>
+												<div className="text-xs">PROCESSOR</div>
+											</div>
+											<div>
+												<div className="font-bold text-orange-400">512GB NVME</div>
+												<div className="text-xs">M.2 SSD</div>
+											</div>
+											<div>
+												<div className="font-bold text-orange-400">16GB DDR5</div>
+												<div className="text-xs">RAM</div>
+											</div>
+											<div>
+												<div className="font-bold text-orange-400">16" WUXGA IPS</div>
+												<div className="text-xs">DISPLAY</div>
+											</div>
+										</div>
+									</div>
+									<div className="relative">
+										<div className="absolute -top-8 -right-8 bg-red-600 text-white px-4 py-2 text-sm font-bold rounded z-10">
+											NEW<br />ARRIVAL
+										</div>
+										<div className="w-[400px] h-[200px] bg-orange-900/30 rounded-2xl flex items-center justify-center border border-orange-600/30 relative">
+											<div className="text-8xl font-bold text-orange-600/50">TUF</div>
+										</div>
+										<div className="absolute bottom-4 right-4 flex gap-2">
+											<div className="bg-orange-600 px-3 py-1 rounded">
+												<span className="text-xs font-bold">AMD RYZEN</span>
+											</div>
+											<div className="bg-green-600 px-3 py-1 rounded">
+												<span className="text-xs font-bold">GEFORCE RTX</span>
+											</div>
+										</div>
+										<div className="absolute bottom-4 left-4">
+											<svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+												<rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="2"/>
+												<path d="M8 10h8M8 14h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+											</svg>
+											<span className="text-xs">Windows 11</span>
+										</div>
+										<div className="absolute top-2 right-2 font-bold text-3xl text-white">
+											ASUS
+										</div>
+									</div>
+								</div>
+								<div className="absolute top-4 left-20 text-red-600 text-xl">❄</div>
+								<div className="absolute top-8 right-32 text-red-600 text-xl">❄</div>
+								<div className="absolute bottom-12 left-32 text-red-600 text-xl">❄</div>
+							</div>
+
+							{/* Gaming Banner - MSI */}
+							<div className="min-w-full relative h-[300px] bg-gradient-to-r from-purple-950 via-purple-900 to-pink-950">
+								<div className="absolute inset-0 flex items-center justify-between px-12">
+									<div className="text-white space-y-3 max-w-xl">
+										<p className="text-xl tracking-widest font-light">PLAY WITH POWER</p>
+										<h2 className="text-7xl font-bold tracking-wider">
+											<span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400">
+												GAMING
+											</span>
+										</h2>
+										<p className="text-3xl font-light italic">never ever give up</p>
+										<div className="grid grid-cols-2 gap-4 text-sm mt-4">
+											<div>
+												<div className="font-bold text-yellow-400">Intel Core i7-13700H</div>
+												<div className="text-xs">PROCESSOR</div>
+											</div>
+											<div>
+												<div className="font-bold text-yellow-400">NVIDIA RTX 4060</div>
+												<div className="text-xs">GRAPHICS</div>
+											</div>
+											<div>
+												<div className="font-bold text-yellow-400">32GB DDR5</div>
+												<div className="text-xs">RAM</div>
+											</div>
+											<div>
+												<div className="font-bold text-yellow-400">165Hz Display</div>
+												<div className="text-xs">REFRESH RATE</div>
+											</div>
+										</div>
+									</div>
+									<div className="relative">
+										<div className="w-[450px] h-[250px] bg-gradient-to-br from-purple-800/30 to-pink-800/30 rounded-2xl flex items-center justify-center border border-purple-600/30 relative overflow-hidden">
+											<div className="absolute inset-0 flex items-center justify-center">
+												<div className="text-9xl font-black text-purple-600/20">MSI</div>
+											</div>
+											<div className="relative z-10">
+												<svg className="w-56 h-56 text-purple-300/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+													<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+												</svg>
+											</div>
+										</div>
+										<div className="absolute bottom-4 right-4 flex gap-2">
+											<div className="bg-gradient-to-r from-red-600 to-orange-600 px-3 py-1 rounded">
+												<span className="text-xs font-bold">RTX 4060</span>
+											</div>
+											<div className="bg-blue-600 px-3 py-1 rounded">
+												<span className="text-xs font-bold">Intel i7</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div className="absolute top-4 left-20 text-red-500 text-xl">❄</div>
+								<div className="absolute top-8 right-32 text-red-500 text-xl">❄</div>
+								<div className="absolute bottom-12 left-32 text-red-500 text-xl">❄</div>
+								<div className="absolute bottom-12 right-32 text-red-500 text-xl">❄</div>
+							</div>
+						</div>
+
+						{/* Navigation Arrows */}
+						<button 
+							onClick={prevSlide}
+							className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all z-20"
+						>
+							<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+							</svg>
+						</button>
+						<button 
+							onClick={nextSlide}
+							className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all z-20"
+						>
+							<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+							</svg>
+						</button>
+
+						{/* Dots Navigation */}
+						<div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+							{[0, 1, 2, 3].map((index) => (
+								<button
+									key={index}
+									onClick={() => goToSlide(index)}
+									className={`w-2 h-2 rounded-full transition-all ${
+										currentSlide === index ? 'bg-white w-8' : 'bg-white/50'
+									}`}
+								/>
+							))}
 						</div>
 					</div>
 				</div>
@@ -209,101 +516,7 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			{/* Footer */}
-			<footer className="bg-primary text-primary-foreground mt-16">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-					<div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-						<div>
-							<h3 className="font-semibold mb-4">About TechHub</h3>
-							<p className="text-sm opacity-80">
-								Your premier destination for laptop sales and auctions
-							</p>
-						</div>
-						<div>
-							<h3 className="font-semibold mb-4">Quick Links</h3>
-							<ul className="space-y-2 text-sm opacity-80">
-								<li>
-									<Link
-										href="#"
-										className="hover:opacity-100 transition-opacity"
-									>
-										Browse Products
-									</Link>
-								</li>
-								<li>
-									<Link
-										href="#"
-										className="hover:opacity-100 transition-opacity"
-									>
-										Auctions
-									</Link>
-								</li>
-								<li>
-									<Link
-										href="#"
-										className="hover:opacity-100 transition-opacity"
-									>
-										Sell with Us
-									</Link>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h3 className="font-semibold mb-4">Customer Service</h3>
-							<ul className="space-y-2 text-sm opacity-80">
-								<li>
-									<Link
-										href="#"
-										className="hover:opacity-100 transition-opacity"
-									>
-										Contact Us
-									</Link>
-								</li>
-								<li>
-									<Link
-										href="#"
-										className="hover:opacity-100 transition-opacity"
-									>
-										FAQs
-									</Link>
-								</li>
-								<li>
-									<Link
-										href="#"
-										className="hover:opacity-100 transition-opacity"
-									>
-										Returns
-									</Link>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h3 className="font-semibold mb-4">Legal</h3>
-							<ul className="space-y-2 text-sm opacity-80">
-								<li>
-									<Link
-										href="#"
-										className="hover:opacity-100 transition-opacity"
-									>
-										Privacy Policy
-									</Link>
-								</li>
-								<li>
-									<Link
-										href="#"
-										className="hover:opacity-100 transition-opacity"
-									>
-										Terms of Service
-									</Link>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-80">
-						<p>&copy; 2025 TechHub. All rights reserved.</p>
-					</div>
-				</div>
-			</footer>
+			<Footer />
 		</main>
 	)
 }

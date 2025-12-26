@@ -8,6 +8,7 @@ import { ShoppingCart, User, Search } from 'lucide-react'
 
 export function Navbar() {
 	const [searchQuery, setSearchQuery] = useState('')
+	const [selectedCategory, setSelectedCategory] = useState('All Categories')
 
 	return (
 		<nav className='bg-white border-b border-gray-200 sticky top-0 z-50'>
@@ -25,15 +26,32 @@ export function Navbar() {
 
 					{/* Search Bar */}
 					<div className='flex-1 max-w-2xl mx-8 hidden md:flex'>
-						<div className='relative w-full'>
+						<div className='relative w-full flex items-center border-2 border-blue-900 rounded-full overflow-hidden bg-white'>
 							<Input
 								type='text'
-								placeholder='Search laptops, accessories...'
+								placeholder='Search Your Products'
 								value={searchQuery}
 								onChange={(e) => setSearchQuery(e.target.value)}
-								className='w-full pl-4 pr-10 h-10 rounded-lg border border-gray-300 bg-gray-50 text-gray-900 placeholder:text-gray-500'
+								className='flex-1 pl-6 pr-4 h-10 border-0 bg-transparent text-gray-900 placeholder:text-gray-400 focus-visible:ring-0 focus-visible:ring-offset-0'
 							/>
-							<button className='absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700'>
+							<div className='flex items-center'>
+								<select
+									value={selectedCategory}
+									onChange={(e) => setSelectedCategory(e.target.value)}
+									className='px-4 h-10 bg-transparent text-gray-700 font-medium cursor-pointer border-0 outline-none appearance-none pr-8 text-sm'
+								>
+									<option>All Categories</option>
+									<option>Laptops</option>
+									<option>Gaming Laptops</option>
+									<option>Business Laptops</option>
+									<option>Ultrabooks</option>
+									<option>Accessories</option>
+								</select>
+								<svg className='w-4 h-4 text-gray-600 absolute right-[110px] pointer-events-none' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+									<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
+								</svg>
+							</div>
+							<button className='bg-orange-500 hover:bg-orange-600 text-white px-6 h-10 flex items-center justify-center transition-colors'>
 								<Search className='w-5 h-5' />
 							</button>
 						</div>

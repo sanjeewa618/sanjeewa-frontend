@@ -2,3 +2,193 @@
 [00:00:06.262] Server  LOG      ○ Compiling / ...
 [00:00:09.108] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:01:05.343] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:28:42.164] Server  LOG      ○ Compiling /account ...
+[08:11:06.740] Server  LOG      ✓ Compiled in 509ms
+[08:11:39.249] Server  LOG      ✓ Compiled in 551ms
+[08:29:37.178] Server  LOG      ✓ Compiled in 324ms
+[08:29:48.402] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:44:24.275] Server  LOG      ✓ Compiled in 1086ms
+[08:47:51.736] Server  LOG      ✓ Compiled in 1390ms
+[08:48:17.832] Server  LOG      ✓ Compiled in 281ms
+[08:49:08.080] Server  LOG      ✓ Compiled in 356ms
+[08:51:42.038] Server  LOG      ✓ Compiled in 679ms
+[08:52:31.616] Server  LOG      ✓ Compiled in 241ms
+[08:52:41.522] Server  LOG      ✓ Compiled in 124ms
+[08:52:50.830] Server  LOG      ✓ Compiled in 200ms
+[08:52:58.372] Server  LOG      ✓ Compiled in 388ms
+[08:53:03.834] Server  LOG      ✓ Compiled in 187ms
+[08:53:28.647] Server  LOG      ✓ Compiled in 125ms
+[08:53:36.606] Server  LOG      ✓ Compiled in 158ms
+[08:53:49.698] Server  LOG      ✓ Compiled in 325ms
+[08:56:47.687] Server  LOG      ✓ Compiled in 404ms
+[08:57:20.886] Server  LOG      ✓ Compiled in 323ms
+[08:58:30.789] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[09:00:42.962] Server  LOG      ✓ Compiled in 971ms
+[09:03:43.748] Server  LOG      ✓ Compiled in 456ms
+[09:10:37.397] Server  LOG      ✓ Compiled in 817ms
+[09:26:23.961] Server  LOG      ○ Compiling /login ...
+[09:26:51.525] Server  LOG      ✓ Compiled in 1057ms
+[09:30:04.907] Server  LOG      ✓ Compiled in 792ms
+[09:30:57.423] Server  LOG      ✓ Compiled in 349ms
+[09:33:26.268] Server  LOG      ✓ Compiled in 365ms
+[09:34:38.993] Server  LOG      ✓ Compiled in 381ms
+[09:35:02.142] Server  LOG      ✓ Compiled in 212ms
+[09:35:06.438] Server  LOG      ✓ Compiled in 149ms
+[09:35:20.796] Server  LOG      ✓ Compiled in 102ms
+[09:35:31.772] Server  LOG      ✓ Compiled in 96ms
+[09:35:34.917] Server  LOG      ✓ Compiled in 84ms
+[09:35:38.818] Server  LOG      ✓ Compiled in 209ms
+[09:35:41.867] Server  LOG      ✓ Compiled in 199ms
+[09:35:48.697] Server  LOG      ✓ Compiled in 240ms
+[09:35:50.549] Server  LOG      ✓ Compiled in 175ms
+[09:35:58.824] Server  LOG      ✓ Compiled in 103ms
+[09:36:04.150] Server  LOG      ✓ Compiled in 103ms
+[09:36:06.113] Server  LOG      ✓ Compiled in 74ms
+[09:36:18.280] Server  LOG      ✓ Compiled in 169ms
+[09:36:21.325] Server  LOG      ✓ Compiled in 144ms
+[09:36:25.471] Server  LOG      ✓ Compiled in 125ms
+[09:36:38.738] Server  LOG      ✓ Compiled in 175ms
+[09:36:40.402] Server  LOG      ✓ Compiled in 283ms
+[09:36:41.763] Server  LOG      ✓ Compiled in 151ms
+[09:36:50.507] Server  LOG      ✓ Compiled in 119ms
+[09:37:14.528] Server  LOG      ✓ Compiled in 172ms
+[09:37:17.319] Server  LOG      ✓ Compiled in 128ms
+[09:37:32.655] Server  LOG      ✓ Compiled in 226ms
+[09:38:02.068] Server  LOG      ✓ Compiled in 196ms
+[09:38:04.132] Server  LOG      ✓ Compiled in 109ms
+[09:38:06.739] Server  LOG      ✓ Compiled in 148ms
+[09:38:10.038] Server  LOG      ✓ Compiled in 95ms
+[09:41:32.219] Server  LOG      ✓ Compiled in 529ms
+[09:42:55.606] Server  LOG      ✓ Compiled in 803ms
+[09:43:29.095] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[09:43:29.371] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/cart" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="cart/page.tsx">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function CartPage} serverProvidedParams={{...}}>
+              <CartPage params={Promise} searchParams={Promise}>
+                <main className="min-h-scre...">
+                  <Navbar>
+                    <nav className="bg-white b...">
+                      <div className="w-full px-...">
+                        <div className="flex items...">
+                          <LinkComponent>
+                          <div className="flex-1 max...">
+                            <div className="relative w...">
+                              <Input type="text" placeholder="Search You..." value="" onChange={function onChange} ...>
+                                <input
+                                  type="text"
+                                  data-slot="input"
++                                 className="file:text-foreground selection:bg-primary selection:text-primary-foregrou..."
+-                                 className="file:text-foreground selection:bg-primary selection:text-primary-foregrou..."
+                                  placeholder="Search Your Products"
+                                  value=""
+                                  onChange={function onChange}
+                                >
+                              <div
++                               className="flex items-center"
+-                               className="flex items-center border-l-2 border-blue-900"
+                              >
+                                <select
+                                  value="All Categories"
+                                  onChange={function onChange}
++                                 className="px-4 h-10 bg-transparent text-gray-700 font-medium cursor-pointer border-..."
+-                                 className="px-6 h-12 bg-transparent text-gray-700 font-medium cursor-pointer border-..."
+                                >
+                                <svg
++                                 className="w-4 h-4 text-gray-600 absolute right-[110px] pointer-events-none"
+-                                 className="w-4 h-4 text-gray-600 absolute right-[140px] pointer-events-none"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                              <button
++                               className="bg-orange-500 hover:bg-orange-600 text-white px-6 h-10 flex items-center ju..."
+-                               className="bg-orange-500 hover:bg-orange-600 text-white px-8 h-12 flex items-center ju..."
+                              >
+                          ...
+                  ...
+          ...
+        ...
+
+[09:43:57.985] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[09:43:58.152] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/cart" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="cart/page.tsx">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function CartPage} serverProvidedParams={{...}}>
+              <CartPage params={Promise} searchParams={Promise}>
+                <main className="min-h-scre...">
+                  <Navbar>
+                    <nav className="bg-white b...">
+                      <div className="w-full px-...">
+                        <div className="flex items...">
+                          <LinkComponent>
+                          <div className="flex-1 max...">
+                            <div className="relative w...">
+                              <Input type="text" placeholder="Search You..." value="" onChange={function onChange} ...>
+                                <input
+                                  type="text"
+                                  data-slot="input"
++                                 className="file:text-foreground selection:bg-primary selection:text-primary-foregrou..."
+-                                 className="file:text-foreground selection:bg-primary selection:text-primary-foregrou..."
+                                  placeholder="Search Your Products"
+                                  value=""
+                                  onChange={function onChange}
+                                >
+                              <div
++                               className="flex items-center"
+-                               className="flex items-center border-l-2 border-blue-900"
+                              >
+                                <select
+                                  value="All Categories"
+                                  onChange={function onChange}
++                                 className="px-4 h-10 bg-transparent text-gray-700 font-medium cursor-pointer border-..."
+-                                 className="px-6 h-12 bg-transparent text-gray-700 font-medium cursor-pointer border-..."
+                                >
+                                <svg
++                                 className="w-4 h-4 text-gray-600 absolute right-[110px] pointer-events-none"
+-                                 className="w-4 h-4 text-gray-600 absolute right-[140px] pointer-events-none"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                              <button
++                               className="bg-orange-500 hover:bg-orange-600 text-white px-6 h-10 flex items-center ju..."
+-                               className="bg-orange-500 hover:bg-orange-600 text-white px-8 h-12 flex items-center ju..."
+                              >
+                          ...
+                  ...
+          ...
+        ...
+
+[09:44:00.224] Browser WARN    Image with src "/placeholder.svg?key=1aqpe" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
