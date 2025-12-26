@@ -186,7 +186,7 @@ export default function CartPage() {
                 <Link href="/checkout">
                   <Button
                     disabled={cartItems.length === 0}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground h-12 rounded-lg font-semibold text-base disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full h-12 rounded-lg font-semibold text-base bg-blue-900 hover:bg-blue-800/90 text-white disabled:opacity-180 disabled:cursor-not-allowed"
                   >
                     Proceed to Checkout
                   </Button>

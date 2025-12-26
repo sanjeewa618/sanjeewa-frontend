@@ -78,8 +78,8 @@ export default function AuctionsPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-accent/10 to-primary/10 border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-b border-blue-300 dark:border-blue-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Live Auction Events
           </h1>

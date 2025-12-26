@@ -725,7 +725,7 @@ function CartPage() {
                                                     href: "/checkout",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                                         disabled: cartItems.length === 0,
-                                                        className: "w-full bg-primary hover:bg-primary/90 text-primary-foreground h-12 rounded-lg font-semibold text-base disabled:opacity-50 disabled:cursor-not-allowed",
+                                                        className: "w-full h-12 rounded-lg font-semibold text-base bg-blue-900 hover:bg-blue-800/90 text-white disabled:opacity-180 disabled:cursor-not-allowed",
                                                         children: "Proceed to Checkout"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/cart/page.tsx",

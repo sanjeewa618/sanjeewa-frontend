@@ -193,7 +193,7 @@ function AccountPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar Navigation */}
-          <Card className="lg:col-span-1 h-fit bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900/50 dark:to-blue-900/30 border-blue-200 dark:border-blue-800/50 shadow-md">
+          <Card className="lg:col-span-1 h-fit bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
             <CardContent className="p-4">
               <div className="flex flex-col gap-2">
                 <Link 
@@ -267,17 +267,16 @@ function AccountPage() {
 
               {/* Profile Tab */}
               <TabsContent value="profile">
-                <Card className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900/50 dark:via-blue-900/30 dark:to-purple-900/30 border-blue-200 dark:border-blue-800/50 shadow-lg">
-                  <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg shadow-md">
+                <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
+                  <CardHeader>
                     <div className="flex items-center justify-between">
                       <div>
-                        <CardTitle className="text-white">Personal Information</CardTitle>
-                        <CardDescription className="text-blue-100">Update your personal details</CardDescription>
+                        <CardTitle>Personal Information</CardTitle>
+                        <CardDescription>Update your personal details</CardDescription>
                       </div>
                       <Button
                         variant={isEditingProfile ? "default" : "outline"}
                         onClick={() => isEditingProfile ? handleProfileSave() : setIsEditingProfile(true)}
-                        className={isEditingProfile ? "bg-white text-blue-600 hover:bg-blue-50" : "bg-blue-500 text-white border-blue-400 hover:bg-blue-600"}
                       >
                         {isEditingProfile ? 'Save Changes' : <><Edit2 className="w-4 h-4 mr-2" />Edit</>}
                       </Button>
@@ -381,36 +380,36 @@ function AccountPage() {
 
                 {/* Account Stats */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                  <Card className="bg-gradient-to-br from-blue-600 to-purple-600 text-white border-none shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                  <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                     <CardContent className="pt-6">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-sm text-blue-100">Total Orders</p>
-                          <p className="text-2xl font-bold">{orders.length}</p>
+                          <p className="text-sm text-muted-foreground">Total Orders</p>
+                          <p className="text-2xl font-bold text-foreground">{orders.length}</p>
                         </div>
-                        <Package className="w-8 h-8 text-blue-200" />
+                        <Package className="w-8 h-8 text-muted-foreground" />
                       </div>
                     </CardContent>
                   </Card>
-                  <Card className="bg-gradient-to-br from-blue-600 to-purple-600 text-white border-none shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                  <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                     <CardContent className="pt-6">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-sm text-blue-100">Wishlist Items</p>
-                          <p className="text-2xl font-bold">{wishlist.length}</p>
+                          <p className="text-sm text-muted-foreground">Wishlist Items</p>
+                          <p className="text-2xl font-bold text-foreground">{wishlist.length}</p>
                         </div>
-                        <Heart className="w-8 h-8 text-blue-200" />
+                        <Heart className="w-8 h-8 text-muted-foreground" />
                       </div>
                     </CardContent>
                   </Card>
-                  <Card className="bg-gradient-to-br from-blue-600 to-purple-600 text-white border-none shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                  <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg hover:shadow-xl transition-all hover:scale-105">
                     <CardContent className="pt-6">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-sm text-blue-100">Saved Addresses</p>
-                          <p className="text-2xl font-bold">{addresses.length}</p>
+                          <p className="text-sm text-muted-foreground">Saved Addresses</p>
+                          <p className="text-2xl font-bold text-foreground">{addresses.length}</p>
                         </div>
-                        <MapPin className="w-8 h-8 text-blue-200" />
+                        <MapPin className="w-8 h-8 text-muted-foreground" />
                       </div>
                     </CardContent>
                   </Card>
@@ -419,10 +418,10 @@ function AccountPage() {
 
               {/* Orders Tab */}
               <TabsContent value="orders">
-                <Card className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900/50 dark:via-blue-900/30 dark:to-purple-900/30 border-blue-200 dark:border-blue-800/50 shadow-lg">
-                  <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg shadow-md">
-                    <CardTitle className="text-white">Order History</CardTitle>
-                    <CardDescription className="text-blue-100">View and track your orders</CardDescription>
+                <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
+                  <CardHeader>
+                    <CardTitle>Order History</CardTitle>
+                    <CardDescription>View and track your orders</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
@@ -475,14 +474,14 @@ function AccountPage() {
 
               {/* Addresses Tab */}
               <TabsContent value="addresses">
-                <Card className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900/50 dark:via-blue-900/30 dark:to-purple-900/30 border-blue-200 dark:border-blue-800/50 shadow-lg">
-                  <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg shadow-md">
+                <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
+                  <CardHeader>
                     <div className="flex items-center justify-between">
                       <div>
-                        <CardTitle className="text-white">Saved Addresses</CardTitle>
-                        <CardDescription className="text-blue-100">Manage your delivery addresses</CardDescription>
+                        <CardTitle>Saved Addresses</CardTitle>
+                        <CardDescription>Manage your delivery addresses</CardDescription>
                       </div>
-                      <Button className="bg-white text-blue-600 hover:bg-blue-50">
+                      <Button>
                         <Plus className="w-4 h-4 mr-2" />
                         Add Address
                       </Button>
@@ -538,10 +537,10 @@ function AccountPage() {
 
               {/* Wishlist Tab */}
               <TabsContent value="wishlist">
-                <Card className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900/50 dark:via-blue-900/30 dark:to-purple-900/30 border-blue-200 dark:border-blue-800/50 shadow-lg">
-                  <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg shadow-md">
-                    <CardTitle className="text-white">My Wishlist</CardTitle>
-                    <CardDescription className="text-blue-100">Items you want to purchase later</CardDescription>
+                <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
+                  <CardHeader>
+                    <CardTitle>My Wishlist</CardTitle>
+                    <CardDescription>Items you want to purchase later</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -585,10 +584,10 @@ function AccountPage() {
               {/* Security Tab */}
               <TabsContent value="security">
                 <div className="space-y-6">
-                  <Card className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900/50 dark:via-blue-900/30 dark:to-purple-900/30 border-blue-200 dark:border-blue-800/50 shadow-lg">
-                    <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg shadow-md">
-                      <CardTitle className="text-white">Change Password</CardTitle>
-                      <CardDescription className="text-blue-100">Update your password to keep your account secure</CardDescription>
+                  <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
+                    <CardHeader>
+                      <CardTitle>Change Password</CardTitle>
+                      <CardDescription>Update your password to keep your account secure</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4 max-w-md">
@@ -627,10 +626,10 @@ function AccountPage() {
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900/50 dark:via-blue-900/30 dark:to-purple-900/30 border-blue-200 dark:border-blue-800/50 shadow-lg">
-                    <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg shadow-md">
-                      <CardTitle className="text-white">Two-Factor Authentication</CardTitle>
-                      <CardDescription className="text-blue-100">Add an extra layer of security to your account</CardDescription>
+                  <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
+                    <CardHeader>
+                      <CardTitle>Two-Factor Authentication</CardTitle>
+                      <CardDescription>Add an extra layer of security to your account</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="flex items-center justify-between">
@@ -646,10 +645,10 @@ function AccountPage() {
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900/50 dark:via-blue-900/30 dark:to-purple-900/30 border-blue-200 dark:border-blue-800/50 shadow-lg">
-                    <CardHeader className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg shadow-md">
-                      <CardTitle className="text-white">Notification Preferences</CardTitle>
-                      <CardDescription className="text-blue-100">Manage how you receive notifications</CardDescription>
+                  <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
+                    <CardHeader>
+                      <CardTitle>Notification Preferences</CardTitle>
+                      <CardDescription>Manage how you receive notifications</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
