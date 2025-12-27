@@ -1,7 +1,10 @@
+'use client'
+
 import { Navbar } from '@/components/navbar'
 import { ProductFilters } from '@/components/product-filters'
 import { AuctionCard } from '@/components/auction-card'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
 const auctionListings = [
   {
@@ -78,12 +81,18 @@ export default function AuctionsPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-b border-blue-300 dark:border-blue-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+      <section className="relative bg-gradient-to-r from-[#0A1E5B] via-[#1a3a8a] to-[#0A1E5B] border-b-4 border-orange-500 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5B]/70 via-[#1a3a8a]/60 to-[#0A1E5B]/70"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold text-white text-center mb-6 drop-shadow-lg">
             Live Auction Events
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-xl text-white/95 text-center max-w-3xl mx-auto">
             Bid on exclusive and limited-edition laptops from top sellers
           </p>
         </div>

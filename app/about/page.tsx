@@ -7,16 +7,12 @@ export default function AboutPage() {
 		<div className='min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100'>
 			<Navbar />
 			
-			{/* Hero Section with Background */}
-			<div className='relative bg-gradient-to-r from-[#0A1E5B] to-[#1a3a8a] py-20 mb-10'>
-				<div className='absolute inset-0 bg-black/10'></div>
-				<div className='container mx-auto px-4 relative z-10'>
-					<h1 className='text-5x1 md:text-6xl font-bold text-white text-center mb-4 animate-fade-in'>
-						About TechHub
-					</h1>
-					<p className='text-xl text-white/90 text-center max-w-2xl mx-auto'>
-						Your Premier Destination for Cutting-Edge Technology
-					</p>
+			{/* About TechHub Hero Section */}
+			<div className="relative min-h-[400px] flex flex-col items-center justify-center text-center overflow-hidden" style={{background: "url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&auto=format&fit=crop') center/cover no-repeat"}}>
+				<div className="absolute inset-0 bg-[#0A1E5B]/80" />
+				<div className="relative z-10 py-24 w-full flex flex-col items-center justify-center">
+					<h1 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">About TechHub</h1>
+					<p className="text-xl text-white/95 max-w-2xl mx-auto">Your Premier Destination for Cutting-Edge Technology</p>
 				</div>
 			</div>
 			
