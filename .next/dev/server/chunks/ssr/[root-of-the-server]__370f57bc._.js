@@ -380,13 +380,13 @@ function SignupForm() {
                         children: "Sign in"
                     }, void 0, false, {
                         fileName: "[project]/components/signup-form.tsx",
-                        lineNumber: 149,
+                        lineNumber: 150,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/signup-form.tsx",
-                lineNumber: 147,
+                lineNumber: 148,
                 columnNumber: 7
             }, this)
         ]

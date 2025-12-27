@@ -1,11 +1,11 @@
 import { AuthHeader } from '@/components/auth-header'
 import { SignupForm } from '@/components/signup-form'
-import { Navbar } from '@/components/navbar'
+
 
 export default function SignupPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <Navbar />
+     
       <AuthHeader />
       
       <div className="flex-1 flex items-center justify-center p-4">

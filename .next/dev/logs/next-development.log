@@ -243,3 +243,70 @@ Import trace:
 [01:11:25.192] Server  LOG      ✓ Compiled in 1408ms
 [01:12:39.484] Server  LOG      ○ Compiling /admin/dashboard ...
 [01:12:44.952] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:14:29.417] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:19:28.068] Server  LOG      ○ Compiling /product/[id] ...
+[01:22:55.338] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:28:08.639] Server  LOG      ✓ Compiled in 522ms
+[01:28:58.910] Server  LOG      ✓ Compiled in 551ms
+[01:28:59.756] Browser ERROR   ./app/auctions/page.tsx:138:5
+Parsing ecmascript source code failed
+  136 |       
+  137 |       </footer>
+> 138 |     </main>
+      |     ^
+  139 |   )
+  140 | }
+  141 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/auctions/page.tsx [Client Component Browser]
+    ./app/auctions/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auctions/page.tsx [Client Component SSR]
+    ./app/auctions/page.tsx [Server Component]
+[01:28:59.756] Browser ERROR   ./app/auctions/page.tsx:138:6
+Parsing ecmascript source code failed
+  136 |       
+  137 |       </footer>
+> 138 |     </main>
+      |      ^^^^^^
+  139 |   )
+  140 | }
+  141 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/auctions/page.tsx [Client Component Browser]
+    ./app/auctions/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auctions/page.tsx [Client Component SSR]
+    ./app/auctions/page.tsx [Server Component]
+[01:29:13.835] Server  LOG      ✓ Compiled in 398ms
+[01:31:31.082] Server  LOG      ✓ Compiled in 771ms
+[01:31:32.043] Server  ERROR   C:\Users\DELL\Desktop\GP 2025\New folder\sanjeewa-frontend\.next\dev\server\chunks\ssr\[root-of-the-server]__48d0d894._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:31:32.057] Server  ERROR    ⨯ ReferenceError: Navbar is not defined
+[01:31:32.513] Browser ERROR   uncaughtError: ReferenceError: Navbar is not defined
+[01:31:37.720] Server  ERROR   C:\Users\DELL\Desktop\GP 2025\New folder\sanjeewa-frontend\.next\dev\server\chunks\ssr\[root-of-the-server]__48d0d894._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:31:37.724] Server  ERROR    ⨯ ReferenceError: Navbar is not defined
+[01:31:40.495] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:40.495] Browser ERROR   uncaughtError: ReferenceError: Navbar is not defined
+[01:31:47.809] Server  LOG      ✓ Compiled in 135ms
+[01:31:48.463] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:31:57.826] Server  LOG      ○ Compiling /signup ...
+[01:32:19.012] Server  LOG      ✓ Compiled in 476ms
+[01:32:19.684] Server  ERROR   C:\Users\DELL\Desktop\GP 2025\New folder\sanjeewa-frontend\.next\dev\server\chunks\ssr\[root-of-the-server]__1796eb31._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:32:19.694] Server  ERROR    ⨯ ReferenceError: Navbar is not defined
+[01:32:19.976] Browser ERROR   uncaughtError: ReferenceError: Navbar is not defined
+[01:32:22.536] Server  LOG      ✓ Compiled in 140ms
+[01:32:23.716] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:37:54.703] Server  LOG      ✓ Compiled in 470ms
+[01:38:41.308] Server  LOG      ✓ Compiled in 866ms
+[01:39:43.702] Server  LOG      ✓ Compiled in 157ms
+[01:44:16.072] Server  LOG      ✓ Compiled in 1359ms

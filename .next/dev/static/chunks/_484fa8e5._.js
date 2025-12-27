@@ -391,13 +391,13 @@ function SignupForm() {
                         children: "Sign in"
                     }, void 0, false, {
                         fileName: "[project]/components/signup-form.tsx",
-                        lineNumber: 149,
+                        lineNumber: 150,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/signup-form.tsx",
-                lineNumber: 147,
+                lineNumber: 148,
                 columnNumber: 7
             }, this)
         ]
@@ -407,7 +407,7 @@ function SignupForm() {
         columnNumber: 5
     }, this);
 }
-_s(SignupForm, "EN9ws5t9w56zxrfOCKnOohR63iw=");
+_s(SignupForm, "tZcE4LS2bRIdDMxYmB3XtJMJ8Ns=");
 _c = SignupForm;
 var _c;
 __turbopack_context__.k.register(_c, "SignupForm");

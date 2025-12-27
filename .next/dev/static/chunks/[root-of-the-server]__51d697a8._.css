@@ -294,6 +294,7 @@
     --container-2xl: 42rem;
     --container-3xl: 48rem;
     --container-4xl: 56rem;
+    --container-6xl: 72rem;
     --container-7xl: 80rem;
     --text-xs: .75rem;
     --text-xs--line-height: calc(1 / .75);
@@ -1681,6 +1682,10 @@
     max-width: var(--container-4xl);
   }
 
+  .max-w-6xl {
+    max-width: var(--container-6xl);
+  }
+
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
@@ -2578,6 +2583,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-black\/20 {
       background-color: color-mix(in oklab, var(--color-black) 20%, transparent);
+    }
+  }
+
+  .bg-black\/25 {
+    background-color: #00000040;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-black\/25 {
+      background-color: color-mix(in oklab, var(--color-black) 25%, transparent);
     }
   }
 
@@ -7074,8 +7089,26 @@
   }
 
   @media (min-width: 64rem) {
+    .lg\:block {
+      display: block;
+    }
+  }
+
+  @media (min-width: 64rem) {
     .lg\:inline-grid {
       display: inline-grid;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:w-2\/5 {
+      width: 40%;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:w-3\/5 {
+      width: 60%;
     }
   }
 
@@ -7130,6 +7163,13 @@
   @media (min-width: 64rem) {
     .lg\:flex-row {
       flex-direction: row;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:rounded-l-none {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 

@@ -79,16 +79,22 @@ export function LoginForm() {
         <Button
           type="button"
           variant="outline"
-          className="border border-border bg-secondary hover:bg-secondary/80 text-foreground rounded-lg transition-colors"
+          className="flex items-center justify-center gap-2 border border-border bg-secondary hover:bg-secondary/80 text-foreground rounded-lg transition-colors"
         >
-          Google
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.35 11.1h-9.16v2.92h5.46c-.23 1.44-1.41 3.72-5.46 3.72-3.29 0-5.97-2.71-5.97-6.05s2.68-6.05 5.97-6.05c1.87 0 3.13.8 3.85 1.48l2.62-2.52C17.4 2.3 15.06 1 12.19 1 6.81 1 2.5 5.34 2.5 10.7s4.31 9.7 9.69 9.7c5.58 0 9.06-3.9 9.06-9.3 0-.62-.07-1.08-.19-1.3z" fill="#4285F4"/>
+          </svg>
+          <span>Google</span>
         </Button>
         <Button
           type="button"
           variant="outline"
-          className="border border-border bg-secondary hover:bg-secondary/80 text-foreground rounded-lg transition-colors"
+          className="flex items-center justify-center gap-2 border border-border bg-secondary hover:bg-secondary/80 text-foreground rounded-lg transition-colors"
         >
-          Facebook
+          <svg className="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#1877F2" d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.09 5.66 21 10.44 21v-6.66H8.08V12h2.36V9.8c0-2.34 1.4-3.63 3.53-3.63 1.02 0 2.09.18 2.09.18v2.3h-1.18c-1.16 0-1.52.72-1.52 1.46V12h2.59l-.41 2.34h-2.18V21C18.34 21 22 17.09 22 12.07z"/>
+          </svg>
+          <span>Facebook</span>
         </Button>
       </div>
 
