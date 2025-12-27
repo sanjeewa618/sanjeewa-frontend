@@ -219,3 +219,6 @@ Import trace:
 [00:29:35.324] Server  LOG      ✓ Compiled in 269ms
 [00:30:01.028] Server  LOG      ✓ Compiled in 618ms
 [00:31:27.299] Server  LOG      ✓ Compiled in 327ms
+[00:32:23.151] Server  LOG      ✓ Compiled in 340ms
+[00:34:25.793] Server  LOG      ○ Compiling /auctions ...
+[00:35:27.318] Server  LOG      ✓ Compiled in 420ms

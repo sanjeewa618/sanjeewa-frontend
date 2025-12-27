@@ -51,9 +51,9 @@ export function ProductCard({
 
   return (
     <Link href={`/product/${id}`}>
-      <div className="bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-all duration-300 group cursor-pointer h-full flex flex-col">
+      <div className="bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-all duration-300 group cursor-pointer h-full flex flex-col max-w-sm mx-auto">
         {/* Image Container */}
-        <div className="relative w-full h-48 bg-secondary overflow-hidden">
+        <div className="relative w-full h-56 bg-secondary overflow-hidden">
           <Image
             src={image || "/placeholder.svg"}
             alt={name}
