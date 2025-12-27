@@ -181,71 +181,70 @@ function AccountPage() {
     }
   }
 
+  const [activeTab, setActiveTab] = useState("profile")
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-2">My Account</h1>
           <p className="text-muted-foreground">Manage your account settings and preferences</p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar Navigation */}
           <Card className="lg:col-span-1 h-fit bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
             <CardContent className="p-4">
               <div className="flex flex-col gap-2">
-                <Link 
-                  href="#profile" 
-                  className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                <button
+                  onClick={() => setActiveTab("profile")}
+                  className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${activeTab === "profile" ? "bg-accent" : "hover:bg-accent"}`}
                 >
                   <User className="w-5 h-5 text-muted-foreground" />
                   <span className="text-sm font-medium">Profile</span>
-                </Link>
-                <Link 
-                  href="#orders" 
-                  className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                </button>
+                <button
+                  onClick={() => setActiveTab("orders")}
+                  className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${activeTab === "orders" ? "bg-accent" : "hover:bg-accent"}`}
                 >
                   <Package className="w-5 h-5 text-muted-foreground" />
                   <span className="text-sm font-medium">Orders</span>
-                </Link>
-                <Link 
-                  href="#addresses" 
-                  className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                </button>
+                <button
+                  onClick={() => setActiveTab("addresses")}
+                  className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${activeTab === "addresses" ? "bg-accent" : "hover:bg-accent"}`}
                 >
                   <MapPin className="w-5 h-5 text-muted-foreground" />
                   <span className="text-sm font-medium">Addresses</span>
-                </Link>
-                <Link 
-                  href="#wishlist" 
-                  className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                </button>
+                <button
+                  onClick={() => setActiveTab("wishlist")}
+                  className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${activeTab === "wishlist" ? "bg-accent" : "hover:bg-accent"}`}
                 >
                   <Heart className="w-5 h-5 text-muted-foreground" />
                   <span className="text-sm font-medium">Wishlist</span>
-                </Link>
-                <Link 
-                  href="#payment" 
-                  className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                </button>
+                <button
+                  onClick={() => setActiveTab("payment")}
+                  className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${activeTab === "payment" ? "bg-accent" : "hover:bg-accent"}`}
                 >
                   <CreditCard className="w-5 h-5 text-muted-foreground" />
                   <span className="text-sm font-medium">Payment Methods</span>
-                </Link>
-                <Link 
-                  href="#security" 
-                  className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                </button>
+                <button
+                  onClick={() => setActiveTab("security")}
+                  className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${activeTab === "security" ? "bg-accent" : "hover:bg-accent"}`}
                 >
                   <Lock className="w-5 h-5 text-muted-foreground" />
                   <span className="text-sm font-medium">Security</span>
-                </Link>
-                <Link 
-                  href="#notifications" 
-                  className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                </button>
+                <button
+                  onClick={() => setActiveTab("notifications")}
+                  className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${activeTab === "notifications" ? "bg-accent" : "hover:bg-accent"}`}
                 >
                   <Bell className="w-5 h-5 text-muted-foreground" />
                   <span className="text-sm font-medium">Notifications</span>
-                </Link>
+                </button>
                 <Separator className="my-2" />
                 <button className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-destructive/10 text-destructive transition-colors">
                   <LogOut className="w-5 h-5" />
@@ -254,17 +253,53 @@ function AccountPage() {
               </div>
             </CardContent>
           </Card>
-
           {/* Main Content */}
           <div className="lg:col-span-3">
-            <Tabs defaultValue="profile" className="space-y-6">
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
               <TabsList>
                 <TabsTrigger value="profile">Profile</TabsTrigger>
                 <TabsTrigger value="orders">Orders</TabsTrigger>
                 <TabsTrigger value="addresses">Addresses</TabsTrigger>
                 <TabsTrigger value="wishlist">Wishlist</TabsTrigger>
+                <TabsTrigger value="payment">Payment Methods</TabsTrigger>
                 <TabsTrigger value="security">Security</TabsTrigger>
               </TabsList>
+              {/* Payment Methods Tab */}
+              <TabsContent value="payment">
+                <Card className="bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-blue-300 dark:border-blue-700 shadow-lg">
+                  <CardHeader>
+                    <CardTitle>Payment Methods</CardTitle>
+                    <CardDescription>Manage your saved payment methods</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <CreditCard className="w-8 h-8 text-muted-foreground" />
+                          <div>
+                            <p className="font-medium">Visa ending in 1234</p>
+                            <p className="text-sm text-muted-foreground">Expires 12/28</p>
+                          </div>
+                        </div>
+                        <Button variant="outline" size="sm">Remove</Button>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <CreditCard className="w-8 h-8 text-muted-foreground" />
+                          <div>
+                            <p className="font-medium">Mastercard ending in 5678</p>
+                            <p className="text-sm text-muted-foreground">Expires 05/27</p>
+                          </div>
+                        </div>
+                        <Button variant="outline" size="sm">Remove</Button>
+                      </div>
+                      <Button variant="default" className="mt-4">
+                        <Plus className="w-4 h-4 mr-2" /> Add New Payment Method
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
 
               {/* Profile Tab */}
               <TabsContent value="profile">
