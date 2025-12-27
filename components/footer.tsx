@@ -19,7 +19,7 @@ export function Footer() {
 						</div>
 						<div className="mb-6">
 							<p className="text-sm font-semibold mb-2">TechHub (Pvt) Ltd.</p>
-							<p className="text-sm text-gray-400">#40,Sri Jyewardenepura Kotte. Sri Lanka.</p>
+							<p className="text-sm text-gray-400">#40,Sri Jayewardenepura Kotte. Sri Lanka.</p>
 						</div>
 						<div className="mb-6">
 							<p className="text-sm font-semibold mb-1">Technical Support:</p>

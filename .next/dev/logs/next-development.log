@@ -204,3 +204,18 @@ Import trace:
     ./app/about/page.tsx
 [00:12:56.711] Server  LOG      ✓ Compiled in 873ms
 [00:12:58.664] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:11.685] Server  LOG      ✓ Compiled in 949ms
+[00:18:56.061] Server  LOG      ✓ Compiled in 1150ms
+[00:19:59.206] Server  LOG      ✓ Compiled in 332ms
+[00:20:25.829] Server  LOG      ✓ Compiled in 392ms
+[00:21:52.685] Server  LOG      ✓ Compiled in 359ms
+[00:23:03.260] Server  LOG      ✓ Compiled in 301ms
+[00:23:20.351] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:40.164] Server  LOG      ✓ Compiled in 767ms
+[00:25:53.030] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:51.388] Server  LOG      ✓ Compiled in 1559ms
+[00:27:59.094] Server  LOG      ✓ Compiled in 480ms
+[00:28:38.786] Server  LOG      ✓ Compiled in 196ms
+[00:29:35.324] Server  LOG      ✓ Compiled in 269ms
+[00:30:01.028] Server  LOG      ✓ Compiled in 618ms
+[00:31:27.299] Server  LOG      ✓ Compiled in 327ms
