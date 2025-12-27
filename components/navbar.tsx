@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { ShoppingCart, User, Search } from 'lucide-react'
@@ -9,6 +9,31 @@ import { ShoppingCart, User, Search } from 'lucide-react'
 export function Navbar() {
 	const [searchQuery, setSearchQuery] = useState('')
 	const [selectedCategory, setSelectedCategory] = useState('All Categories')
+	const [cartCount, setCartCount] = useState(0)
+
+	useEffect(() => {
+		const updateCartCount = () => {
+			const savedCart = localStorage.getItem('cart')
+			if (savedCart) {
+				const cart = JSON.parse(savedCart)
+				const count = cart.reduce((sum: number, item: any) => sum + item.quantity, 0)
+				setCartCount(count)
+			}
+		}
+
+		// Initial load
+		updateCartCount()
+
+		// Listen for custom event
+		window.addEventListener('cart-updated', updateCartCount)
+		// Listen for storage changes (cross-tab)
+		window.addEventListener('storage', updateCartCount)
+
+		return () => {
+			window.removeEventListener('cart-updated', updateCartCount)
+			window.removeEventListener('storage', updateCartCount)
+		}
+	}, [])
 
 
 
@@ -43,12 +68,11 @@ export function Navbar() {
 									onChange={(e) => setSelectedCategory(e.target.value)}
 									className='px-4 h-10 bg-transparent text-gray-700 font-medium cursor-pointer border-0 outline-none appearance-none pr-8 text-sm'
 								>
-									<option>All Categories</option>
-									<option>Laptops</option>
-									<option>Gaming Laptops</option>
-									<option>Business Laptops</option>
-									<option>Ultrabooks</option>
-									<option>Accessories</option>
+									<option value="all">All Categories</option>
+									<option value="laptops">Laptops</option>
+									<option value="gaming">Gaming Laptops</option>
+									<option value="business">Business Laptops</option>
+									<option value="accessories">Accessories</option>
 								</select>
 								<svg className='w-4 h-4 text-gray-600 absolute right-[110px] pointer-events-none' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
 									<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
@@ -69,6 +93,12 @@ export function Navbar() {
 							Auctions
 						</Link>
 						<Link
+							href='/accessories'
+							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors hover:underline'
+						>
+							Accessories
+						</Link>
+						<Link
 							href='/about'
 							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors hover:underline'
 						>
@@ -85,9 +115,11 @@ export function Navbar() {
 							className='relative text-gray-700 hover:text-[#0A1E5B] transition-all hover:shadow-[0_0_15px_rgba(10,30,91,0.6)] rounded-full p-2'
 						>
 							<ShoppingCart className='w-6 h-6' />
-							<span className='absolute -top-2 -right-2 w-5 h-5 bg-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center'>
-								0
-							</span>
+							{cartCount > 0 && (
+								<span className='absolute -top-2 -right-2 w-5 h-5 bg-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center'>
+									{cartCount}
+								</span>
+							)}
 						</Link>
 						<Link
 							href='/account'
@@ -96,9 +128,9 @@ export function Navbar() {
 							<User className='w-6 h-6' />
 						</Link>
 						<Link href='/login'>
-							<Button 
+							<Button
 								variant="outline"
-								
+
 								className='border-[#0A1E5B] text-[#0A1E5B] hover:[#0A1E5B]/90 rounded-lg h-10 px-6'
 							>
 								Sign In

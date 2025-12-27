@@ -1535,6 +1535,10 @@
     width: 100px;
   }
 
+  .w-\[180px\] {
+    width: 180px;
+  }
+
   .w-\[280px\] {
     width: 280px;
   }
@@ -6897,6 +6901,12 @@
   @media (min-width: 64rem) {
     .lg\:px-8 {
       padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 
