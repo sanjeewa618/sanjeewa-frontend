@@ -152,7 +152,7 @@ export default function HomePage() {
 				{/* Video Background */}
 
 
-			
+
 				<div
 					className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
 					style={{ backgroundImage: "url('/asus-rog-gaming-laptop.jpg')" }}
