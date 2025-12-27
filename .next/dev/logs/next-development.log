@@ -1,887 +1,485 @@
-[00:00:01.698] Server  LOG      ✓ Ready in 1270ms
-[00:00:07.096] Server  LOG      ○ Compiling / ...
-[00:00:14.361] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:15.700] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:41.633] Server  LOG      ✓ Compiled in 763ms
-[00:02:46.924] Server  LOG      ✓ Compiled in 123ms
-[00:02:50.621] Server  LOG      ✓ Compiled in 110ms
-[00:04:41.812] Server  LOG      ✓ Compiled in 253ms
-[00:04:43.128] Server  LOG      ✓ Compiled in 136ms
-[00:05:33.905] Server  LOG      ✓ Compiled in 167ms
-[00:10:35.113] Server  LOG      ✓ Compiled in 377ms
-[00:11:25.540] Server  LOG      ○ Compiling /about ...
-[00:11:26.767] Server  ERROR    ⨯ ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-
-
-[00:11:27.072] Browser ERROR   ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-[00:11:27.194] Browser ERROR   ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-[00:11:28.639] Browser ERROR   ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-[00:11:28.813] Browser ERROR   ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-[00:11:30.845] Browser ERROR   ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-[00:11:30.973] Server  ERROR    ⨯ ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-
-
-[00:11:31.838] Browser ERROR   uncaughtError: Error: ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-
-
-[00:11:32.163] Browser ERROR   ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-[00:11:32.163] Browser ERROR   ./components/navbar.tsx:4:10
-Ecmascript file had an error
-  2 |
-  3 | import Link from 'next/link'
-> 4 | import { useState } from 'react'
-    |          ^^^^^^^^
-  5 | import { Button } from '@/components/ui/button'
-  6 | import { Input } from '@/components/ui/input'
-  7 | import { ShoppingCart, User, Search } from 'lucide-react'
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/navbar.tsx
-    ./app/about/page.tsx
-[00:12:56.711] Server  LOG      ✓ Compiled in 873ms
-[00:12:58.664] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:18:11.685] Server  LOG      ✓ Compiled in 949ms
-[00:18:56.061] Server  LOG      ✓ Compiled in 1150ms
-[00:19:59.206] Server  LOG      ✓ Compiled in 332ms
-[00:20:25.829] Server  LOG      ✓ Compiled in 392ms
-[00:21:52.685] Server  LOG      ✓ Compiled in 359ms
-[00:23:03.260] Server  LOG      ✓ Compiled in 301ms
-[00:23:20.351] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:25:40.164] Server  LOG      ✓ Compiled in 767ms
-[00:25:53.030] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:26:51.388] Server  LOG      ✓ Compiled in 1559ms
-[00:27:59.094] Server  LOG      ✓ Compiled in 480ms
-[00:28:38.786] Server  LOG      ✓ Compiled in 196ms
-[00:29:35.324] Server  LOG      ✓ Compiled in 269ms
-[00:30:01.028] Server  LOG      ✓ Compiled in 618ms
-[00:31:27.299] Server  LOG      ✓ Compiled in 327ms
-[00:32:23.151] Server  LOG      ✓ Compiled in 340ms
-[00:34:25.793] Server  LOG      ○ Compiling /auctions ...
-[00:35:27.318] Server  LOG      ✓ Compiled in 420ms
-[00:39:20.368] Server  LOG      ✓ Compiled in 621ms
-[00:40:52.027] Server  LOG      ✓ Compiled in 1821ms
-[00:42:56.317] Server  LOG      ✓ Compiled in 995ms
-[00:43:40.293] Server  LOG      ✓ Compiled in 323ms
-[00:46:39.223] Server  LOG      ✓ Compiled in 990ms
-[00:47:43.750] Server  LOG      ✓ Compiled in 518ms
-[00:48:31.081] Server  LOG      ✓ Compiled in 97ms
-[00:52:36.729] Server  LOG      ✓ Compiled in 655ms
-[01:00:17.147] Server  LOG      ✓ Compiled in 392ms
-[01:00:21.703] Server  LOG      ✓ Compiled in 914ms
-[01:01:21.695] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:01:25.461] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:04:21.501] Server  LOG      ✓ Compiled in 744ms
-[01:05:45.024] Server  LOG      ✓ Compiled in 788ms
-[01:07:12.043] Server  LOG      ✓ Compiled in 530ms
-[01:07:13.808] Server  LOG      ✓ Compiled in 481ms
-[01:07:18.247] Server  LOG      ✓ Compiled in 321ms
-[01:07:22.631] Server  LOG      ✓ Compiled in 131ms
-[01:11:25.192] Server  LOG      ✓ Compiled in 1408ms
-[01:12:39.484] Server  LOG      ○ Compiling /admin/dashboard ...
-[01:12:44.952] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:14:29.417] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:19:28.068] Server  LOG      ○ Compiling /product/[id] ...
-[01:22:55.338] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:28:08.639] Server  LOG      ✓ Compiled in 522ms
-[01:28:58.910] Server  LOG      ✓ Compiled in 551ms
-[01:28:59.756] Browser ERROR   ./app/auctions/page.tsx:138:5
+[00:00:24.769] Server  LOG      ✓ Ready in 23.9s
+[00:00:27.834] Server  LOG      ○ Compiling / ...
+[00:00:47.285] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:00.177] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[00:02:44.468] Server  LOG      ✓ Compiled in 218ms
+[00:02:44.647] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[00:02:48.264] Server  LOG      ✓ Compiled in 365ms
+[00:02:48.654] Browser ERROR   ./app/cart/page.tsx:210:5
 Parsing ecmascript source code failed
-  136 |       
-  137 |       </footer>
-> 138 |     </main>
+  208 |       {/* Footer */}
+  209 |       <fo
+> 210 |     </main>
       |     ^
-  139 |   )
-  140 | }
-  141 |
+  211 |   );
+  212 | }
+  213 |
 
 Expression expected
 
 Import traces:
   Client Component Browser:
-    ./app/auctions/page.tsx [Client Component Browser]
-    ./app/auctions/page.tsx [Server Component]
+    ./app/cart/page.tsx [Client Component Browser]
+    ./app/cart/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/auctions/page.tsx [Client Component SSR]
-    ./app/auctions/page.tsx [Server Component]
-[01:28:59.756] Browser ERROR   ./app/auctions/page.tsx:138:6
+    ./app/cart/page.tsx [Client Component SSR]
+    ./app/cart/page.tsx [Server Component]
+[00:02:48.654] Browser ERROR   ./app/cart/page.tsx:210:6
 Parsing ecmascript source code failed
-  136 |       
-  137 |       </footer>
-> 138 |     </main>
+  208 |       {/* Footer */}
+  209 |       <fo
+> 210 |     </main>
       |      ^^^^^^
-  139 |   )
-  140 | }
-  141 |
+  211 |   );
+  212 | }
+  213 |
 
 Unterminated regexp literal
 
 Import traces:
   Client Component Browser:
-    ./app/auctions/page.tsx [Client Component Browser]
-    ./app/auctions/page.tsx [Server Component]
+    ./app/cart/page.tsx [Client Component Browser]
+    ./app/cart/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/auctions/page.tsx [Client Component SSR]
-    ./app/auctions/page.tsx [Server Component]
-[01:29:13.835] Server  LOG      ✓ Compiled in 398ms
-[01:31:31.082] Server  LOG      ✓ Compiled in 771ms
-[01:31:32.043] Server  ERROR   C:\Users\DELL\Desktop\GP 2025\New folder\sanjeewa-frontend\.next\dev\server\chunks\ssr\[root-of-the-server]__48d0d894._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[01:31:32.057] Server  ERROR    ⨯ ReferenceError: Navbar is not defined
-[01:31:32.513] Browser ERROR   uncaughtError: ReferenceError: Navbar is not defined
-[01:31:37.720] Server  ERROR   C:\Users\DELL\Desktop\GP 2025\New folder\sanjeewa-frontend\.next\dev\server\chunks\ssr\[root-of-the-server]__48d0d894._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[01:31:37.724] Server  ERROR    ⨯ ReferenceError: Navbar is not defined
-[01:31:40.495] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:31:40.495] Browser ERROR   uncaughtError: ReferenceError: Navbar is not defined
-[01:31:47.809] Server  LOG      ✓ Compiled in 135ms
-[01:31:48.463] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:31:57.826] Server  LOG      ○ Compiling /signup ...
-[01:32:19.012] Server  LOG      ✓ Compiled in 476ms
-[01:32:19.684] Server  ERROR   C:\Users\DELL\Desktop\GP 2025\New folder\sanjeewa-frontend\.next\dev\server\chunks\ssr\[root-of-the-server]__1796eb31._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[01:32:19.694] Server  ERROR    ⨯ ReferenceError: Navbar is not defined
-[01:32:19.976] Browser ERROR   uncaughtError: ReferenceError: Navbar is not defined
-[01:32:22.536] Server  LOG      ✓ Compiled in 140ms
-[01:32:23.716] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:37:54.703] Server  LOG      ✓ Compiled in 470ms
-[01:38:41.308] Server  LOG      ✓ Compiled in 866ms
-[01:39:43.702] Server  LOG      ✓ Compiled in 157ms
-[01:44:16.072] Server  LOG      ✓ Compiled in 1359ms
-[01:47:33.060] Server  LOG      ✓ Compiled in 1056ms
-[01:58:43.718] Server  LOG      ✓ Compiled in 964ms
-[02:01:16.328] Server  LOG      ✓ Compiled in 2s
-[02:03:09.157] Server  LOG      ✓ Compiled in 925ms
-[02:03:43.607] Server  LOG      ✓ Compiled in 1140ms
-[02:06:44.847] Server  LOG      ✓ Compiled in 1468ms
-[02:06:45.777] Browser ERROR   ./components/login-form.tsx:1:5
+    ./app/cart/page.tsx [Client Component SSR]
+    ./app/cart/page.tsx [Server Component]
+[00:02:50.657] Browser ERROR   ./app/cart/page.tsx:210:5
 Parsing ecmascript source code failed
-> 1 | the image should be add fully in that area 
-    |     ^^^^^
-  2 | both sign in and sign up
-
-Expected ';', '}' or <eof>
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-[02:06:56.228] Server  LOG      ✓ Compiled in 394ms
-[02:07:16.699] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:16.730] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:16.758] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:16.782] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:16.944] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:16.967] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:17.005] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:17.012] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:17.021] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:17.032] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:17.050] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:17.056] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:07:17.092] Server  LOG      ✓ Compiled in 1851ms
-[02:07:18.750] Browser ERROR   ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[02:07:44.113] Server  LOG      ✓ Compiled in 972ms
-[02:07:49.215] Server  LOG      ✓ Compiled in 219ms
-[02:08:16.806] Server  LOG      ✓ Compiled in 191ms
-[02:08:19.082] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.090] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.096] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.102] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.118] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.122] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.130] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.139] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.147] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.156] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.162] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.168] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:08:19.173] Server  LOG      ✓ Compiled in 309ms
-[02:08:19.753] Browser ERROR   ./components/login-form.tsx:6:1
-Module not found: Can't resolve '@/lib/supabase/client'
-  4 | import { Checkbox } from "@/components/ui/checkbox";
-  5 | import { Input } from "@/components/ui/input";
-> 6 | import { createClient } from "@/lib/supabase/client";
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { zodResolver } from "@hookform/resolvers/zod";
-  8 | import { Eye, EyeOff } from "lucide-react";
-  9 | import Link from "next/link";
-
-Import map: aliased to relative './lib/supabase/client' inside of [project]/
-
-Import trace:
-  Server Component:
-    ./components/login-form.tsx
-    ./app/login/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[02:08:22.697] Server  LOG      ✓ Compiled in 458ms
-[02:09:05.654] Server  LOG      ✓ Compiled in 1157ms
-[02:10:00.482] Server  LOG      ✓ Compiled in 794ms
-[02:11:09.393] Server  LOG      ✓ Compiled in 678ms
-[02:11:12.080] Server  LOG      ✓ Compiled in 337ms
-[02:11:42.717] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:11:47.819] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:12:08.684] Server  LOG      ✓ Compiled in 497ms
-[02:12:49.834] Server  LOG      ✓ Compiled in 523ms
-[02:13:17.425] Server  LOG      ✓ Compiled in 587ms
-[02:38:20.933] Server  LOG      ○ Compiling /admin/products ...
+  208 |       {/* Footer */}
+  209 |       <footer
+> 210 |     </main>
+      |     ^
+  211 |   );
+  212 | }
+  213 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/cart/page.tsx [Client Component Browser]
+    ./app/cart/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/cart/page.tsx [Client Component SSR]
+    ./app/cart/page.tsx [Server Component]
+[00:02:50.658] Browser ERROR   ./app/cart/page.tsx:210:6
+Parsing ecmascript source code failed
+  208 |       {/* Footer */}
+  209 |       <footer
+> 210 |     </main>
+      |      ^^^^^^
+  211 |   );
+  212 | }
+  213 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/cart/page.tsx [Client Component Browser]
+    ./app/cart/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/cart/page.tsx [Client Component SSR]
+    ./app/cart/page.tsx [Server Component]
+[00:02:53.659] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[00:02:53.659] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[00:03:02.115] Server  LOG      ✓ Compiled in 175ms
+[00:03:02.665] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[00:03:23.467] Server  LOG      ✓ Compiled in 251ms
+[00:03:23.654] Browser ERROR   ./app/cart/page.tsx:213:1
+Parsing ecmascript source code failed
+  211 |     </main>
+  212 |   );
+> 213 | }
+      | ^
+  214 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/cart/page.tsx [Client Component Browser]
+    ./app/cart/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/cart/page.tsx [Client Component SSR]
+    ./app/cart/page.tsx [Server Component]
+[00:03:26.104] Server  LOG      ✓ Compiled in 374ms
+[00:03:26.656] Browser ERROR   ./app/cart/page.tsx:211:5
+Parsing ecmascript source code failed
+  209 |       {/* Footer */}
+  210 |       </footer>
+> 211 |     </main>
+      |     ^
+  212 |   );
+  213 | }
+  214 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/cart/page.tsx [Client Component Browser]
+    ./app/cart/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/cart/page.tsx [Client Component SSR]
+    ./app/cart/page.tsx [Server Component]
+[00:03:26.656] Browser ERROR   ./app/cart/page.tsx:211:6
+Parsing ecmascript source code failed
+  209 |       {/* Footer */}
+  210 |       </footer>
+> 211 |     </main>
+      |      ^^^^^^
+  212 |   );
+  213 | }
+  214 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/cart/page.tsx [Client Component Browser]
+    ./app/cart/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/cart/page.tsx [Client Component SSR]
+    ./app/cart/page.tsx [Server Component]
+[00:03:31.663] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[00:03:31.663] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[00:04:18.390] Server  LOG      ✓ Compiled in 171ms
+[00:04:30.088] Server  LOG      ✓ Compiled in 177ms
+[00:04:33.361] Server  LOG      ✓ Compiled in 250ms
+[00:07:23.727] Browser LOG     Order placed: {"cartItems":[{"id":1,"image":"/placeholder.svg?key=6xdaw","name":"Dell XPS 13 Plus","price":1299,"quantity":1},{"id":2,"image":"/placeholder.svg?key=88r7h","name":"MacBook Air M2","price":1199,"quantity":1}],"orderDate":"2025-12-27T10:59:59.770Z","paymentMethod":"card","shipping":0,"shippingInfo":{"address":"Thudugala RD, Dodangoda, Kalutara.","city":"kalutara","country":"United States","email":"sanjeewasandaruwan477@gmail.com","firstName":"Sanjeewa","lastName":"Sandaruwan","phone":"+94763779440","state":"western","zipCode":"1220"},"subtotal":2498,"tax":199.84,"total":2697.84,"transactionId":"TXN-1766833198758-K2J6WJJ9R"}
+[00:09:56.632] Server  LOG      ✓ Compiled in 311ms
+[00:10:08.766] Server  LOG      ✓ Compiled in 138ms
+[00:10:09.647] Browser ERROR   ./app/seller/dashboard/page.tsx:176:7
+Parsing ecmascript source code failed
+  174 |       </div>
+  175 |       <
+> 176 |       </main>
+      |       ^
+  177 |     </>
+  178 |   )
+  179 | }
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/dashboard/page.tsx [Client Component Browser]
+    ./app/seller/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/dashboard/page.tsx [Client Component SSR]
+    ./app/seller/dashboard/page.tsx [Server Component]
+[00:10:09.647] Browser ERROR   ./app/seller/dashboard/page.tsx:176:8
+Parsing ecmascript source code failed
+  174 |       </div>
+  175 |       <
+> 176 |       </main>
+      |        ^^^^^^
+  177 |     </>
+  178 |   )
+  179 | }
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/dashboard/page.tsx [Client Component Browser]
+    ./app/seller/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/dashboard/page.tsx [Client Component SSR]
+    ./app/seller/dashboard/page.tsx [Server Component]
+[00:10:12.657] Browser ERROR   ./app/seller/dashboard/page.tsx:176:7
+Parsing ecmascript source code failed
+  174 |       </div>
+  175 |       <Footer
+> 176 |       </main>
+      |       ^
+  177 |     </>
+  178 |   )
+  179 | }
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/dashboard/page.tsx [Client Component Browser]
+    ./app/seller/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/dashboard/page.tsx [Client Component SSR]
+    ./app/seller/dashboard/page.tsx [Server Component]
+[00:10:12.657] Browser ERROR   ./app/seller/dashboard/page.tsx:176:8
+Parsing ecmascript source code failed
+  174 |       </div>
+  175 |       <Footer
+> 176 |       </main>
+      |        ^^^^^^
+  177 |     </>
+  178 |   )
+  179 | }
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/dashboard/page.tsx [Client Component Browser]
+    ./app/seller/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/dashboard/page.tsx [Client Component SSR]
+    ./app/seller/dashboard/page.tsx [Server Component]
+[00:10:54.089] Server  LOG      ✓ Compiled in 244ms
+[00:11:09.588] Server  LOG      ✓ Compiled in 252ms
+[00:11:10.658] Browser ERROR   ./app/seller/orders/page.tsx:229:7
+Parsing ecmascript source code failed
+  227 |         </div>
+  228 |         <
+> 229 |       </main>
+      |       ^
+  230 |       </div>
+  231 |     </>
+  232 |   )
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/orders/page.tsx [Client Component Browser]
+    ./app/seller/orders/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/orders/page.tsx [Client Component SSR]
+    ./app/seller/orders/page.tsx [Server Component]
+[00:11:10.658] Browser ERROR   ./app/seller/orders/page.tsx:229:8
+Parsing ecmascript source code failed
+  227 |         </div>
+  228 |         <
+> 229 |       </main>
+      |        ^^^^^^
+  230 |       </div>
+  231 |     </>
+  232 |   )
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/orders/page.tsx [Client Component Browser]
+    ./app/seller/orders/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/orders/page.tsx [Client Component SSR]
+    ./app/seller/orders/page.tsx [Server Component]
+[00:11:12.652] Browser ERROR   ./app/seller/orders/page.tsx:229:7
+Parsing ecmascript source code failed
+  227 |         </div>
+  228 |         <Footer
+> 229 |       </main>
+      |       ^
+  230 |       </div>
+  231 |     </>
+  232 |   )
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/orders/page.tsx [Client Component Browser]
+    ./app/seller/orders/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/orders/page.tsx [Client Component SSR]
+    ./app/seller/orders/page.tsx [Server Component]
+[00:11:12.652] Browser ERROR   ./app/seller/orders/page.tsx:229:8
+Parsing ecmascript source code failed
+  227 |         </div>
+  228 |         <Footer
+> 229 |       </main>
+      |        ^^^^^^
+  230 |       </div>
+  231 |     </>
+  232 |   )
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/orders/page.tsx [Client Component Browser]
+    ./app/seller/orders/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/orders/page.tsx [Client Component SSR]
+    ./app/seller/orders/page.tsx [Server Component]
+[00:11:13.390] Server  LOG      ✓ Compiled in 245ms
+[00:13:05.446] Server  LOG      ✓ Compiled in 320ms
+[00:13:27.194] Server  LOG      ✓ Compiled in 281ms
+[00:14:04.399] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:13.450] Server  LOG      ✓ Compiled in 200ms
+[00:15:17.877] Server  LOG      ✓ Compiled in 207ms
+[00:17:24.179] Server  LOG      ✓ Compiled in 237ms
+[00:17:27.613] Server  LOG      ✓ Compiled in 371ms
+[00:17:45.604] Server  LOG      ✓ Compiled in 144ms
+[00:17:48.067] Server  LOG      ✓ Compiled in 170ms
+[00:17:48.652] Browser ERROR   ./app/seller/settings/page.tsx:265:15
+Parsing ecmascript source code failed
+  263 |       
+  264 |     </>
+> 265 |      <Footer />
+      |               ^
+  266 |   )
+  267 | }
+  268 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/settings/page.tsx [Client Component Browser]
+    ./app/seller/settings/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/settings/page.tsx [Client Component SSR]
+    ./app/seller/settings/page.tsx [Server Component]
+[00:18:13.179] Server  LOG      ○ Compiling /seller/analytics ...
+[00:18:34.498] Server  LOG      ✓ Compiled in 221ms
+[00:18:37.004] Server  LOG      ✓ Compiled in 266ms
+[00:19:11.327] Server  LOG      ✓ Compiled in 193ms
+[00:19:13.815] Server  LOG      ✓ Compiled in 289ms
+[00:19:34.183] Server  LOG      ✓ Compiled in 219ms
+[00:19:37.153] Server  LOG      ✓ Compiled in 267ms
+[00:19:57.542] Server  LOG      ✓ Compiled in 235ms
+[00:20:00.144] Server  LOG      ✓ Compiled in 260ms
+[00:20:09.146] Server  LOG      ✓ Compiled in 190ms
+[00:20:09.656] Browser ERROR   ./app/seller/auctions/page.tsx:236:1
+Parsing ecmascript source code failed
+  234 |     
+  235 |   )
+> 236 | }
+      | ^
+  237 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/auctions/page.tsx [Client Component Browser]
+    ./app/seller/auctions/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/auctions/page.tsx [Client Component SSR]
+    ./app/seller/auctions/page.tsx [Server Component]
+[00:20:11.086] Server  LOG      ✓ Compiled in 169ms
+[00:20:11.660] Browser ERROR   ./app/seller/auctions/page.tsx:235:3
+Parsing ecmascript source code failed
+  233 |       <Footer />
+  234 |     <
+> 235 |   )
+      |   ^
+  236 | }
+  237 |
+
+Expected '</', got ')'
+
+Import traces:
+  Client Component Browser:
+    ./app/seller/auctions/page.tsx [Client Component Browser]
+    ./app/seller/auctions/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/seller/auctions/page.tsx [Client Component SSR]
+    ./app/seller/auctions/page.tsx [Server Component]
+[00:20:41.419] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:43.874] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:05.541] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:08.197] Server  LOG      ✓ Compiled in 156ms
+[00:23:14.105] Server  LOG      ✓ Compiled in 157ms
+[00:23:14.654] Browser ERROR   ./app/admin/dashboard/page.tsx:197:5
+Parsing ecmascript source code failed
+  195 |       </main>
+  196 |       <
+> 197 |     </>
+      |     ^
+  198 |   )
+  199 | }
+  200 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/dashboard/page.tsx [Client Component Browser]
+    ./app/admin/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/dashboard/page.tsx [Client Component SSR]
+    ./app/admin/dashboard/page.tsx [Server Component]
+[00:23:14.654] Browser ERROR   ./app/admin/dashboard/page.tsx:197:6
+Parsing ecmascript source code failed
+  195 |       </main>
+  196 |       <
+> 197 |     </>
+      |      ^^
+  198 |   )
+  199 | }
+  200 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/dashboard/page.tsx [Client Component Browser]
+    ./app/admin/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/dashboard/page.tsx [Client Component SSR]
+    ./app/admin/dashboard/page.tsx [Server Component]
+[00:23:16.655] Browser ERROR   ./app/admin/dashboard/page.tsx:197:5
+Parsing ecmascript source code failed
+  195 |       </main>
+  196 |       <F
+> 197 |     </>
+      |     ^
+  198 |   )
+  199 | }
+  200 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/dashboard/page.tsx [Client Component Browser]
+    ./app/admin/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/dashboard/page.tsx [Client Component SSR]
+    ./app/admin/dashboard/page.tsx [Server Component]
+[00:23:16.655] Browser ERROR   ./app/admin/dashboard/page.tsx:197:6
+Parsing ecmascript source code failed
+  195 |       </main>
+  196 |       <F
+> 197 |     </>
+      |      ^^
+  198 |   )
+  199 | }
+  200 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/dashboard/page.tsx [Client Component Browser]
+    ./app/admin/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/admin/dashboard/page.tsx [Client Component SSR]
+    ./app/admin/dashboard/page.tsx [Server Component]
+[00:23:18.186] Server  LOG      ✓ Compiled in 333ms

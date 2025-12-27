@@ -1,6 +1,7 @@
 'use client'
 
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { SellerSidebar } from '@/components/seller-sidebar'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
@@ -226,8 +227,10 @@ export default function MyAuctionsPage() {
             <p className="text-2xl font-bold text-emerald-600">$4,100</p>
           </div>
         </div>
+        
       </main>
       </div>
+      <Footer />
     </>
   )
 }

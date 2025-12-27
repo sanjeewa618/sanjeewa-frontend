@@ -1,6 +1,7 @@
 'use client'
 
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { SellerSidebar } from '@/components/seller-sidebar'
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 
@@ -218,8 +219,10 @@ export default function AnalyticsPage() {
             </div>
           </div>
         </div>
+        
       </main>
       </div>
+      <Footer />
     </>
   )
 }

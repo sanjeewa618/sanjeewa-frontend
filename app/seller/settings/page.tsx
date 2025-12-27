@@ -1,6 +1,7 @@
 'use client'
 
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { SellerSidebar } from '@/components/seller-sidebar'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
@@ -256,8 +257,12 @@ export default function StoreSettingsPage() {
             </p>
           </div>
         </div>
+       
       </main>
+      <Footer />
       </div>
+      
     </>
+     
   )
 }

@@ -1,6 +1,7 @@
 'use client'
 
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { SellerSidebar } from '@/components/seller-sidebar'
 import { StatCard } from '@/components/stat-card'
 import { Button } from '@/components/ui/button'
@@ -171,6 +172,7 @@ export default function SellerDashboard() {
           </div>
         </div>
       </div>
+      <Footer />
       </main>
     </>
   )

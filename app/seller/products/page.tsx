@@ -1,6 +1,7 @@
 'use client'
 
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { SellerSidebar } from '@/components/seller-sidebar'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
@@ -247,8 +248,10 @@ export default function MyProductsPage() {
             <p className="text-2xl font-bold text-amber-600">{mockProducts.filter((p) => p.stock < 5 && p.stock > 0).length}</p>
           </div>
         </div>
+        
       </main>
       </div>
+      <Footer />
     </>
   )
 }

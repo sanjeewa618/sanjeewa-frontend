@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { AdminSidebar } from '@/components/admin-sidebar'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -281,6 +282,7 @@ export default function SellersPage() {
         </DialogContent>
       </Dialog>
       </main>
+      <Footer />  
     </>
   )
 }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { AdminSidebar } from '@/components/admin-sidebar'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
@@ -190,6 +191,7 @@ export default function SystemSettingsPage() {
         </div>
       </div>
       </main>
+      <Footer />
     </>
   )
 }

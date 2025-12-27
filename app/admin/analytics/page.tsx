@@ -1,6 +1,7 @@
 'use client'
 
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { AdminSidebar } from '@/components/admin-sidebar'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
@@ -185,6 +186,7 @@ export default function AnalyticsPage() {
         </div>
       </div>
       </main>
+      <Footer/>
     </>
   )
 }

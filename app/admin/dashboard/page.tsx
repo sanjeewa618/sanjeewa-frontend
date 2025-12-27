@@ -1,6 +1,7 @@
 'use client'
 
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { AdminSidebar } from '@/components/admin-sidebar'
 import { StatCard } from '@/components/stat-card'
 import { AlertBadge } from '@/components/alert-badge'
@@ -192,6 +193,7 @@ export default function AdminDashboard() {
         </div>
       </div>
       </main>
+      <Footer />
     </>
   )
 }
