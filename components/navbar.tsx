@@ -1,4 +1,4 @@
-'use client'
+-'use client'
 
 import Link from 'next/link'
 import { useState } from 'react'
@@ -9,6 +9,9 @@ import { ShoppingCart, User, Search } from 'lucide-react'
 export function Navbar() {
 	const [searchQuery, setSearchQuery] = useState('')
 	const [selectedCategory, setSelectedCategory] = useState('All Categories')
+
+
+	
 
 	return (
 		<nav className='bg-white border-b border-gray-200 sticky top-0 z-50'>
@@ -61,25 +64,25 @@ export function Navbar() {
 					<div className='flex items-center gap-6'>
 						<Link
 							href='/auctions'
-							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors'
+							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors hover:underline'
 						>
 							Auctions
 						</Link>
 						<Link
 							href='/about'
-							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors'
+							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors hover:underline'
 						>
 							About Us
 						</Link>
 						<Link
 							href='/contact'
-							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors'
+							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors hover:underline'
 						>
 							Contact Us
 						</Link>
 						<Link
 							href='/cart'
-							className='relative text-gray-700 hover:text-[#0A1E5B] transition-colors'
+							className='relative text-gray-700 hover:text-[#0A1E5B] transition-all hover:shadow-[0_0_15px_rgba(10,30,91,0.6)] rounded-full p-2'
 						>
 							<ShoppingCart className='w-6 h-6' />
 							<span className='absolute -top-2 -right-2 w-5 h-5 bg-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center'>
@@ -88,7 +91,7 @@ export function Navbar() {
 						</Link>
 						<Link
 							href='/account'
-							className='text-gray-700 hover:text-[#0A1E5B] transition-colors'
+							className='text-gray-700 hover:text-[#0A1E5B] transition-all hover:shadow-[0_0_15px_rgba(10,30,91,0.6)] rounded-full p-2'
 						>
 							<User className='w-6 h-6' />
 						</Link>
