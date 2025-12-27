@@ -1,34 +1,46 @@
-import { AuthHeader } from '@/components/auth-header'
-import { LoginForm } from '@/components/login-form'
-
+import { AuthHeader } from "@/components/auth-header";
+import { LoginForm } from "@/components/login-form";
 
 export default function LoginPage() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      
-      <AuthHeader />
-      
-      <div className="flex-1 flex items-center justify-center p-6">
-        <div className="w-full max-w-6xl">
-          <div className="flex bg-transparent rounded-lg overflow-hidden">
-            {/* Left: laptop image (60%) */}
-            <div className="hidden lg:block lg:w-3/5 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1600&auto=format&fit=crop')", minHeight: '560px' }}>
-              <div className="w-full h-full bg-black/25" />
+    <div className="min-h-screen w-full lg:grid lg:grid-cols-2">
+      <div className="hidden lg:block relative h-full w-full">
+        <div className="absolute inset-0 bg-zinc-900" />
+        <img
+          src="/msi-gaming-laptop.jpg"
+          alt="Authentication background"
+          className="absolute inset-0 h-full w-full object-cover opacity-90"
+        />
+        <div className="relative z-20 flex h-full flex-col justify-between p-10 text-white">
+          <div className="flex items-center gap-2 font-medium text-lg">
+            <div className="w-8 h-8 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center">
+              <span className="font-bold">L</span>
             </div>
-
-            {/* Right: sign-in form (40%) */}
-            <div className="w-full lg:w-2/5 flex items-center justify-end">
-              <div className="w-full max-w-md p-8 bg-white rounded-lg lg:rounded-l-none shadow-2xl border border-gray-200">
-                <div className="mb-6">
-                  <h1 className="text-3xl font-bold text-foreground mb-2">Welcome back</h1>
-                  <p className="text-muted-foreground">Sign in to your TechHub account to continue shopping</p>
-                </div>
-                <LoginForm />
-              </div>
-            </div>
+            LaptopHub
+          </div>
+          <div className="space-y-2">
+            <blockquote className="space-y-2">
+              <p className="text-lg">
+                &ldquo;The best place to buy and sell premium laptops. Secure, fast, and reliable.&rdquo;
+              </p>
+              <footer className="text-sm text-white/80">Laptop Hub</footer>
+            </blockquote>
           </div>
         </div>
       </div>
+      <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-background">
+        <div className="mx-auto w-full max-w-[400px] space-y-6">
+          <div className="flex flex-col space-y-2 text-center">
+            <h1 className="text-3xl font-semibold tracking-tight">
+              Welcome back
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              Enter your email to sign in to your account
+            </p>
+          </div>
+          <LoginForm />
+        </div>
+      </div>
     </div>
-  )
+  );
 }

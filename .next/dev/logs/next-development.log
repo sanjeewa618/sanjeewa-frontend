@@ -310,3 +310,578 @@ Import traces:
 [01:38:41.308] Server  LOG      ✓ Compiled in 866ms
 [01:39:43.702] Server  LOG      ✓ Compiled in 157ms
 [01:44:16.072] Server  LOG      ✓ Compiled in 1359ms
+[01:47:33.060] Server  LOG      ✓ Compiled in 1056ms
+[01:58:43.718] Server  LOG      ✓ Compiled in 964ms
+[02:01:16.328] Server  LOG      ✓ Compiled in 2s
+[02:03:09.157] Server  LOG      ✓ Compiled in 925ms
+[02:03:43.607] Server  LOG      ✓ Compiled in 1140ms
+[02:06:44.847] Server  LOG      ✓ Compiled in 1468ms
+[02:06:45.777] Browser ERROR   ./components/login-form.tsx:1:5
+Parsing ecmascript source code failed
+> 1 | the image should be add fully in that area 
+    |     ^^^^^
+  2 | both sign in and sign up
+
+Expected ';', '}' or <eof>
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+[02:06:56.228] Server  LOG      ✓ Compiled in 394ms
+[02:07:16.699] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:16.730] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:16.758] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:16.782] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:16.944] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:16.967] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:17.005] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:17.012] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:17.021] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:17.032] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:17.050] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:17.056] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:07:17.092] Server  LOG      ✓ Compiled in 1851ms
+[02:07:18.750] Browser ERROR   ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:07:44.113] Server  LOG      ✓ Compiled in 972ms
+[02:07:49.215] Server  LOG      ✓ Compiled in 219ms
+[02:08:16.806] Server  LOG      ✓ Compiled in 191ms
+[02:08:19.082] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.090] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.096] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.102] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.118] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.122] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.130] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.139] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.147] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.156] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.162] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.168] Server  ERROR    ⨯ ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:08:19.173] Server  LOG      ✓ Compiled in 309ms
+[02:08:19.753] Browser ERROR   ./components/login-form.tsx:6:1
+Module not found: Can't resolve '@/lib/supabase/client'
+  4 | import { Checkbox } from "@/components/ui/checkbox";
+  5 | import { Input } from "@/components/ui/input";
+> 6 | import { createClient } from "@/lib/supabase/client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { zodResolver } from "@hookform/resolvers/zod";
+  8 | import { Eye, EyeOff } from "lucide-react";
+  9 | import Link from "next/link";
+
+Import map: aliased to relative './lib/supabase/client' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/login-form.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[02:08:22.697] Server  LOG      ✓ Compiled in 458ms
+[02:09:05.654] Server  LOG      ✓ Compiled in 1157ms
+[02:10:00.482] Server  LOG      ✓ Compiled in 794ms
+[02:11:09.393] Server  LOG      ✓ Compiled in 678ms
+[02:11:12.080] Server  LOG      ✓ Compiled in 337ms
+[02:11:42.717] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:11:47.819] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:12:08.684] Server  LOG      ✓ Compiled in 497ms
+[02:12:49.834] Server  LOG      ✓ Compiled in 523ms
+[02:13:17.425] Server  LOG      ✓ Compiled in 587ms
+[02:38:20.933] Server  LOG      ○ Compiling /admin/products ...
