@@ -507,6 +507,40 @@ export default function HomePage() {
 				</div>
 			</section>
 
+			{/* Contact Us Section */}
+<section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+  <div className="relative bg-gradient-to-r from-[#0A1E5B] via-[#1a3a8a] to-[#0A1E5B] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between min-h-[400px]">
+    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-30" />
+    <div className="absolute inset-0 bg-black/40" />
+    <div className="relative z-10 flex-1 flex flex-col items-start justify-center p-10">
+      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">Contact Us</h2>
+      <p className="text-lg text-white/90 mb-6 max-w-lg">Have questions, need support, or want to partner with us? Reach out and our team will get back to you as soon as possible.</p>
+      <div className="space-y-2 text-white/90">
+        <div className="flex items-center gap-3">
+          <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V8a4 4 0 00-8 0v4m8 0v4a4 4 0 01-8 0v-4" /></svg>
+          <span>info@techhub.com</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" /></svg>
+          <span>+1 (555) 123-4567</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2h5" /></svg>
+          <span>123 TechHub Ave, Silicon City</span>
+        </div>
+      </div>
+    </div>
+    <form className="relative z-10 flex-1 flex flex-col items-center justify-center p-10 w-full md:w-auto">
+      <div className="bg-white/90 rounded-2xl shadow-lg p-8 w-full max-w-md flex flex-col gap-4">
+        <input type="text" placeholder="Your Name" className="rounded-lg px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400" />
+        <input type="email" placeholder="Your Email" className="rounded-lg px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400" />
+        <textarea placeholder="Your Message" rows={3} className="rounded-lg px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
+        <button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition-colors shadow-md">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
 			<Footer />
 		</main>
 	)
