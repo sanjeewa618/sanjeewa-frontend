@@ -1,4 +1,4 @@
--'use client'
+'use client'
 
 import Link from 'next/link'
 import { useState } from 'react'
@@ -11,7 +11,7 @@ export function Navbar() {
 	const [selectedCategory, setSelectedCategory] = useState('All Categories')
 
 
-	
+
 
 	return (
 		<nav className='bg-white border-b border-gray-200 sticky top-0 z-50'>

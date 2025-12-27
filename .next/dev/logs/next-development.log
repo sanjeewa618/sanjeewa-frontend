@@ -8,3 +8,199 @@
 [00:04:41.812] Server  LOG      ✓ Compiled in 253ms
 [00:04:43.128] Server  LOG      ✓ Compiled in 136ms
 [00:05:33.905] Server  LOG      ✓ Compiled in 167ms
+[00:10:35.113] Server  LOG      ✓ Compiled in 377ms
+[00:11:25.540] Server  LOG      ○ Compiling /about ...
+[00:11:26.767] Server  ERROR    ⨯ ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+
+
+[00:11:27.072] Browser ERROR   ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+[00:11:27.194] Browser ERROR   ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+[00:11:28.639] Browser ERROR   ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+[00:11:28.813] Browser ERROR   ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+[00:11:30.845] Browser ERROR   ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+[00:11:30.973] Server  ERROR    ⨯ ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+
+
+[00:11:31.838] Browser ERROR   uncaughtError: Error: ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+
+
+[00:11:32.163] Browser ERROR   ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+[00:11:32.163] Browser ERROR   ./components/navbar.tsx:4:10
+Ecmascript file had an error
+  2 |
+  3 | import Link from 'next/link'
+> 4 | import { useState } from 'react'
+    |          ^^^^^^^^
+  5 | import { Button } from '@/components/ui/button'
+  6 | import { Input } from '@/components/ui/input'
+  7 | import { ShoppingCart, User, Search } from 'lucide-react'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/about/page.tsx
+[00:12:56.711] Server  LOG      ✓ Compiled in 873ms
+[00:12:58.664] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
