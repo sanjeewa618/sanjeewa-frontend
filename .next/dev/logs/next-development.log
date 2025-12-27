@@ -201,3 +201,118 @@ It can also happen if the client has a browser extension installed which messes 
                         >
                   ...
 
+[00:49:48.828] Server  LOG      ✓ Compiled in 960ms
+[00:50:11.655] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:50:12.455] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/accessories" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="2084227846"
+                        >
+                          ...
+                            <main className="min-h-scre...">
+                              ...
+                                <div className="flex-1 max...">
+                                  <div className="relative w...">
+                                    <Input type="text" placeholder="Search You..." value="" onChange={function onChange} ...>
+                                      <input
+                                        type="text"
+                                        data-slot="input"
+                                        className="file:text-foreground selection:bg-primary selection:text-primary-fo..."
+                                        placeholder="Search Your Products"
+                                        value=""
+                                        onChange={function onChange}
+-                                       style={{caret-color:"transparent"}}
+                                      >
+                                    ...
+                              ...
+                                <SliderThumb data-slot="slider-thumb" className="border-pri...">
+                                  <span style={{...}}>
+                                    <SliderCollectionItemSlot>
+                                    <BubbleInput name={undefined} form={undefined} value={undefined}>
+                                      <input
++                                       style={{display:"none"}}
+-                                       style={{display:"none",caret-color:"transparent"}}
+                                        name={undefined}
+                                        form={undefined}
+                                        ref={{current:null}}
+                                        defaultValue={undefined}
+                                      >
+                                <SliderThumb data-slot="slider-thumb" className="border-pri...">
+                                  <span style={{...}}>
+                                    <SliderCollectionItemSlot>
+                                    <BubbleInput name={undefined} form={undefined} value={undefined}>
+                                      <input
++                                       style={{display:"none"}}
+-                                       style={{display:"none",caret-color:"transparent"}}
+                                        name={undefined}
+                                        form={undefined}
+                                        ref={{current:null}}
+                                        defaultValue={undefined}
+                                      >
+                              ...
+                  ...
+
+[00:56:55.332] Server  LOG      ✓ Compiled in 2.1s
+[00:56:55.699] Browser ERROR   `legacyBehavior` is deprecated and will be removed in a future release. A codemod is available to upgrade your components:
+
+npx @next/codemod@latest new-link .
+
+Learn more: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#remove-a-tags-from-link-components
+[01:02:51.320] Server  LOG      ✓ Compiled in 1057ms
+[01:06:30.701] Server  LOG      ✓ Compiled in 1263ms
+[01:07:26.956] Server  LOG      ✓ Compiled in 133ms
+[01:13:07.285] Server  LOG      ✓ Compiled in 704ms
+[01:15:15.257] Server  LOG      ✓ Compiled in 235ms
+[01:16:00.219] Server  LOG      ✓ Compiled in 146ms
+[01:16:04.827] Server  LOG      ✓ Compiled in 93ms
+[01:16:10.343] Server  LOG      ✓ Compiled in 122ms
+[01:16:12.052] Server  LOG      ✓ Compiled in 637ms
+[01:16:12.709] Browser ERROR   ./components/navbar.tsx:27:3
+Parsing ecmascript source code failed
+  25 | 			]
+  26 | 		}
+> 27 | 		{ name: 'Bags & Cases' },
+     | 		^
+  28 | 		{ name: 'Memory & Storage' },
+  29 | 		{ name: 'Mouse & Keyboards' },
+  30 | 		{ name: 'Battery' },
+
+Expected ',', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./components/navbar.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navbar.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]

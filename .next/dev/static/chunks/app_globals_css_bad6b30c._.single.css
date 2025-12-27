@@ -758,6 +758,10 @@
     top: 60%;
   }
 
+  .top-\[80\%\] {
+    top: 80%;
+  }
+
   .top-full {
     top: 100%;
   }
@@ -842,6 +846,10 @@
     left: 50%;
   }
 
+  .left-full {
+    left: 100%;
+  }
+
   .isolate {
     isolation: isolate;
   }
@@ -876,6 +884,10 @@
 
   .col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .col-span-full {
+    grid-column: 1 / -1;
   }
 
   .col-start-2 {
@@ -1058,6 +1070,10 @@
 
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
+  }
+
+  .-ml-1 {
+    margin-left: calc(var(--spacing) * -1);
   }
 
   .-ml-4 {
@@ -1537,6 +1553,14 @@
 
   .w-\[180px\] {
     width: 180px;
+  }
+
+  .w-\[200px\] {
+    width: 200px;
+  }
+
+  .w-\[250px\] {
+    width: 250px;
   }
 
   .w-\[280px\] {
@@ -3460,6 +3484,10 @@
     padding-inline: calc(var(--spacing) * 12);
   }
 
+  .py-0 {
+    padding-block: calc(var(--spacing) * 0);
+  }
+
   .py-0\.5 {
     padding-block: calc(var(--spacing) * .5);
   }
@@ -3562,6 +3590,14 @@
 
   .pr-8 {
     padding-right: calc(var(--spacing) * 8);
+  }
+
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
+  }
+
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
   }
 
   .pb-3 {
@@ -4453,6 +4489,12 @@
   }
 
   @media (hover: hover) {
+    .group-hover\:text-gray-600:is(:where(.group):hover *) {
+      color: var(--color-gray-600);
+    }
+  }
+
+  @media (hover: hover) {
     .group-hover\:text-primary:is(:where(.group):hover *) {
       color: var(--primary);
     }
@@ -4461,6 +4503,18 @@
   @media (hover: hover) {
     .group-hover\:opacity-100:is(:where(.group):hover *) {
       opacity: 1;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\/item\:block:is(:where(.group\/item):hover *) {
+      display: block;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\/item\:text-gray-600:is(:where(.group\/item):hover *) {
+      color: var(--color-gray-600);
     }
   }
 
@@ -5010,6 +5064,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-gray-100:hover {
+      background-color: var(--color-gray-100);
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-green-700:hover {
       background-color: var(--color-green-700);
     }
@@ -5138,6 +5198,12 @@
       .hover\:bg-sidebar-accent\/10:hover {
         background-color: color-mix(in oklab, var(--sidebar-accent) 10%, transparent);
       }
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-transparent:hover {
+      background-color: #0000;
     }
   }
 
@@ -6234,6 +6300,10 @@
 
   .data-\[state\=open\]\:bg-secondary[data-state="open"] {
     background-color: var(--secondary);
+  }
+
+  .data-\[state\=open\]\:bg-transparent[data-state="open"] {
+    background-color: #0000;
   }
 
   .data-\[state\=open\]\:text-accent-foreground[data-state="open"] {

@@ -4,12 +4,41 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { ShoppingCart, User, Search } from 'lucide-react'
+import { ShoppingCart, User, Search, ChevronRight } from 'lucide-react'
 
 export function Navbar() {
 	const [searchQuery, setSearchQuery] = useState('')
 	const [selectedCategory, setSelectedCategory] = useState('All Categories')
 	const [cartCount, setCartCount] = useState(0)
+	const [isAccessoriesOpen, setIsAccessoriesOpen] = useState(false)
+
+	const ACCESSORIES_MENU = [
+		{
+			name: 'Components',
+			subItems: [
+				'Motherboards',
+				'VGA Cards',
+				'Power Supply',
+				'Processors',
+				'RAM (Memory)',
+				'Computer Casing'
+			]
+		},
+		{ name: 'Bags & Cases' },
+		{ name: 'Memory & Storage' },
+		{ name: 'Mouse & Keyboards' },
+		{ name: 'Battery' },
+		{ name: 'Cables' },
+		{ name: 'ODD' },
+		{ name: 'Headsets' },
+		{ name: 'Mouse Mats' },
+		{ name: 'Speakers' },
+		{ name: 'Thermal Paste' },
+		
+		{ name: 'Cooling' },
+		{ name: 'Others' },
+		{ name: 'Ugreen' },
+	]
 
 	useEffect(() => {
 		const updateCartCount = () => {
@@ -92,12 +121,67 @@ export function Navbar() {
 						>
 							Auctions
 						</Link>
-						<Link
-							href='/accessories'
-							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors hover:underline'
+
+
+
+						<div
+							className="relative h-full flex items-center"
+							onMouseEnter={() => setIsAccessoriesOpen(true)}
+							onMouseLeave={() => setIsAccessoriesOpen(false)}
 						>
-							Accessories
-						</Link>
+							<Link
+								href="/accessories"
+								className="text-sm font-medium text-gray-700 hover:text-[#0A1E5B] hover:underline flex items-center h-full"
+							>
+								Accessories
+							</Link>
+
+							{isAccessoriesOpen && (
+								<div className="absolute top-[80%] left-0 w-[250px] bg-white shadow-lg border border-gray-100 rounded-md z-50">
+									<ul className="flex flex-col py-2">
+										<li className="mb-1 pb-1 border-b border-gray-100">
+											<Link
+												href="/accessories"
+												className="flex items-center justify-between px-4 py-2 text-sm font-semibold text-[#0A1E5B] hover:bg-gray-50 transition-colors"
+											>
+												View All Accessories
+											</Link>
+										</li>
+										{ACCESSORIES_MENU.map((item) => (
+											<li key={item.name} className="relative group/item">
+												<Link
+													href={`/accessories?category=${item.name.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`}
+													className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors w-full"
+												>
+													<span>{item.name}</span>
+													{(item.subItems || item.name === 'Memory & Storage' || item.name === 'Mouse & Keyboards' || item.name === 'Ugreen') && (
+														<ChevronRight className="w-4 h-4 text-gray-400 group-hover/item:text-gray-600" />
+													)}
+												</Link>
+
+												{/* Nested Sub-menu */}
+												{item.subItems && (
+													<div className="absolute left-full top-0 w-[200px] bg-white shadow-lg border border-gray-100 rounded-md hidden group-hover/item:block -ml-1">
+														<ul className="flex flex-col py-2">
+															{item.subItems.map((subItem) => (
+																<li key={subItem}>
+																	<Link
+																		href={`/accessories?category=${item.name.toLowerCase()}&sub=${subItem.toLowerCase().replace(/ /g, '-')}`}
+																		className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+																	>
+																		{subItem}
+																	</Link>
+																</li>
+															))}
+														</ul>
+													</div>
+												)}
+											</li>
+										))}
+									</ul>
+								</div>
+							)}
+						</div>
 						<Link
 							href='/about'
 							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors hover:underline'

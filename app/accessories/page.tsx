@@ -6,8 +6,9 @@ import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Slider } from '@/components/ui/slider'
 import Image from 'next/image'
-import { ShoppingCart, Star } from 'lucide-react'
+import { ShoppingCart, Star, Filter } from 'lucide-react'
 import { useToast } from "@/components/ui/use-toast"
 
 // Mock Data for Accessories
@@ -76,12 +77,20 @@ const ACCESSORIES = [
 
 export default function AccessoriesPage() {
     const [items, setItems] = useState(ACCESSORIES)
+    const [filteredItems, setFilteredItems] = useState(ACCESSORIES)
     const [sortBy, setSortBy] = useState('name')
+    const [priceRange, setPriceRange] = useState([0, 500])
     const { toast } = useToast()
 
-    // Handle Sorting
+    // Handle Filtering and Sorting
     useEffect(() => {
-        const sorted = [...items].sort((a, b) => {
+        let result = [...ACCESSORIES]
+
+        // Filter by Price
+        result = result.filter(item => item.price >= priceRange[0] && item.price <= priceRange[1])
+
+        // Sort
+        result.sort((a, b) => {
             if (sortBy === 'name') {
                 return a.name.localeCompare(b.name)
             } else if (sortBy === 'brand') {
@@ -93,8 +102,9 @@ export default function AccessoriesPage() {
             }
             return 0
         })
-        setItems(sorted)
-    }, [sortBy])
+
+        setFilteredItems(result)
+    }, [sortBy, priceRange])
 
     const addToCart = (product: any) => {
         const savedCart = localStorage.getItem('cart')
@@ -153,44 +163,100 @@ export default function AccessoriesPage() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    {items.map((product) => (
-                        <div key={product.id} className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
-                            <div className="relative aspect-square bg-secondary">
-                                <Image
-                                    src={product.image}
-                                    alt={product.name}
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    {/* Filter Sidebar */}
+                    <div className="lg:col-span-1 h-fit sticky top-24">
+                        <div className="bg-card border border-border rounded-lg p-6">
+                            <div className="flex items-center gap-2 font-semibold text-lg mb-6 text-foreground">
+                                <Filter className="w-5 h-5" />
+                                Filters
                             </div>
 
-                            <div className="p-4">
-                                <div className="text-xs text-muted-foreground mb-1">{product.brand}</div>
-                                <h3 className="font-semibold text-foreground leading-tight mb-2 h-10 line-clamp-2">
-                                    {product.name}
-                                </h3>
-
-                                <div className="flex items-center mb-3">
-                                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                                    <span className="text-xs font-medium ml-1">{product.rating}</span>
-                                    <span className="text-xs text-muted-foreground ml-1">({product.reviews})</span>
+                            <div className="space-y-6">
+                                <div>
+                                    <h3 className="text-sm font-medium mb-4 text-foreground">Filter by price</h3>
+                                    <Slider
+                                        defaultValue={[0, 500]}
+                                        max={500}
+                                        step={10}
+                                        value={priceRange}
+                                        onValueChange={setPriceRange}
+                                        className="mb-4"
+                                    />
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="text-muted-foreground">Price: </span>
+                                        <span className="font-medium text-foreground">
+                                            ${priceRange[0]} — ${priceRange[1]}
+                                        </span>
+                                    </div>
                                 </div>
 
-                                <div className="flex items-center justify-between mt-auto">
-                                    <div className="text-lg font-bold text-primary">${product.price.toFixed(2)}</div>
-                                    <Button
-                                        size="sm"
-                                        onClick={() => addToCart(product)}
-                                        className="bg-[#0A1E5B] hover:bg-[#0A1E5B]/90 text-white"
-                                    >
-                                        <ShoppingCart className="w-4 h-4 mr-2" />
-                                        Add
-                                    </Button>
-                                </div>
+                                <Button
+                                    variant="secondary"
+                                    className="w-full mt-4"
+                                    onClick={() => setPriceRange([0, 500])}
+                                >
+                                    Reset Filters
+                                </Button>
                             </div>
                         </div>
-                    ))}
+                    </div>
+
+                    {/* Product Grid */}
+                    <div className="lg:col-span-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {filteredItems.map((product) => (
+                                <div key={product.id} className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
+                                    <div className="relative aspect-square bg-secondary">
+                                        <Image
+                                            src={product.image}
+                                            alt={product.name}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                        />
+                                    </div>
+
+                                    <div className="p-4">
+                                        <div className="text-xs text-muted-foreground mb-1">{product.brand}</div>
+                                        <h3 className="font-semibold text-foreground leading-tight mb-2 h-10 line-clamp-2">
+                                            {product.name}
+                                        </h3>
+
+                                        <div className="flex items-center mb-3">
+                                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                            <span className="text-xs font-medium ml-1">{product.rating}</span>
+                                            <span className="text-xs text-muted-foreground ml-1">({product.reviews})</span>
+                                        </div>
+
+                                        <div className="flex items-center justify-between mt-auto">
+                                            <div className="text-lg font-bold text-primary">${product.price.toFixed(2)}</div>
+                                            <Button
+                                                size="sm"
+                                                onClick={() => addToCart(product)}
+                                                className="bg-[#0A1E5B] hover:bg-[#0A1E5B]/90 text-white"
+                                            >
+                                                <ShoppingCart className="w-4 h-4 mr-2" />
+                                                Add
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+
+                            {filteredItems.length === 0 && (
+                                <div className="col-span-full py-12 text-center">
+                                    <p className="text-muted-foreground text-lg">No products found in this price range.</p>
+                                    <Button
+                                        variant="link"
+                                        onClick={() => setPriceRange([0, 500])}
+                                        className="mt-2 text-accent"
+                                    >
+                                        Reset Filters
+                                    </Button>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
 
