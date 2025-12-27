@@ -1,3 +1,5 @@
+'use client'
+
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { BidHistory } from '@/components/bid-history'
@@ -5,8 +7,27 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
+import { useParams, useRouter } from 'next/navigation'
 
 export default function AuctionDetailPage() {
+  const params = useParams()
+  const router = useRouter()
+  const [bidAmount, setBidAmount] = useState(1500)
+
+  const auctionId = params.id as string
+  const itemName = 'Dell XPS 15 Plus Premium Edition'
+  const currentBid = '1,450'
+
+  const handlePlaceBid = () => {
+    // Navigate to confirmation page with bid details
+    const queryParams = new URLSearchParams({
+      amount: bidAmount.toString(),
+      item: itemName,
+      current: currentBid
+    })
+    router.push(`/auction/${auctionId}/bid-confirmation?${queryParams.toString()}`)
+  }
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -83,10 +104,14 @@ export default function AuctionDetailPage() {
                   <Input
                     type="number"
                     placeholder="Enter your bid"
-                    defaultValue={1500}
+                    value={bidAmount}
+                    onChange={(e) => setBidAmount(Number(e.target.value))}
                     className="flex-1"
                   />
-                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 rounded-lg font-medium h-10">
+                  <Button
+                    onClick={handlePlaceBid}
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 rounded-lg font-medium h-10"
+                  >
                     Place Bid
                   </Button>
                 </div>
@@ -163,8 +188,8 @@ export default function AuctionDetailPage() {
       </div>
 
       {/* Footer */}
-     <Footer />
+      <Footer />
     </main>
-      
+
   )
 }
