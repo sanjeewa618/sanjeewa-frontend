@@ -276,9 +276,7 @@ export default function HomePage() {
 										</div>
 									</div>
 								</div>
-								<div className="absolute top-4 left-20 text-red-600 text-xl">❄</div>
-								<div className="absolute top-8 right-32 text-red-600 text-xl">❄</div>
-								<div className="absolute bottom-12 left-32 text-red-600 text-xl">❄</div>
+								
 							</div>
 
 							{/* MSI Summit Banner */}
@@ -319,9 +317,7 @@ export default function HomePage() {
 										</div>
 									</div>
 								</div>
-								<div className="absolute top-4 left-20 text-red-500 text-xl">❄</div>
-								<div className="absolute top-8 right-32 text-red-500 text-xl">❄</div>
-								<div className="absolute bottom-12 left-32 text-red-500 text-xl">❄</div>
+								
 							</div>
 
 							{/* ASUS TUF Gaming Banner */}
@@ -379,9 +375,7 @@ export default function HomePage() {
 										</div>
 									</div>
 								</div>
-								<div className="absolute top-4 left-20 text-red-600 text-xl">❄</div>
-								<div className="absolute top-8 right-32 text-red-600 text-xl">❄</div>
-								<div className="absolute bottom-12 left-32 text-red-600 text-xl">❄</div>
+								
 							</div>
 
 							{/* Gaming Banner - MSI */}
@@ -435,10 +429,7 @@ export default function HomePage() {
 										</div>
 									</div>
 								</div>
-								<div className="absolute top-4 left-20 text-red-500 text-xl">❄</div>
-								<div className="absolute top-8 right-32 text-red-500 text-xl">❄</div>
-								<div className="absolute bottom-12 left-32 text-red-500 text-xl">❄</div>
-								<div className="absolute bottom-12 right-32 text-red-500 text-xl">❄</div>
+								
 							</div>
 						</div>
 

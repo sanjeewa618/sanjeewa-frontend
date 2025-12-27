@@ -192,3 +192,13 @@ It can also happen if the client has a browser extension installed which messes 
 
 [09:44:00.224] Browser WARN    Image with src "/placeholder.svg?key=1aqpe" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[21:34:10.451] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[21:41:56.566] Server  LOG      ✓ Compiled in 1338ms
+[21:42:16.880] Server  LOG      ✓ Compiled in 202ms
+[21:43:58.258] Server  LOG      ✓ Compiled in 367ms
+[21:47:47.221] Server  LOG      ✓ Compiled in 1633ms
+[21:48:00.028] Server  LOG      ✓ Compiled in 176ms
+[21:48:20.420] Server  LOG      ✓ Compiled in 291ms
+[21:48:30.632] Server  LOG      ✓ Compiled in 109ms
+[21:48:41.530] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[21:48:45.020] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

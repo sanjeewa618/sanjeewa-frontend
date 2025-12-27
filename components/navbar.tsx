@@ -25,7 +25,7 @@ export function Navbar() {
 					</Link>
 
 					{/* Search Bar */}
-					<div className='flex-1 max-w-2xl mx-8 hidden md:flex'>
+					<div className='flex-1 max-w-xl ml-8 mr-4 hidden md:flex'>
 						<div className='relative w-full flex items-center border-2 border-blue-900 rounded-full overflow-hidden bg-white'>
 							<Input
 								type='text'
@@ -61,13 +61,25 @@ export function Navbar() {
 					<div className='flex items-center gap-6'>
 						<Link
 							href='/auctions'
-							className='text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors'
+							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors'
 						>
 							Auctions
 						</Link>
 						<Link
+							href='/about'
+							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors'
+						>
+							About Us
+						</Link>
+						<Link
+							href='/contact'
+							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors'
+						>
+							Contact Us
+						</Link>
+						<Link
 							href='/cart'
-							className='relative text-gray-700 hover:text-gray-900 transition-colors'
+							className='relative text-gray-700 hover:text-[#0A1E5B] transition-colors'
 						>
 							<ShoppingCart className='w-6 h-6' />
 							<span className='absolute -top-2 -right-2 w-5 h-5 bg-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center'>
@@ -76,7 +88,7 @@ export function Navbar() {
 						</Link>
 						<Link
 							href='/account'
-							className='text-gray-700 hover:text-gray-900 transition-colors'
+							className='text-gray-700 hover:text-[#0A1E5B] transition-colors'
 						>
 							<User className='w-6 h-6' />
 						</Link>
