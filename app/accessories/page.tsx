@@ -178,6 +178,7 @@ export default function AccessoriesPage() {
             {/* Hero Section */}
             <div className="relative bg-[#050B20] text-white overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5B]/90 via-[#0A1E5B]/80 to-[#0A1E5B]/90 z-10" />
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
                 <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-30 grayscale mix-blend-overlay" />
 
                 <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">

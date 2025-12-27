@@ -7,5 +7,9 @@
   "/auction/[id]/page": "app/auction/[id]/page.js",
   "/auctions/page": "app/auctions/page.js",
   "/cart/page": "app/cart/page.js",
-  "/page": "app/page.js"
+  "/checkout/page": "app/checkout/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/product/[id]/page": "app/product/[id]/page.js",
+  "/signup/page": "app/signup/page.js"
 }

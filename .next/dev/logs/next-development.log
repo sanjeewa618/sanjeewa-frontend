@@ -341,3 +341,93 @@ Import traces:
     ./app/accessories/page.tsx [Client Component SSR]
     ./app/accessories/page.tsx [Server Component]
 [01:43:30.819] Server  LOG      ✓ Compiled in 260ms
+[01:45:41.433] Server  LOG      ✓ Compiled in 171ms
+[01:46:24.001] Server  LOG      ○ Compiling /login ...
+[01:47:16.200] Server  LOG      ✓ Compiled in 99ms
+[01:47:24.681] Server  LOG      ✓ Compiled in 74ms
+[01:48:16.077] Server  LOG      ✓ Compiled in 103ms
+[01:49:56.704] Browser ERROR   ./app/login/page.tsx:32:12
+Parsing ecmascript source code failed
+  30 |         </div>
+  31 |       </div>
+> 32 |       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-background">
+     |            ^^^^^^^^^
+  33 |         <div className="mx-auto w-full max-w-[400px] space-y-6">
+  34 |           <div className="flex flex-col space-y-2 text-center">
+  35 |             <h1 className="text-3xl font-semibold tracking-tight">
+
+Expected ',', got 'className'
+[01:50:02.109] Server  LOG      ✓ Compiled in 80ms
+[01:50:53.029] Server  LOG      ✓ Compiled in 95ms
+[01:51:35.516] Server  LOG      ✓ Compiled in 240ms
+[01:52:18.702] Browser ERROR   ./app/login/page.tsx:34:12
+Parsing ecmascript source code failed
+  32 |         </div>
+  33 |       </div>
+> 34 |       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-background">
+     |            ^^^^^^^^^
+  35 |         <div className="mx-auto w-full max-w-[400px] space-y-6">
+  36 |           <div className="flex flex-col space-y-2 text-center">
+  37 |             <h1 className="text-3xl font-semibold tracking-tight">
+
+Expected ',', got 'className'
+[01:52:20.339] Server  LOG      ✓ Compiled in 92ms
+[01:52:38.419] Server  LOG      ✓ Compiled in 101ms
+[01:54:16.225] Server  LOG      ✓ Compiled in 144ms
+[01:54:29.742] Server  LOG      ✓ Compiled in 99ms
+[01:54:33.947] Server  LOG      ✓ Compiled in 68ms
+[01:54:39.972] Server  LOG      ✓ Compiled in 79ms
+[01:54:41.951] Server  LOG      ✓ Compiled in 76ms
+[01:54:43.515] Server  LOG      ✓ Compiled in 159ms
+[01:58:15.072] Server  LOG      ✓ Compiled in 262ms
+[02:09:16.915] Server  LOG      ○ Compiling /product/[id] ...
+[02:12:18.220] Server  LOG      ✓ Compiled in 244ms
+[02:12:32.005] Server  LOG      ✓ Compiled in 209ms
+[02:12:34.727] Server  LOG      ✓ Compiled in 84ms
+[02:12:49.131] Server  LOG      ✓ Compiled in 104ms
+[02:12:51.749] Server  LOG      ✓ Compiled in 89ms
+[02:12:54.117] Server  LOG      ✓ Compiled in 167ms
+[02:13:26.582] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:15:37.485] Server  LOG      ✓ Compiled in 298ms
+[02:15:38.376] Server  LOG      ✓ Compiled in 202ms
+[02:15:41.113] Server  LOG      ✓ Compiled in 246ms
+[02:15:45.134] Server  LOG      ✓ Compiled in 167ms
+[02:17:36.470] Server  LOG      ✓ Compiled in 157ms
+[02:17:38.512] Server  LOG      ✓ Compiled in 127ms
+[02:17:43.680] Server  LOG      ✓ Compiled in 204ms
+[02:18:19.021] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:18:44.320] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:25:31.276] Server  LOG      ✓ Compiled in 702ms
+[02:25:31.704] Browser ERROR   ./app/page.tsx:252:14
+Parsing ecmascript source code failed
+  250 | 					</div>
+  251 | 				</div>
+> 252 | 			</section>
+      | 			          ^
+> 253 |
+      | ^
+> 254 | 			{/* Advertisement Banner Section */}
+      | ^^^^
+  255 | 			<section className="w-full bg-background py-10 border-b border-border">
+  256 | 				<div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
+  257 | 					<div className="relative overflow-hidden rounded-2xl">
+
+Expected '</', got 'jsx text (
+
+			)'
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[02:25:35.225] Server  LOG      ✓ Compiled in 295ms
+[02:30:07.764] Server  LOG      ✓ Compiled in 844ms
+[02:32:47.707] Server  LOG      ✓ Compiled in 167ms
+[02:33:00.099] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:33:32.410] Server  LOG      ✓ Compiled in 210ms
+[02:33:45.537] Server  LOG      ✓ Compiled in 314ms
+[02:34:29.030] Server  LOG      ✓ Compiled in 373ms

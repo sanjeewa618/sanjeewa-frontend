@@ -106,7 +106,22 @@ const featuredProducts = [
 
 export default function HomePage() {
 	const [currentSlide, setCurrentSlide] = useState(0)
+	const [activeFilter, setActiveFilter] = useState<'all' | 'premium' | 'gaming'>('all')
 	const totalSlides = 4
+
+	const handleFilter = (filter: 'premium' | 'gaming') => {
+		setActiveFilter(filter)
+		const productsSection = document.getElementById('products')
+		if (productsSection) {
+			productsSection.scrollIntoView({ behavior: 'smooth' })
+		}
+	}
+
+	const filteredProducts = featuredProducts.filter(product => {
+		if (activeFilter === 'premium') return product.price >= 1000
+		if (activeFilter === 'gaming') return product.name.toLowerCase().includes('gaming')
+		return true
+	})
 
 	// Auto-rotate carousel every 5 seconds
 	useEffect(() => {
@@ -135,18 +150,10 @@ export default function HomePage() {
 			{/* Hero Section */}
 			<section className="relative overflow-hidden border-b border-border">
 				{/* Video Background */}
-				<video
-					autoPlay
-					loop
-					muted
-					playsInline
-					className="absolute inset-0 w-full h-full object-cover"
-				>
-					<source src="/laptopvideo.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
-				{/* Background Image Fallback */}
-				<div 
+
+
+			
+				<div
 					className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
 					style={{ backgroundImage: "url('/asus-rog-gaming-laptop.jpg')" }}
 				></div>
@@ -155,7 +162,7 @@ export default function HomePage() {
 				<div className="absolute inset-0 bg-black/50"></div>
 
 				{/* Content */}
-				<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-34">
+				<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36">
 					<div className="flex flex-col md:flex-row items-center justify-between gap-8">
 						<div className="max-w-xl text-left">
 							<h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
@@ -174,34 +181,44 @@ export default function HomePage() {
 								Limited Time Offers • Free Shipping
 							</p>
 						</div>
-						
+
 						{/* Laptop Images on the right */}
 						<div className="hidden md:flex flex-col gap-4">
-							<div className="relative w-[280px] h-[180px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-xl border border-white/20 shadow-2xl overflow-hidden group hover:scale-105 transition-transform duration-300">
-								<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"></div>
-								<div className="relative flex items-center justify-center h-full p-4">
-									<svg className="w-32 h-32 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-									</svg>
-								</div>
-								<div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-									<p className="text-white text-sm font-semibold">Premium Collection</p>
+							<div
+								onClick={() => handleFilter('premium')}
+								className="relative w-[280px] h-[180px] rounded-xl border border-white/20 shadow-2xl overflow-hidden group hover:scale-105 transition-transform duration-300 cursor-pointer"
+							>
+								{/* Background Image */}
+								<div
+									className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+									style={{ backgroundImage: "url('/macbook-air-m2.png')" }}
+								/>
+								{/* Overlay */}
+								<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+								<div className="absolute bottom-0 left-0 right-0 p-4">
+									<p className="text-white text-sm font-semibold"> Our Premium Collection</p>
+									<p className="text-xs text-white/70">Flagship Devices</p>
 								</div>
 							</div>
-							<div className="relative w-[280px] h-[180px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-xl border border-white/20 shadow-2xl overflow-hidden group hover:scale-105 transition-transform duration-300">
-								<div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10"></div>
-								<div className="relative flex items-center justify-center h-full p-4">
-									<svg className="w-32 h-32 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-									</svg>
-								</div>
-								<div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-									<p className="text-white text-sm font-semibold">Gaming Series</p>
+							<div
+								onClick={() => handleFilter('gaming')}
+								className="relative w-[280px] h-[180px] rounded-xl border border-white/20 shadow-2xl overflow-hidden group hover:scale-105 transition-transform duration-300 cursor-pointer"
+							>
+								{/* Background Image */}
+								<div
+									className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+									style={{ backgroundImage: "url('/msi-gaming-laptop.jpg')" }}
+								/>
+								{/* Overlay */}
+								<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+								<div className="absolute bottom-0 left-0 right-0 p-4">
+									<p className="text-white text-sm font-semibold"> Our Gaming Series</p>
+									<p className="text-xs text-white/70">High Performance</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					
+
 					{/* Feature Badges at Bottom */}
 					<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-12 text-white">
 						<div className="flex items-center gap-3">
@@ -237,7 +254,7 @@ export default function HomePage() {
 				<div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="relative overflow-hidden rounded-2xl">
 						{/* Banner Carousel */}
-						<div 
+						<div
 							className="flex transition-transform duration-500 ease-in-out"
 							style={{ transform: `translateX(-${currentSlide * 100}%)` }}
 						>
@@ -276,7 +293,7 @@ export default function HomePage() {
 										</div>
 									</div>
 								</div>
-								
+
 							</div>
 
 							{/* MSI Summit Banner */}
@@ -295,8 +312,8 @@ export default function HomePage() {
 										</div>
 										<div className="flex items-center gap-4 mt-4">
 											<svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-												<rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="2"/>
-												<path d="M8 10h8M8 14h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+												<rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+												<path d="M8 10h8M8 14h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
 											</svg>
 											<span className="text-xs">Windows 11</span>
 										</div>
@@ -317,7 +334,7 @@ export default function HomePage() {
 										</div>
 									</div>
 								</div>
-								
+
 							</div>
 
 							{/* ASUS TUF Gaming Banner */}
@@ -365,8 +382,8 @@ export default function HomePage() {
 										</div>
 										<div className="absolute bottom-4 left-4">
 											<svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-												<rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="2"/>
-												<path d="M8 10h8M8 14h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+												<rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+												<path d="M8 10h8M8 14h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
 											</svg>
 											<span className="text-xs">Windows 11</span>
 										</div>
@@ -375,7 +392,7 @@ export default function HomePage() {
 										</div>
 									</div>
 								</div>
-								
+
 							</div>
 
 							{/* Gaming Banner - MSI */}
@@ -429,12 +446,12 @@ export default function HomePage() {
 										</div>
 									</div>
 								</div>
-								
+
 							</div>
 						</div>
 
 						{/* Navigation Arrows */}
-						<button 
+						<button
 							onClick={prevSlide}
 							className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all z-20"
 						>
@@ -442,7 +459,7 @@ export default function HomePage() {
 								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
 							</svg>
 						</button>
-						<button 
+						<button
 							onClick={nextSlide}
 							className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all z-20"
 						>
@@ -457,9 +474,8 @@ export default function HomePage() {
 								<button
 									key={index}
 									onClick={() => goToSlide(index)}
-									className={`w-2 h-2 rounded-full transition-all ${
-										currentSlide === index ? 'bg-white w-8' : 'bg-white/50'
-									}`}
+									className={`w-2 h-2 rounded-full transition-all ${currentSlide === index ? 'bg-white w-8' : 'bg-white/50'
+										}`}
 								/>
 							))}
 						</div>
@@ -483,11 +499,21 @@ export default function HomePage() {
 						<div className="mb-6 flex items-center justify-between">
 							<div>
 								<h2 className="text-2xl font-bold text-foreground">
-									All Laptops
+									{activeFilter === 'all' ? 'All Laptops' : activeFilter === 'premium' ? 'Premium Collection' : 'Gaming Series'}
 								</h2>
-								<p className="text-sm text-muted-foreground">
-									Showing {featuredProducts.length} products
-								</p>
+								<div className="flex items-center gap-2">
+									<p className="text-sm text-muted-foreground">
+										Showing {filteredProducts.length} products
+									</p>
+									{activeFilter !== 'all' && (
+										<button
+											onClick={() => setActiveFilter('all')}
+											className="text-xs bg-secondary hover:bg-secondary/80 text-secondary-foreground px-2 py-1 rounded transition-colors"
+										>
+											Clear Filter
+										</button>
+									)}
+								</div>
 							</div>
 							<select className="border border-border bg-background rounded-lg px-4 py-2 text-sm text-foreground cursor-pointer">
 								<option>Most Popular</option>
@@ -499,7 +525,7 @@ export default function HomePage() {
 						</div>
 
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-							{featuredProducts.map((product) => (
+							{filteredProducts.map((product) => (
 								<ProductCard key={product.id} {...product} />
 							))}
 						</div>
@@ -508,38 +534,38 @@ export default function HomePage() {
 			</section>
 
 			{/* Contact Us Section */}
-<section id="contact" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-  <div className="relative bg-gradient-to-r from-[#0A1E5B] via-[#1a3a8a] to-[#0A1E5B] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between min-h-[400px]">
-    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-30" />
-    <div className="absolute inset-0 bg-black/40" />
-    <div className="relative z-10 flex-1 flex flex-col items-start justify-center p-10">
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">Contact Us</h2>
-      <p className="text-lg text-white/90 mb-6 max-w-lg">Have questions, need support, or want to partner with us? Reach out and our team will get back to you as soon as possible.</p>
-      <div className="space-y-2 text-white/90">
-        <div className="flex items-center gap-3">
-          <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V8a4 4 0 00-8 0v4m8 0v4a4 4 0 01-8 0v-4" /></svg>
-          <span>info@techhub.com</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" /></svg>
-          <span>+1 (555) 123-4567</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2h5" /></svg>
-          <span>123 TechHub Ave, Silicon City</span>
-        </div>
-      </div>
-    </div>
-    <form className="relative z-10 flex-1 flex flex-col items-center justify-center p-10 w-full md:w-auto">
-	<div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-md flex flex-col gap-4 border border-white/30">
-		<input type="text" placeholder="Your Name" className="rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400" />
-		<input type="email" placeholder="Your Email" className="rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400" />
-		<textarea placeholder="Your Message" rows={3} className="rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
-        <button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition-colors shadow-md">Send Message</button>
-      </div>
-    </form>
-  </div>
-</section>
+			<section id="contact" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+				<div className="relative bg-gradient-to-r from-[#0A1E5B] via-[#1a3a8a] to-[#0A1E5B] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between min-h-[400px]">
+					<div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-30" />
+					<div className="absolute inset-0 bg-black/40" />
+					<div className="relative z-10 flex-1 flex flex-col items-start justify-center p-10">
+						<h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">Contact Us</h2>
+						<p className="text-lg text-white/90 mb-6 max-w-lg">Have questions, need support, or want to partner with us? Reach out and our team will get back to you as soon as possible.</p>
+						<div className="space-y-2 text-white/90">
+							<div className="flex items-center gap-3">
+								<svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V8a4 4 0 00-8 0v4m8 0v4a4 4 0 01-8 0v-4" /></svg>
+								<span>info@techhub.com</span>
+							</div>
+							<div className="flex items-center gap-3">
+								<svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" /></svg>
+								<span>+1 (555) 123-4567</span>
+							</div>
+							<div className="flex items-center gap-3">
+								<svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2h5" /></svg>
+								<span>123 TechHub Ave, Silicon City</span>
+							</div>
+						</div>
+					</div>
+					<form className="relative z-10 flex-1 flex flex-col items-center justify-center p-10 w-full md:w-auto">
+						<div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-md flex flex-col gap-4 border border-white/30">
+							<input type="text" placeholder="Your Name" className="rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400" />
+							<input type="email" placeholder="Your Email" className="rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400" />
+							<textarea placeholder="Your Message" rows={3} className="rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
+							<button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition-colors shadow-md">Send Message</button>
+						</div>
+					</form>
+				</div>
+			</section>
 
 			<Footer />
 		</main>

@@ -1,5 +1,6 @@
 import { AuthHeader } from "@/components/auth-header";
 import { SignupForm } from "@/components/signup-form";
+import Link from "next/link";
 
 export default function SignupPage() {
   return (
@@ -12,12 +13,14 @@ export default function SignupPage() {
           className="absolute inset-0 h-full w-full object-cover opacity-90"
         />
         <div className="relative z-20 flex h-full flex-col justify-between p-10 text-white">
-          <div className="flex items-center gap-2 font-medium text-lg">
-            <div className="w-8 h-8 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center">
-              <span className="font-bold">L</span>
-            </div>
-            LaptopHub
-          </div>
+          <Link href='/' className='flex items-center gap-2 flex-shrink-0'>
+						<div className='w-10 h-10 bg-[#0A1E5B] rounded-lg flex items-center justify-center'>
+							<span className='text-white font-bold text-lg'>T</span>
+						</div>
+						<span className='text-xl font-bold text-white-900'>
+							TechHub
+						</span>
+					</Link>
           <div className="space-y-2">
             <blockquote className="space-y-2">
               <p className="text-lg">
