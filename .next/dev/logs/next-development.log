@@ -316,3 +316,28 @@ Import traces:
     ./components/navbar.tsx [Client Component SSR]
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
+[01:23:23.528] Server  LOG      ✓ Compiled in 2.4s
+[01:32:04.157] Server  LOG      ✓ Compiled in 907ms
+[01:39:37.317] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[01:39:43.065] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
+[01:39:51.574] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:41:58.207] Server  LOG      ✓ Compiled in 1506ms
+[01:41:58.709] Browser ERROR   ./app/accessories/page.tsx:367:1
+Parsing ecmascript source code failed
+  365 |         </main>
+  366 |     )
+> 367 | }
+      | ^
+  368 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/accessories/page.tsx [Client Component Browser]
+    ./app/accessories/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/accessories/page.tsx [Client Component SSR]
+    ./app/accessories/page.tsx [Server Component]
+[01:43:30.819] Server  LOG      ✓ Compiled in 260ms

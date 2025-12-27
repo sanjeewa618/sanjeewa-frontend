@@ -34,7 +34,7 @@ export function Navbar() {
 		{ name: 'Mouse Mats' },
 		{ name: 'Speakers' },
 		{ name: 'Thermal Paste' },
-		
+
 		{ name: 'Cooling' },
 		{ name: 'Others' },
 		{ name: 'Ugreen' },
