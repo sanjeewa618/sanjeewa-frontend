@@ -314,7 +314,7 @@ function Navbar() {
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/contact",
+                                href: "/#contact",
                                 className: "text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors hover:underline",
                                 children: "Contact Us"
                             }, void 0, false, {
@@ -1326,7 +1326,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "#",
+                                                href: "/#contact",
                                                 className: "hover:text-white transition-colors",
                                                 children: "Contact Us"
                                             }, void 0, false, {
@@ -3368,6 +3368,7 @@ function HomePage() {
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                id: "contact",
                 className: "relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "relative bg-gradient-to-r from-[#0A1E5B] via-[#1a3a8a] to-[#0A1E5B] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between min-h-[400px]",
@@ -3531,34 +3532,34 @@ function HomePage() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                             className: "relative z-10 flex-1 flex flex-col items-center justify-center p-10 w-full md:w-auto",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-white/90 rounded-2xl shadow-lg p-8 w-full max-w-md flex flex-col gap-4",
+                                className: "bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-md flex flex-col gap-4 border border-white/30",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         type: "text",
                                         placeholder: "Your Name",
-                                        className: "rounded-lg px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                                        className: "rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400"
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
                                         lineNumber: 535,
-                                        columnNumber: 9
+                                        columnNumber: 3
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         type: "email",
                                         placeholder: "Your Email",
-                                        className: "rounded-lg px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                                        className: "rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400"
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
                                         lineNumber: 536,
-                                        columnNumber: 9
+                                        columnNumber: 3
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
                                         placeholder: "Your Message",
                                         rows: 3,
-                                        className: "rounded-lg px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
+                                        className: "rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
                                         lineNumber: 537,
-                                        columnNumber: 9
+                                        columnNumber: 3
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         type: "submit",
@@ -3573,7 +3574,7 @@ function HomePage() {
                             }, void 0, true, {
                                 fileName: "[project]/app/page.tsx",
                                 lineNumber: 534,
-                                columnNumber: 7
+                                columnNumber: 2
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",

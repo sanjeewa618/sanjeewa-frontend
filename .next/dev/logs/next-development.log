@@ -234,3 +234,12 @@ Import trace:
 [01:00:21.703] Server  LOG      ✓ Compiled in 914ms
 [01:01:21.695] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [01:01:25.461] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:04:21.501] Server  LOG      ✓ Compiled in 744ms
+[01:05:45.024] Server  LOG      ✓ Compiled in 788ms
+[01:07:12.043] Server  LOG      ✓ Compiled in 530ms
+[01:07:13.808] Server  LOG      ✓ Compiled in 481ms
+[01:07:18.247] Server  LOG      ✓ Compiled in 321ms
+[01:07:22.631] Server  LOG      ✓ Compiled in 131ms
+[01:11:25.192] Server  LOG      ✓ Compiled in 1408ms
+[01:12:39.484] Server  LOG      ○ Compiling /admin/dashboard ...
+[01:12:44.952] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

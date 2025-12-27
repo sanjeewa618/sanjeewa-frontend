@@ -508,7 +508,7 @@ export default function HomePage() {
 			</section>
 
 			{/* Contact Us Section */}
-<section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+<section id="contact" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
   <div className="relative bg-gradient-to-r from-[#0A1E5B] via-[#1a3a8a] to-[#0A1E5B] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between min-h-[400px]">
     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-30" />
     <div className="absolute inset-0 bg-black/40" />
@@ -531,10 +531,10 @@ export default function HomePage() {
       </div>
     </div>
     <form className="relative z-10 flex-1 flex flex-col items-center justify-center p-10 w-full md:w-auto">
-      <div className="bg-white/90 rounded-2xl shadow-lg p-8 w-full max-w-md flex flex-col gap-4">
-        <input type="text" placeholder="Your Name" className="rounded-lg px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400" />
-        <input type="email" placeholder="Your Email" className="rounded-lg px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400" />
-        <textarea placeholder="Your Message" rows={3} className="rounded-lg px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
+	<div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-md flex flex-col gap-4 border border-white/30">
+		<input type="text" placeholder="Your Name" className="rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400" />
+		<input type="email" placeholder="Your Email" className="rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400" />
+		<textarea placeholder="Your Message" rows={3} className="rounded-lg px-4 py-3 bg-white/5 text-white placeholder:text-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
         <button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition-colors shadow-md">Send Message</button>
       </div>
     </form>

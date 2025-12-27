@@ -75,7 +75,7 @@ export function Navbar() {
 							About Us
 						</Link>
 						<Link
-							href='/contact'
+							href="/#contact"
 							className='text-sm font-medium text-gray-700 hover:text-[#0A1E5B] transition-colors hover:underline'
 						>
 							Contact Us
