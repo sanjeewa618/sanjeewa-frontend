@@ -16,6 +16,8 @@ export default function AboutPage() {
 				</div>
 			</div>
 			
+
+			
 			{/* About Us Section */}
 			<div className='container mx-auto px-4 py-8'>
 				<div className='flex flex-col lg:flex-row items-start gap-12'>
