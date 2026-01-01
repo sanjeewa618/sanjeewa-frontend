@@ -34,6 +34,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+//function to format date
 
 function AccountPage() {
   const [isEditingProfile, setIsEditingProfile] = useState(false)
