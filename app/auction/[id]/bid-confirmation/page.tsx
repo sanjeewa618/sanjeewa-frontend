@@ -10,9 +10,6 @@ import { CheckCircle2, ArrowLeft, Eye, List } from 'lucide-react'
 export default function BidConfirmationPage() {
     const params = useParams()
     const searchParams = useSearchParams()
-
-
-    
     const auctionId = params.id as string
     const bidAmount = searchParams.get('amount') || '1,500'
     const itemName = searchParams.get('item') || 'Dell XPS 15 Plus Premium Edition'
