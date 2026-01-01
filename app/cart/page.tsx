@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from '@/components/footer'
-
+// Define the structure of a cart item
 interface CartItem {
   id: number;
   name: string;
