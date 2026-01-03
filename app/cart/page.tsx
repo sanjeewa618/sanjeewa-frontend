@@ -14,8 +14,6 @@ interface CartItem {
   quantity: number;
   image: string;
 }
-
-
 // Main Cart Page Component
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);

@@ -42,6 +42,7 @@ export default function BidConfirmationPage() {
                         </p>
                     </div>
 
+
                     {/* Bid Details */}
                     <div className="bg-secondary border border-border rounded-lg p-6 mb-6">
                         <h2 className="text-lg font-semibold text-foreground mb-4">Bid Details</h2>
