@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { useParams, useSearchParams } from 'next/navigation'
 import { CheckCircle2, ArrowLeft, Eye, List } from 'lucide-react'
 
+// Bid Confirmation Page Component
 export default function BidConfirmationPage() {
     const params = useParams()
     const searchParams = useSearchParams()
@@ -18,6 +19,8 @@ export default function BidConfirmationPage() {
     return (
         <main className="min-h-screen bg-background">
             <Navbar />
+
+            {/* Bid Confirmation Content */}
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Success Card */}
