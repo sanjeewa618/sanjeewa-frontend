@@ -5,7 +5,7 @@ import { Footer } from '@/components/footer'
 import { SellerSidebar } from '@/components/seller-sidebar'
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 
-
+// Sample data for charts
 const salesData = [
   { month: 'Jan', sales: 2400, orders: 120 },
   { month: 'Feb', sales: 2210, orders: 135 },
@@ -16,6 +16,7 @@ const salesData = [
   { month: 'Jul', sales: 2100, orders: 142 },
 ]
 
+// Sample data for product performance
 const productPerformance = [
   { name: 'Dell XPS 13', value: 35, revenue: 1560 },
   { name: 'HP Pavilion 15', value: 25, revenue: 899 },
