@@ -42,6 +42,7 @@ export default function AnalyticsPage() {
       isPositive: true,
       icon: 'cart',
     },
+
     {
       title: 'Page Views',
       value: '45,230',
@@ -49,6 +50,7 @@ export default function AnalyticsPage() {
       isPositive: true,
       icon: 'eye',
     },
+    
     {
       title: 'Wishlist Adds',
       value: '892',
