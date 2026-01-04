@@ -12,6 +12,7 @@ export function AdminSidebar() {
     { label: 'Dashboard', href: '/admin/dashboard', icon: 'grid' },
     { label: 'Users', href: '/admin/users', icon: 'users' },
     { label: 'Sellers', href: '/admin/sellers', icon: 'shop' },
+    
     { label: 'Products', href: '/admin/products', icon: 'box' },
     { label: 'Auctions', href: '/admin/auctions', icon: 'gavel' },
     { label: 'Orders', href: '/admin/orders', icon: 'shopping' },
