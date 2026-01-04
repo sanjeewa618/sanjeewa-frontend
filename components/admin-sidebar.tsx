@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 
 export function AdminSidebar() {
   const pathname = usePathname()
+// Define the menu items for the admin sidebar
 
   const menuItems = [
     { label: 'Dashboard', href: '/admin/dashboard', icon: 'grid' },
