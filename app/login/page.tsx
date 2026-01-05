@@ -1,6 +1,7 @@
 import { AuthHeader } from "@/components/auth-header";
 import { LoginForm } from "@/components/login-form";
 import Link from "next/link";
+// Login Page Component
 
 export default function LoginPage() {
   return (
