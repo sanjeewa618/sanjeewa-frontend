@@ -51,7 +51,6 @@ export default function AnalyticsPage() {
       icon: 'eye',
     },
     
-
     {
       title: 'Wishlist Adds',
       value: '892',
@@ -60,8 +59,6 @@ export default function AnalyticsPage() {
       icon: 'heart',
     },
   ]
-
-
   const getIcon = (icon: string) => {
     switch (icon) {
       case 'dollar':
