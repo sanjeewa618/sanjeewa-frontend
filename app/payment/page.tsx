@@ -10,8 +10,6 @@ import Link from 'next/link'
 import { Package, MapPin, ArrowLeft, CheckCircle } from 'lucide-react'
 // Define the structure of a cart item
 
-
-
 interface CartItem {
   id: number
   name: string
