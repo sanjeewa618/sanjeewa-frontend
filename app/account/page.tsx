@@ -35,7 +35,6 @@ import {
 import Link from 'next/link'
 import Image from 'next/image'
 //function to format date
-
 function AccountPage() {
   const [isEditingProfile, setIsEditingProfile] = useState(false)
   const [profileData, setProfileData] = useState({
@@ -72,6 +71,7 @@ function AccountPage() {
     }
   ])
 
+  
   const [orders] = useState([
     {
       id: 'ORD-2025-001',
