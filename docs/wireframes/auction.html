@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Page Wireframe - LaptopHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0e0e0;
+            padding: 20px;
+        }
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .title {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Header/Navbar */
+        .header {
+            background: #3a3a3a;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+        .logo {
+            width: 140px;
+            height: 45px;
+            background: #4a4a4a;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-item {
+            min-width: 90px;
+            height: 38px;
+            background: #555;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 0 15px;
+        }
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-signin {
+            padding: 10px 22px;
+            background: white;
+            border: none;
+            border-radius: 6px;
+            color: #333;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+        }
+        .btn-sell {
+            padding: 10px 22px;
+            background: #686969;
+            border-radius: 6px;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Page Header */
+        .page-header {
+            background: #f5f5f5;
+            padding: 30px 40px;
+            border-bottom: 2px solid #ddd;
+        }
+        .breadcrumb {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .breadcrumb-item {
+            width: 60px;
+            height: 15px;
+            background: #bbb;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 8px;
+        }
+        .page-title {
+            width: 100%;
+            height: 45px;
+            background: #333;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .page-subtitle {
+            width: 100%;
+            height: 20px;
+            background: #999;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            color: #333;
+            font-size: 10px;
+        }
+        /* Filters */
+        .filters {
+            background: #f9f9f9;
+            padding: 25px 40px;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .filter-label {
+            width: 80px;
+            height: 20px;
+            background: #888;
+            border-radius: 3px;
+        }
+        .filter-box {
+            width: 140px;
+            height: 40px;
+            background: #ddd;
+            border: 2px solid #999;
+            border-radius: 4px;
+        }
+        .sort-box {
+            width: 160px;
+            height: 40px;
+            background: #ddd;
+            border: 2px solid #999;
+            border-radius: 4px;
+            margin-left: auto;
+        }
+        /* Auction Grid */
+        .auctions-section {
+            padding: 40px;
+        }
+        .auctions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .auction-card {
+            background: #f5f5f5;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .auction-image {
+            width: 100%;
+            height: 220px;
+            background: #d0d0d0;
+            border-bottom: 2px solid #bbb;
+            position: relative;
+        }
+        .time-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 100px;
+            height: 30px;
+            background: #333;
+            border-radius: 4px;
+        }
+        .auction-info {
+            padding: 20px;
+        }
+        .auction-title {
+            width: 100%;
+            height: 22px;
+            background: #aaa;
+            margin-bottom: 12px;
+            border-radius: 3px;
+        }
+        .auction-seller {
+            width: 120px;
+            height: 16px;
+            background: #bbb;
+            margin-bottom: 15px;
+            border-radius: 3px;
+        }
+        .bid-info {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .current-bid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .bid-label {
+            width: 90px;
+            height: 16px;
+            background: #999;
+            border-radius: 3px;
+        }
+        .bid-amount {
+            width: 100px;
+            height: 28px;
+            background: #333;
+            border-radius: 3px;
+        }
+        .bid-count {
+            width: 80px;
+            height: 14px;
+            background: #aaa;
+            border-radius: 3px;
+        }
+        .bid-button {
+            width: 100%;
+            height: 40px;
+            background: #666;
+            border-radius: 4px;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #555;
+        }
+        @media (max-width: 1024px) {
+            .auctions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .auctions-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-menu {
+                display: none;
+            }
+            .filters {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .sort-box {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <div class="wireframe-container">
+        <div class="title">
+            <h1>AUCTION PAGE WIREFRAME</h1>
+            <p>Live auction listings with bidding interface</p>
+        </div>
+        
+       <!-- Header/Navigation -->
+        <div class="header">
+            <div class="logo">LaptopHub</div>
+            <div class="nav-menu">
+                <div class="nav-item">Home</div>
+                <div class="nav-item">Laptops</div>
+                <div class="nav-item">Auctions</div>
+                <div class="nav-item">Accessories</div>
+            </div>
+            <div class="header-actions">
+               
+                <div class="icon-box">🛒</div>
+                
+                <div class="btn-signin">Sign In</div>
+                <div class="btn-sell">Sell Now</div>
+            </div>
+        </div>
+        <!-- Page Header -->
+        <div class="page-header">
+           
+            <div class="page-title">Live Auction Events</div>
+            <div class="page-subtitle">Bid on exclusive and limited-edition laptops from top sellers</div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter-label" style="display: flex; align-items: center; justify-content: center; color: #ddd; font-size: 9px;">Filters:</div>
+            <div class="filter-box" style="display: flex; align-items: center; padding-left: 10px; color: #555; font-size: 9px;">All Brands</div>
+            <div class="filter-box" style="display: flex; align-items: center; padding-left: 10px; color: #555; font-size: 9px;">Price Range</div>
+            <div class="filter-box" style="display: flex; align-items: center; padding-left: 10px; color: #555; font-size: 9px;">Time Left</div>
+            <div class="sort-box" style="display: flex; align-items: center; padding-left: 10px; color: #555; font-size: 9px;">Sort By: Popular</div>
+        </div>
+
+        <!-- Auctions Grid -->
+        <div class="auctions-section">
+            <div class="auctions-grid">
+                <!-- Auction Card 1 -->
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <div class="time-badge" style="display: flex; align-items: center; justify-content: center; color: white; font-size: 8px;">2 hrs left</div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="auction-title" style="display: flex; align-items: center; padding-left: 10px; color: white; font-size: 10px;">Dell XPS 15 Plus Premium Edition</div>
+                        <div class="auction-seller" style="display: flex; align-items: center; padding-left: 10px; color: #aaa; font-size: 8px;">Seller: TechStore_Pro</div>
+                        <div class="bid-info">
+                            <div class="current-bid">
+                                <div class="bid-label" style="display: flex; align-items: center; padding-left: 10px; color: #aaa; font-size: 8px;">Current Bid</div>
+                                <div class="bid-amount" style="display: flex; align-items: center; padding-left: 10px; color: white; font-size: 11px; font-weight: 600;">$1,450</div>
+                            </div>
+                            <div class="bid-count" style="display: flex; align-items: center; padding-left: 10px; color: #aaa; font-size: 8px;">23 bids</div>
+                        </div>
+                        <div class="bid-button" style="display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; font-weight: 600;">Place Bid</div>
+                    </div>
+                </div>
+
+                <!-- Auction Card 2 -->
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <div class="time-badge" style="display: flex; align-items: center; justify-content: center; color: white; font-size: 8px;">5 hrs left</div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="auction-title" style="display: flex; align-items: center; padding-left: 10px; color: white; font-size: 10px;">MacBook Pro 16" M2 Max</div>
+                        <div class="auction-seller" style="display: flex; align-items: center; padding-left: 10px; color: #aaa; font-size: 8px;">Seller: AppleReseller</div>
+                        <div class="bid-info">
+                            <div class="current-bid">
+                                <div class="bid-label" style="display: flex; align-items: center; padding-left: 10px; color: #aaa; font-size: 8px;">Current Bid</div>
+                                <div class="bid-amount" style="display: flex; align-items: center; padding-left: 10px; color: white; font-size: 11px; font-weight: 600;">$2,100</div>
+                            </div>
+                            <div class="bid-count" style="display: flex; align-items: center; padding-left: 10px; color: #aaa; font-size: 8px;">45 bids</div>
+                        </div>
+                        <div class="bid-button" style="display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; font-weight: 600;">Place Bid</div>
+                    </div>
+                </div>
+
+                <!-- Auction Card 3 -->
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <div class="time-badge"></div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="auction-title"></div>
+                        <div class="auction-seller"></div>
+                        <div class="bid-info">
+                            <div class="current-bid">
+                                <div class="bid-label"></div>
+                                <div class="bid-amount"></div>
+                            </div>
+                            <div class="bid-count"></div>
+                        </div>
+                        <div class="bid-button"></div>
+                    </div>
+                </div>
+
+                <!-- Auction Card 4 -->
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <div class="time-badge"></div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="auction-title"></div>
+                        <div class="auction-seller"></div>
+                        <div class="bid-info">
+                            <div class="current-bid">
+                                <div class="bid-label"></div>
+                                <div class="bid-amount"></div>
+                            </div>
+                            <div class="bid-count"></div>
+                        </div>
+                        <div class="bid-button"></div>
+                    </div>
+                </div>
+
+                <!-- Auction Card 5 -->
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <div class="time-badge"></div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="auction-title"></div>
+                        <div class="auction-seller"></div>
+                        <div class="bid-info">
+                            <div class="current-bid">
+                                <div class="bid-label"></div>
+                                <div class="bid-amount"></div>
+                            </div>
+                            <div class="bid-count"></div>
+                        </div>
+                        <div class="bid-button"></div>
+                    </div>
+                </div>
+
+                <!-- Auction Card 6 -->
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <div class="time-badge"></div>
+                    </div>
+                    <div class="auction-info">
+                        <div class="auction-title"></div>
+                        <div class="auction-seller"></div>
+                        <div class="bid-info">
+                            <div class="current-bid">
+                                <div class="bid-label"></div>
+                                <div class="bid-amount"></div>
+                            </div>
+                            <div class="bid-count"></div>
+                        </div>
+                        <div class="bid-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
