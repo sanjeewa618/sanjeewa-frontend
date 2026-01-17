@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page Wireframe - LaptopHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0e0e0;
+            padding: 20px;
+        }
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .title {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Header/Navbar */
+        .header {
+            background: #3a3a3a;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+        .logo {
+            width: 140px;
+            height: 45px;
+            background: #4a4a4a;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-item {
+            min-width: 90px;
+            height: 38px;
+            background: #555;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 0 15px;
+        }
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-signin {
+            padding: 10px 22px;
+            background: white;
+            border: none;
+            border-radius: 6px;
+            color: #333;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+        }
+        .btn-sell {
+            padding: 10px 22px;
+            background: #686969;
+            border-radius: 6px;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Checkout Content */
+        .checkout-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+        /* Form Section */
+        .checkout-form {
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+        .section-header {
+            width: 220px;
+            height: 35px;
+            background: #333;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .input-label {
+            width: 100px;
+            height: 18px;
+            background: #999;
+            margin-bottom: 8px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            color: #333;
+            font-size: 9px;
+            font-weight: 500;
+        }
+        .input-field {
+            width: 100%;
+            height: 45px;
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .select-field {
+            width: 100%;
+            height: 45px;
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .textarea-field {
+            width: 100%;
+            height: 100px;
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .section-divider {
+            height: 2px;
+            background: #ddd;
+            margin: 35px 0;
+        }
+        .shipping-options {
+            margin-bottom: 25px;
+        }
+        .radio-option {
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .radio-circle {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 2px solid #999;
+            border-radius: 50%;
+        }
+        .radio-content {
+            flex: 1;
+            margin: 0 15px;
+        }
+        .radio-label {
+            width: 120px;
+            height: 20px;
+            background: #aaa;
+            margin-bottom: 6px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            color: #333;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        .radio-desc {
+            width: 180px;
+            height: 15px;
+            background: #bbb;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            color: #555;
+            font-size: 8px;
+        }
+        .radio-price {
+            width: 60px;
+            height: 22px;
+            background: #666;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        /* Order Summary */
+        .order-summary {
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        .summary-header {
+            width: 180px;
+            height: 35px;
+            background: #333;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .order-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .order-item-image {
+            width: 80px;
+            height: 80px;
+            background: #d0d0d0;
+            border: 2px solid #bbb;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+        .order-item-details {
+            flex: 1;
+        }
+        .order-item-title {
+            width: 100%;
+            height: 18px;
+            background: #aaa;
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+        .order-item-qty {
+            width: 60px;
+            height: 15px;
+            background: #bbb;
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+        .order-item-price {
+            width: 70px;
+            height: 20px;
+            background: #666;
+            border-radius: 3px;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .summary-label {
+            width: 100px;
+            height: 20px;
+            background: #999;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            color: #333;
+            font-size: 9px;
+        }
+        .summary-value {
+            width: 80px;
+            height: 20px;
+            background: #aaa;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8px;
+            color: #333;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        .divider {
+            height: 2px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        .total-label {
+            width: 80px;
+            height: 28px;
+            background: #333;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .total-value {
+            width: 100px;
+            height: 32px;
+            background: #333;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .payment-btn {
+            width: 100%;
+            height: 50px;
+            background: #333;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .back-cart {
+            width: 100%;
+            height: 40px;
+            background: #ccc;
+            border: 2px solid #999;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 11px;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #555;
+        }
+        @media (max-width: 1024px) {
+            .checkout-content {
+                grid-template-columns: 1fr;
+            }
+            .order-summary {
+                position: static;
+            }
+        }
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .checkout-steps {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <div class="wireframe-container">
+        <div class="title">
+            <h1>CHECKOUT PAGE WIREFRAME</h1>
+            <p>Shipping information and order review</p>
+        </div>
+        
+       <!-- Header/Navigation -->
+        <div class="header">
+            <div class="logo">LaptopHub</div>
+            <div class="nav-menu">
+                <div class="nav-item">Home</div>
+                <div class="nav-item">Laptops</div>
+                <div class="nav-item">Auctions</div>
+                <div class="nav-item">Accessories</div>
+            </div>
+            <div class="header-actions">
+               
+                <div class="icon-box">🛒</div>
+                
+                <div class="btn-signin">Sign In</div>
+                <div class="btn-sell">Sell Now</div>
+            </div>
+        </div>
+
+        <!-- Checkout Content -->
+        <div class="checkout-content">
+            <!-- Checkout Form -->
+            <div class="checkout-form">
+                <div class="section-header">Shipping Information</div>
+
+                <!-- Contact Information -->
+                <div class="form-group">
+                    <div class="input-label" style="width: 120px;">Email Address</div>
+                    <div class="input-field"></div>
+                </div>
+
+                <!-- Name Fields -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="input-label">First Name</div>
+                        <div class="input-field"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-label">Last Name</div>
+                        <div class="input-field"></div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <div class="input-label">Street Address</div>
+                    <div class="input-field"></div>
+                </div>
+
+                <!-- City, State, ZIP -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="input-label">City</div>
+                        <div class="input-field"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-label">State</div>
+                        <div class="select-field"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="input-label">ZIP Code</div>
+                        <div class="input-field"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-label">Country</div>
+                        <div class="select-field"></div>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <div class="input-label">Phone Number</div>
+                    <div class="input-field"></div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Shipping Method -->
+                <div class="section-header" style="width: 200px; margin-bottom: 20px;">Shipping Method</div>
+                
+                <div class="shipping-options">
+                    <div class="radio-option">
+                        <div class="radio-circle"></div>
+                        <div class="radio-content">
+                            <div class="radio-label">Standard Shipping</div>
+                            <div class="radio-desc">Delivery in 5-7 business days</div>
+                        </div>
+                        <div class="radio-price">Free</div>
+                    </div>
+
+                    <div class="radio-option">
+                        <div class="radio-circle"></div>
+                        <div class="radio-content">
+                            <div class="radio-label">Express Shipping</div>
+                            <div class="radio-desc">Delivery in 2-3 business days</div>
+                        </div>
+                        <div class="radio-price">$15.00</div>
+                    </div>
+
+                    <div class="radio-option">
+                        <div class="radio-circle"></div>
+                        <div class="radio-content">
+                            <div class="radio-label">Overnight Shipping</div>
+                            <div class="radio-desc">Next business day delivery</div>
+                        </div>
+                        <div class="radio-price">$30.00</div>
+                    </div>
+                </div>
+
+                <!-- Special Instructions -->
+                <div class="form-group">
+                    <div class="input-label" style="width: 150px;">Special Instructions</div>
+                    <div class="textarea-field"></div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <div class="summary-header">Order Summary</div>
+
+                <!-- Order Items -->
+                <div class="order-item">
+                    <div class="order-item-image"></div>
+                    <div class="order-item-details">
+                        <div class="order-item-title">Dell XPS 13 Plus</div>
+                        <div class="order-item-qty">Qty: 1</div>
+                        <div class="order-item-price">$1,249</div>
+                    </div>
+                </div>
+
+                <div class="order-item">
+                    <div class="order-item-image"></div>
+                    <div class="order-item-details">
+                        <div class="order-item-title">MacBook Pro 14&quot;</div>
+                        <div class="order-item-qty">Qty: 1</div>
+                        <div class="order-item-price">$1,249</div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Pricing -->
+                <div class="summary-row">
+                    <div class="summary-label">Subtotal</div>
+                    <div class="summary-value">$2,498</div>
+                </div>
+                
+                <div class="summary-row">
+                    <div class="summary-label">Tax (8%)</div>
+                    <div class="summary-value">$199.84</div>
+                </div>
+                
+                <div class="summary-row">
+                    <div class="summary-label">Shipping</div>
+                    <div class="summary-value">Free</div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="total-row">
+                    <div class="total-label">Total</div>
+                    <div class="total-value">$2,697.84</div>
+                </div>
+                
+                <div class="payment-btn">Continue to Payment</div>
+                <div class="back-cart">← Back to Cart</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
