@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Wireframe - LaptopHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0e0e0;
+            padding: 20px;
+        }
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .title {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .login-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+        }
+        /* Left Side - Image/Branding */
+        .login-left {
+            background: #2a2a2a;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        .brand-logo {
+            width: 150px;
+            height: 45px;
+            background: #444;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            background: #3a3a3a;
+            border: 2px solid #555;
+            border-radius: 8px;
+            margin: auto 0;
+        }
+        .quote-box {
+            background: #333;
+            padding: 20px;
+            border-left: 4px solid #666;
+            border-radius: 4px;
+        }
+        .quote-text {
+            width: 100%;
+            height: 20px;
+            background: #555;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
+        .quote-author {
+            width: 120px;
+            height: 15px;
+            background: #666;
+            border-radius: 3px;
+        }
+        /* Right Side - Login Form */
+        .login-right {
+            padding: 60px 80px;
+            background: #f9f9f9;
+        }
+        .form-header {
+            margin-bottom: 40px;
+        }
+        .form-title {
+            width: 200px;
+            height: 40px;
+            background: #333;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .form-subtitle {
+            width: 300px;
+            height: 20px;
+            background: #bbb;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 10px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .input-label {
+            width: 100px;
+            height: 18px;
+            background: #999;
+            margin-bottom: 8px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 5px;
+            color: #333;
+            font-size: 9px;
+            font-weight: 500;
+        }
+        .input-field {
+            width: 100%;
+            height: 45px;
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding-left: 12px;
+            color: #999;
+            font-size: 10px;
+        }
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        .checkbox-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 2px solid #999;
+            border-radius: 3px;
+        }
+        .checkbox-label {
+            width: 120px;
+            height: 15px;
+            background: #aaa;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 9px;
+        }
+        .forgot-link {
+            width: 120px;
+            height: 15px;
+            background: #666;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 9px;
+        }
+        .submit-btn {
+            width: 100%;
+            height: 50px;
+            background: #333;
+            border-radius: 4px;
+            margin-bottom: 25px;            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;        }
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background: #ccc;
+        }
+        .divider-text {
+            width: 40px;
+            height: 15px;
+            background: #bbb;
+            border-radius: 3px;            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 9px;        }
+        .social-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .social-btn {
+            flex: 1;
+            height: 45px;
+            background: #e0e0e0;
+            border: 2px solid #ccc;
+            border-radius: 4px;            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 10px;
+            font-weight: 500;        }
+        .signup-prompt {
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .signup-text {
+            width: 180px;
+            height: 18px;
+            background: #aaa;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 9px;
+        }
+        .signup-link {
+            width: 60px;
+            height: 15px;
+            background: #666;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 9px;
+            font-weight: 600;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #555;
+        }
+        @media (max-width: 768px) {
+            .login-layout {
+                grid-template-columns: 1fr;
+            }
+            .login-left {
+                display: none;
+            }
+            .login-right {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <div class="wireframe-container">
+        <div class="title">
+            <h1>LOGIN PAGE WIREFRAME</h1>
+            <p>User authentication and sign-in interface</p>
+        </div>
+        
+        <div class="login-layout">
+            <!-- Left Side - Branding -->
+            <div class="login-left">
+                <div class="brand-logo">LaptopHub Logo</div>
+                <div class="hero-image" style="display: flex; align-items: center; justify-content: center; color: #ddd; font-size: 11px;">Laptop Image Background</div>
+                <div class="quote-box">
+                    <div class="quote-text" style="display: flex; align-items: center; padding-left: 10px; color: #ddd; font-size: 9px;">"The best place to buy and sell premium laptops.</div>
+                    <div class="quote-text" style="width: 90%; display: flex; align-items: center; padding-left: 10px; color: #ddd; font-size: 9px;">Secure, fast, and reliable."</div>
+                    <div style="height: 15px;"></div>
+                    <div class="quote-author" style="display: flex; align-items: center; padding-left: 10px; color: #aaa; font-size: 8px;">- LaptopHub</div>
+                </div>
+            </div>
+
+            <!-- Right Side - Login Form -->
+            <div class="login-right">
+                <div class="form-header">
+                    <div class="form-title">Welcome back</div>
+                    <div class="form-subtitle">Enter your email to sign in to your account</div>
+                </div>
+
+                <form>
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <div class="input-label">Email Address</div>
+                        <div class="input-field">you@example.com</div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <div class="input-label">Password</div>
+                        <div class="input-field">••••••••</div>
+                    </div>
+
+                    <!-- Remember Me & Forgot Password -->
+                    <div class="checkbox-group">
+                        <div class="checkbox-box">
+                            <div class="checkbox"></div>
+                            <div class="checkbox-label">Remember me</div>
+                        </div>
+                        <div class="forgot-link">Forgot password?</div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="submit-btn">Sign In</div>
+
+                    <!-- Divider -->
+                    <div class="divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-text">Or</div>
+                        <div class="divider-line"></div>
+                    </div>
+
+                    <!-- Social Login -->
+                    <div class="social-buttons">
+                        <div class="social-btn">Google</div>
+                        <div class="social-btn">Facebook</div>
+                    </div>
+
+                    <!-- Sign Up Link -->
+                    <div class="signup-prompt">
+                        <div class="signup-text">Don't have an account?</div>
+                        <div class="signup-link">Sign up</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

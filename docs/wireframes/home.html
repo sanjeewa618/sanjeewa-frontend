@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Wireframe - LaptopHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0e0e0;
+            padding: 20px;
+        }
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .title {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Header/Navbar */
+        .header {
+            background: #3a3a3a;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+        .logo {
+            width: 140px;
+            height: 45px;
+            background: #4a4a4a;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-item {
+            min-width: 90px;
+            height: 38px;
+            background: #555;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 0 15px;
+        }
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-signin {
+            padding: 10px 22px;
+            background: white;
+            border: none;
+            border-radius: 6px;
+            color: #333;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+        }
+        .btn-sell {
+            padding: 10px 22px;
+            background: #686969;
+            border-radius: 6px;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Hero Section */
+        .hero {
+            background: #f5f5f5;
+            padding: 60px 40px;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+        .hero-title {
+            width: 400px;
+            height: 50px;
+            background: #bbb;
+            margin: 0 auto 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .hero-subtitle {
+            width: 500px;
+            height: 30px;
+            background: #d0d0d0;
+            margin: 0 auto 30px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 12px;
+        }
+        .cta-button {
+            width: 200px;
+            height: 50px;
+            background: #333;
+            margin: 0 auto;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        /* Filter Section */
+        .filters {
+            background: #f9f9f9;
+            padding: 30px 40px;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .filter-box {
+            min-width: 150px;
+            height: 40px;
+            background: #ddd;
+            border: 2px solid #999;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 12px;
+            padding: 0 15px;
+        }
+        /* Sidebar Filters */
+        .content-with-sidebar {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+            padding: 40px;
+            background: #fafafa;
+        }
+        .sidebar-filters {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .filter-group {
+            margin-bottom: 25px;
+        }
+        .filter-group-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .filter-group-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+        .filter-arrow {
+            font-size: 16px;
+            color: #666;
+        }
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #999;
+            border-radius: 3px;
+            background: white;
+            flex-shrink: 0;
+        }
+        .checkbox.checked {
+            background: #333;
+            position: relative;
+        }
+        .checkbox.checked::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 12px;
+            top: -2px;
+            left: 2px;
+        }
+        .filter-label {
+            font-size: 13px;
+            color: #555;
+            cursor: pointer;
+        }
+        /* Products Grid */
+        .products-section {
+            flex: 1;
+        }
+        .section-header {
+            width: 300px;
+            height: 40px;
+            background: #999;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background: #f5f5f5;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: #d0d0d0;
+            border-bottom: 2px solid #bbb;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-title {
+            width: 100%;
+            height: 20px;
+            background: #aaa;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            color: white;
+            font-size: 10px;
+        }
+        .product-price {
+            width: 80px;
+            height: 25px;
+            background: #333;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .product-rating {
+            width: 100px;
+            height: 15px;
+            background: #bbb;
+            margin-bottom: 15px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 5px;
+            color: #333;
+            font-size: 9px;
+        }
+        .add-cart-btn {
+            width: 100%;
+            height: 35px;
+            background: #666;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        /* Footer */
+        .footer {
+            background: #2a2a2a;
+            padding: 40px;
+            border-top: 3px solid #000;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-column {
+            height: 150px;
+            background: #3a3a3a;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 11px;
+        }
+        .footer-bottom {
+            height: 30px;
+            background: #444;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #555;
+        }
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <div class="wireframe-container">
+        <div class="title">
+            <h1>HOME PAGE WIREFRAME</h1>
+            <p>Main landing page with product listings and navigation</p>
+        </div>
+        
+        <!-- Header/Navigation -->
+        <div class="header">
+            <div class="logo">LaptopHub</div>
+            <div class="nav-menu">
+                <div class="nav-item">Home</div>
+                <div class="nav-item">Laptops</div>
+                <div class="nav-item">Auctions</div>
+                <div class="nav-item">Accessories</div>
+            </div>
+            <div class="header-actions">
+               
+                <div class="icon-box">🛒</div>
+                
+                <div class="btn-signin">Sign In</div>
+                <div class="btn-sell">Sell Now</div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-title">Premium Laptops Marketplace</div>
+            <div class="hero-subtitle">Find the best deals on laptops and tech products</div>
+            <div class="cta-button">Shop Now</div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter-box">All Brands</div>
+            <div class="filter-box">Price Range</div>
+            <div class="filter-box">Processor</div>
+            <div class="filter-box">RAM</div>
+            <div class="filter-box">Sort By</div>
+        </div>
+
+        <!-- Content with Sidebar -->
+        <div class="content-with-sidebar">
+            <!-- Sidebar Filters -->
+            <aside class="sidebar-filters">
+                <h2 class="sidebar-title">Filters</h2>
+                
+                <!-- Brand Filter -->
+                <div class="filter-group">
+                    <div class="filter-group-header">
+                        <div class="filter-group-title">Brand</div>
+                        <div class="filter-arrow">↓</div>
+                    </div>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">Dell</span>
+                        </label>
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">HP</span>
+                        </label>
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">Lenovo</span>
+                        </label>
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">Apple</span>
+                        </label>
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">ASUS</span>
+                        </label>
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">MSI</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Processor Filter -->
+                <div class="filter-group">
+                    <div class="filter-group-header">
+                        <div class="filter-group-title">Processor</div>
+                        <div class="filter-arrow">↓</div>
+                    </div>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">Intel Core i5</span>
+                        </label>
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">Intel Core i7</span>
+                        </label>
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">AMD Ryzen 5</span>
+                        </label>
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">AMD Ryzen 7</span>
+                        </label>
+                        <label class="filter-option">
+                            <div class="checkbox"></div>
+                            <span class="filter-label">Apple M1</span>
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Products Section -->
+            <div class="products-section">
+            <div class="section-header">Featured Products</div>
+            
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-title">Product Name</div>
+                        <div class="product-price">$999</div>
+                        <div class="product-rating"> 4.5 (120)</div>
+                        <div class="add-cart-btn">Add to Cart</div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-title">Product Name</div>
+                        <div class="product-price">$999</div>
+                        <div class="product-rating"> 4.5 (120)</div>
+                        <div class="add-cart-btn">Add to Cart</div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-title">Product Name</div>
+                        <div class="product-price">$999</div>
+                        <div class="product-rating">4.5 (120)</div>
+                        <div class="add-cart-btn">Add to Cart</div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-title">Product Name</div>
+                        <div class="product-price">$999</div>
+                        <div class="product-rating"> 4.5 (120)</div>
+                        <div class="add-cart-btn">Add to Cart</div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-title">Product Name</div>
+                        <div class="product-price">$999</div>
+                        <div class="product-rating"> 4.5 (120)</div>
+                        <div class="add-cart-btn">Add to Cart</div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-title">Product Name</div>
+                        <div class="product-price">$999</div>
+                        <div class="product-rating"> 4.5 (120)</div>
+                        <div class="add-cart-btn">Add to Cart</div>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-title">Product Name</div>
+                        <div class="product-price">$999</div>
+                        <div class="product-rating"> 4.5 (120)</div>
+                        <div class="add-cart-btn">Add to Cart</div>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-title">Product Name</div>
+                        <div class="product-price">$999</div>
+                        <div class="product-rating"> 4.5 (120)</div>
+                        <div class="add-cart-btn">Add to Cart</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+</body>
+</html>

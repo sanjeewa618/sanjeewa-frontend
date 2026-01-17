@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaptopHub Wireframes - Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .wireframes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .wireframe-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .wireframe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .wireframe-card h2 {
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            font-size: 1.3em;
+        }
+        .wireframe-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        .wireframe-card a {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: background 0.2s;
+        }
+        .wireframe-card a:hover {
+            background: #555;
+        }
+        .info-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .info-section h3 {
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        .info-section ul {
+            margin-left: 20px;
+        }
+        .info-section li {
+            margin-bottom: 8px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LaptopHub Platform Wireframes</h1>
+        <p class="subtitle">Application Design Documentation</p>
+        
+        <div class="info-section">
+            <h3>About This Project</h3>
+            <p><strong>LaptopHub</strong> is a comprehensive e-commerce platform for buying and selling premium laptops with integrated auction functionality.</p>
+            <p><strong>Technology Stack:</strong> Next.js 14+, React, TypeScript, Tailwind CSS, Radix UI Components</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Product browsing and filtering</li>
+                <li>Auction system with live bidding</li>
+                <li>Shopping cart management</li>
+                <li>Secure checkout process</li>
+                <li>Payment processing (Stripe integration)</li>
+                <li>User authentication (Login/Register)</li>
+                <li>Seller and Admin dashboards</li>
+            </ul>
+        </div>
+
+        <div class="wireframes-grid">
+            <div class="wireframe-card">
+                <h2>Home Page</h2>
+                <p>Main landing page with featured products, navigation, filters, and product listings.</p>
+                <a href="home.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Login Page</h2>
+                <p>User authentication page with email/password login form.</p>
+                <a href="login.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Register Page</h2>
+                <p>New user registration form with account creation fields.</p>
+                <a href="register.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Auction Page</h2>
+                <p>Auction listings with current bids, time remaining, and bidding interface.</p>
+                <a href="auction.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Shopping Cart</h2>
+                <p>Cart management with item list, quantity controls, and totals.</p>
+                <a href="cart.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Checkout Page</h2>
+                <p>Order review and shipping information collection.</p>
+                <a href="checkout.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Payment Page</h2>
+                <p>Payment processing with order summary and payment form.</p>
+                <a href="payment.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Product Details</h2>
+                <p>Detailed product view with specifications, images, and purchase options.</p>
+                <a href="product-details.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Auction Detail Page</h2>
+                <p>Individual auction item with bidding interface, bid history, and seller information.</p>
+                <a href="auction-detail.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Seller Dashboard</h2>
+                <p>Seller control panel with sales overview, orders, products, and performance metrics.</p>
+                <a href="seller-dashboard.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Admin Dashboard</h2>
+                <p>Platform management dashboard with user control, system monitoring, and analytics.</p>
+                <a href="admin-dashboard.html">View Wireframe →</a>
+            </div>
+
+            <div class="wireframe-card">
+                <h2>Footer</h2>
+                <p>Website footer with company info, navigation links, contact details, and social media.</p>
+                <a href="footer.html">View Wireframe →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

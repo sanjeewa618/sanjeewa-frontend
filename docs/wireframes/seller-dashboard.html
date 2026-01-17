@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard Wireframe - LaptopHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        .title {
+            background: #2a2a2a;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .title h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .title p {
+            font-size: 14px;
+            color: #ccc;
+        }
+        /* Main Layout */
+        .dashboard-layout {
+            display: flex;
+            min-height: 800px;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #333;
+            padding: 30px 20px;
+            border-right: 3px solid #2a2a2a;
+        }
+        .sidebar-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #555;
+        }
+        .store-avatar {
+            width: 50px;
+            height: 50px;
+            background: #666;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .store-name {
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .store-badge {
+            color: #aaa;
+            font-size: 9px;
+        }
+        .view-store-link {
+            color: #999;
+            font-size: 9px;
+            margin-top: 10px;
+            display: block;
+        }
+        .menu-item {
+            height: 40px;
+            background: #444;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            color: #ddd;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        .menu-item.active {
+            background: #666;
+            color: white;
+            font-weight: 600;
+        }
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            background: #f9f9f9;
+        }
+        .page-header {
+            background: #e0e0e0;
+            padding: 30px 40px;
+            border-bottom: 2px solid #999;
+        }
+        .page-title {
+            font-size: 25px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .page-subtitle {
+            font-size: 12px;
+            color: #666;
+        }
+        .content-area {
+            padding: 40px;
+        }
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: #f5f5f5;
+            border: 2px solid #999;
+            border-radius: 8px;
+            padding: 25px;
+            position: relative;
+        }
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            background: #888;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .stat-value {
+            font-size: 18px;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .stat-change {
+            font-size: 8px;
+            color: #666;
+        }
+        /* Content Sections */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        .card {
+            background: #fafafa;
+            border: 2px solid #999;
+            border-radius: 8px;
+            padding: 25px;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+        .card-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #333;
+        }
+        .view-all-link {
+            font-size: 9px;
+            color: #666;
+            font-weight: 500;
+        }
+        /* Table */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        thead {
+            border-bottom: 2px solid #eee;
+        }
+        th {
+            text-align: left;
+            padding: 12px;
+            font-size: 9px;
+            color: #888;
+            font-weight: 600;
+        }
+        td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 10px;
+            color: #333;
+        }
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 8px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .status-delivered {
+            background: #d0d0d0;
+            color: #2a2a2a;
+        }
+        .status-shipped {
+            background: #b8b8b8;
+            color: #1a1a1a;
+        }
+        .status-processing {
+            background: #e0e0e0;
+            color: #333;
+        }
+        .status-pending {
+            background: #c8c8c8;
+            color: #555;
+        }
+        /* Product List */
+        .product-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .product-item:last-child {
+            border-bottom: none;
+        }
+        .product-name {
+            font-size: 10px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .product-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+        }
+        .product-sales {
+            font-size: 8px;
+            color: #777;
+        }
+        .product-revenue {
+            font-size: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+        .product-trend {
+            font-size: 8px;
+            color: #555;
+            font-weight: 700;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        .back-link:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <div class="wireframe-container">
+        <div class="title">
+            <h1>SELLER DASHBOARD WIREFRAME</h1>
+            <p>Sales overview, order management, and performance metrics</p>
+        </div>
+
+        <div class="dashboard-layout">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="store-avatar">TS</div>
+                    <div class="store-name">TechStore_Pro</div>
+                    <div class="store-badge">Verified Seller</div>
+                    <a href="#" class="view-store-link">View Store →</a>
+                </div>
+
+                <nav>
+                    <div class="menu-item active">Dashboard</div>
+                    <div class="menu-item">My Products</div>
+                    <div class="menu-item">Add Product</div>
+                    <div class="menu-item">My Auctions</div>
+                    <div class="menu-item">Orders</div>
+                    <div class="menu-item">Messages</div>
+                    <div class="menu-item">Analytics</div>
+                    <div class="menu-item">Store Settings</div>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-title">Seller Dashboard</div>
+                    <div class="page-subtitle"></div>
+                </div>
+
+                <!-- Content Area -->
+                <div class="content-area">
+                    <!-- Stats Grid -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"></div>
+                            <div class="stat-label">Total Sales</div>
+                            <div class="stat-value"></div>
+                            <div class="stat-change"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"></div>
+                            <div class="stat-label">Orders</div>
+                            <div class="stat-value"></div>
+                            <div class="stat-change"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"></div>
+                            <div class="stat-label">Products</div>
+                            <div class="stat-value"></div>
+                            <div class="stat-change"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"></div>
+                            <div class="stat-label">Customer Rating</div>
+                            <div class="stat-value"></div>
+                            <div class="stat-change"></div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Grid -->
+                    <div class="dashboard-grid">
+                        <!-- Recent Orders -->
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Recent Orders</div>
+                                <div class="view-all-link">View All →</div>
+                            </div>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Product</th>
+                                            <th>Customer</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ORD001</strong></td>
+                                            <td>Dell XPS 13</td>
+                                            <td>John Doe</td>
+                                            <td><strong>$ 100</strong></td>
+                                            <td><span class="status-badge status-delivered">Delivered</span></td>
+                                            <td>1 day ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong></strong></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><strong></strong></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong></strong></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><strong></strong></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong></strong></td>
+                                            <td> </td>
+                                            <td></td>
+                                            <td><strong></strong></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Top Products -->
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Top Products</div>
+                                <div class="view-all-link">View All →</div>
+                            </div>
+                            <div>
+                                <div class="product-item">
+                                    <div class="product-name">Dell XPS 13 Plus</div>
+                                    <div class="product-stats">
+                                        <div>
+                                            <div class="product-sales"></div>
+                                            <div class="product-revenue">$54,558</div>
+                                        </div>
+                                        <div class="product-trend"></div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-name">MacBook Air M2</div>
+                                    <div class="product-stats">
+                                        <div>
+                                            <div class="product-sales"></div>
+                                            <div class="product-revenue">$33,572</div>
+                                        </div>
+                                        <div class="product-trend"></div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-name">Lenovo ThinkPad E14</div>
+                                    <div class="product-stats">
+                                        <div>
+                                            <div class="product-sales"></div>
+                                            <div class="product-revenue">$13,281</div>
+                                        </div>
+                                        <div class="product-trend"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

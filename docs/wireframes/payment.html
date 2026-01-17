@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page Wireframe - LaptopHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0e0e0;
+            padding: 20px;
+        }
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .title {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Header/Navbar */
+        .header {
+            background: #3a3a3a;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+        .logo {
+            width: 140px;
+            height: 45px;
+            background: #4a4a4a;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-item {
+            min-width: 90px;
+            height: 38px;
+            background: #555;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 0 15px;
+        }
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-signin {
+            padding: 10px 22px;
+            background: white;
+            border: none;
+            border-radius: 6px;
+            color: #333;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+        }
+        .btn-sell {
+            padding: 10px 22px;
+            background: #686969;
+            border-radius: 6px;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Payment Content */
+        .payment-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+        /* Payment Form */
+        .payment-form {
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+        .section-header {
+            width: 200px;
+            height: 35px;
+            background: #333;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        /* Payment Methods */
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .payment-method-btn {
+            flex: 1;
+            height: 60px;
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+        .payment-method-btn.active {
+            border-color: #333;
+            background: #f5f5f5;
+        }
+        .payment-icon {
+            width: 60px;
+            height: 35px;
+            background: #aaa;
+            border-radius: 3px;
+        }
+        /* Card Details */
+        .card-details {
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .input-label {
+            width: 120px;
+            height: 18px;
+            background: #999;
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+        .input-field {
+            width: 100%;
+            height: 45px;
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            position: relative;
+        }
+        .card-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 25px;
+            background: #aaa;
+            border-radius: 3px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        .security-note {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #666;
+            margin-bottom: 25px;
+        }
+        .security-icon {
+            width: 25px;
+            height: 25px;
+            background: #666;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .security-text {
+            width: 100%;
+            height: 15px;
+            background: #aaa;
+            margin-bottom: 6px;
+            border-radius: 3px;
+        }
+        .billing-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+        }
+        .checkbox-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 2px solid #999;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        .checkbox-label {
+            flex: 1;
+            height: 20px;
+            background: #aaa;
+            border-radius: 3px;
+        }
+        .billing-address {
+            background: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+        }
+        .address-line {
+            width: 100%;
+            height: 18px;
+            background: #bbb;
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+        /* Order Summary */
+        .order-summary {
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        .summary-header {
+            width: 180px;
+            height: 35px;
+            background: #333;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        .order-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .order-item-image {
+            width: 70px;
+            height: 70px;
+            background: #d0d0d0;
+            border: 2px solid #bbb;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+        .order-item-details {
+            flex: 1;
+        }
+        .order-item-title {
+            width: 100%;
+            height: 16px;
+            background: #aaa;
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+        .order-item-qty {
+            width: 50px;
+            height: 14px;
+            background: #bbb;
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+        .order-item-price {
+            width: 60px;
+            height: 18px;
+            background: #666;
+            border-radius: 3px;
+        }
+        .shipping-info {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .shipping-label {
+            width: 100px;
+            height: 16px;
+            background: #888;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
+        .shipping-address {
+            width: 100%;
+            height: 14px;
+            background: #aaa;
+            margin-bottom: 5px;
+            border-radius: 3px;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .summary-label {
+            width: 100px;
+            height: 20px;
+            background: #999;
+            border-radius: 3px;
+        }
+        .summary-value {
+            width: 80px;
+            height: 20px;
+            background: #aaa;
+            border-radius: 3px;
+        }
+        .divider {
+            height: 2px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        .total-label {
+            width: 80px;
+            height: 28px;
+            background: #333;
+            border-radius: 3px;
+        }
+        .total-value {
+            width: 100px;
+            height: 32px;
+            background: #333;
+            border-radius: 3px;
+        }
+        .submit-payment-btn {
+            width: 100%;
+            height: 55px;
+            background: #333;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .back-btn {
+            width: 100%;
+            height: 40px;
+            background: #ccc;
+            border: 2px solid #999;
+            border-radius: 4px;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #555;
+        }
+        @media (max-width: 1024px) {
+            .payment-content {
+                grid-template-columns: 1fr;
+            }
+            .order-summary {
+                position: static;
+            }
+        }
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .payment-methods {
+                flex-direction: column;
+            }
+            .checkout-steps {
+                display: none;
+            }
+        }
+        .submit-payment-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .back-btn{
+             display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(42, 41, 41);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .summary-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f5efef;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .order-summary .total-value {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .order-summary .total-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .back-btn:hover {
+            background: #b8b8b8;
+        }
+
+        .submit-payment-btn:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <div class="wireframe-container">
+        <div class="title">
+            <h1>PAYMENT PAGE WIREFRAME</h1>
+            <p>Secure payment processing and order finalization</p>
+        </div>
+        
+       <!-- Header/Navigation -->
+        <div class="header">
+            <div class="logo">LaptopHub</div>
+            <div class="nav-menu">
+                <div class="nav-item">Home</div>
+                <div class="nav-item">Laptops</div>
+                <div class="nav-item">Auctions</div>
+                <div class="nav-item">Accessories</div>
+            </div>
+            <div class="header-actions">
+               
+                <div class="icon-box">🛒</div>
+                
+                <div class="btn-signin">Sign In</div>
+                <div class="btn-sell">Sell Now</div>
+            </div>
+        </div>
+
+        <!-- Payment Content -->
+        <div class="payment-content">
+            <!-- Payment Form -->
+            <div class="payment-form">
+                <div class="section-header">Payment Information</div>
+
+                <!-- Payment Methods -->
+                <div class="payment-methods">
+                    <div class="payment-method-btn active">
+                        <div class="payment-icon"></div>
+                        Credit Card
+                    </div>
+                    <div class="payment-method-btn">
+                        <div class="payment-icon"></div>
+                        PayPal
+                    </div>
+                    <div class="payment-method-btn">
+                        <div class="payment-icon"></div>
+                        Google Pay
+                    </div>
+                </div>
+
+                <!-- Card Details -->
+                <div class="card-details">
+                    <div class="form-group">
+                        <div class="input-label" style="width: 130px;">Card Number</div>
+                        <div class="input-field" style="position: relative;">
+                            <div class="card-icon"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-label">Cardholder Name</div>
+                        <div class="input-field"></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="input-label">Expiry Date</div>
+                            <div class="input-field"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-label">CVV</div>
+                            <div class="input-field"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Note -->
+                <div class="security-note">
+                    <div class="security-icon"></div>
+                    <div class="security-text">Your payment is secure</div>
+                   
+                </div>
+
+                <!-- Billing Address -->
+                <div class="billing-section">
+                    <div class="section-header" style="width: 160px; margin-bottom: 20px;">Billing Address</div>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox"></div>
+                        <div class="checkbox-label">Same as shipping address</div>
+                    </div>
+
+                    <div class="billing-address">
+                        <div class="address-line"></div>
+                        <div class="address-line" style="width: 80%;"></div>
+                        <div class="address-line" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <div class="summary-header">Order Summary</div>
+
+                <!-- Order Items -->
+                <div class="order-item">
+                    <div class="order-item-image"></div>
+                    <div class="order-item-details">
+                        <div class="order-item-title"></div>
+                        <div class="order-item-qty"></div>
+                        <div class="order-item-price"></div>
+                    </div>
+                </div>
+
+                <div class="order-item">
+                    <div class="order-item-image"></div>
+                    <div class="order-item-details">
+                        <div class="order-item-title"></div>
+                        <div class="order-item-qty"></div>
+                        <div class="order-item-price"></div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Shipping Info -->
+                <div class="shipping-info">
+                    <div class="shipping-label">Shipping To:</div>
+                    <div class="shipping-address"></div>
+                    <div class="shipping-address" style="width: 80%;"></div>
+                    <div class="shipping-address" style="width: 60%;"></div>
+                </div>
+
+                <!-- Pricing -->
+                <div class="summary-row">
+                    <div class="summary-label">Subtotal</div>
+                    <div class="summary-value">$2,498</div>
+                </div>
+                
+                <div class="summary-row">
+                    <div class="summary-label">Shipping</div>
+                    <div class="summary-value">Free</div>
+                </div>
+                
+                <div class="summary-row">
+                    <div class="summary-label">Tax </div>
+                    <div class="summary-value">$199.84</div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="total-row">
+                    <div class="total-label">Total</div>
+                    <div class="total-value"></div>
+                </div>
+                
+                <div class="submit-payment-btn">Complete Payment</div>
+                
+                <div class="back-btn">← Back to Shipping</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
