@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Wireframe - LaptopHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0e0e0;
+            padding: 20px;
+        }
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .title {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Header/Navbar */
+        .header {
+            background: #3a3a3a;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+        .logo {
+            width: 140px;
+            height: 45px;
+            background: #4a4a4a;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-item {
+            min-width: 90px;
+            height: 38px;
+            background: #555;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 0 15px;
+        }
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-signin {
+            padding: 10px 22px;
+            background: white;
+            border: none;
+            border-radius: 6px;
+            color: #333;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+        }
+        .btn-sell {
+            padding: 10px 22px;
+            background: #686969;
+            border-radius: 6px;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Cart Content */
+        .cart-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            padding: 40px;
+            min-height: 600px;
+        }
+        .cart-items {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+        .cart-header {
+            width: 250px;
+            height: 40px;
+            background: #333;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .cart-item {
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            gap: 20px;
+            align-items: center;
+        }
+        .item-image {
+            width: 120px;
+            height: 120px;
+            background: #d0d0d0;
+            border: 2px solid #bbb;
+            border-radius: 6px;
+        }
+        .item-details {
+            flex: 1;
+        }
+        .item-title {
+            width: 100%;
+            height: 22px;
+            background: #aaa;
+            margin-bottom: 12px;
+            border-radius: 3px;
+        }
+        .item-specs {
+            width: 80%;
+            height: 16px;
+            background: #bbb;
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+        .item-price {
+            width: 100px;
+            height: 28px;
+            background: #333;
+            margin-top: 12px;
+            border-radius: 3px;
+        }
+        .item-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-end;
+        }
+        .quantity-control {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            background: #e8e8e8;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 2px solid #ccc;
+        }
+        .qty-btn {
+            width: 30px;
+            height: 30px;
+            background: #666;
+            border-radius: 4px;
+        }
+        .qty-display {
+            width: 40px;
+            height: 25px;
+            background: #aaa;
+            border-radius: 3px;
+        }
+        .remove-btn {
+            width: 100px;
+            height: 35px;
+            background: #999;
+            border-radius: 4px;
+        }
+        /* Order Summary */
+        .order-summary {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        .summary-header {
+            width: 180px;
+            height: 35px;
+            background: #333;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .summary-label {
+            width: 100px;
+            height: 20px;
+            background: #999;
+            border-radius: 3px;
+        }
+        .summary-value {
+            width: 80px;
+            height: 20px;
+            background: #aaa;
+            border-radius: 3px;
+        }
+        .divider {
+            height: 2px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        .total-label {
+            width: 80px;
+            height: 28px;
+            background: #333;
+            border-radius: 3px;
+        }
+        .total-value {
+            width: 100px;
+            height: 32px;
+            background: #333;
+            border-radius: 3px;
+        }
+        .checkout-btn {
+            width: 100%;
+            height: 50px;
+            background: #333;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .continue-shopping {
+            width: 100%;
+            height: 40px;
+            background: #ccc;
+            border: 2px solid #999;
+            border-radius: 4px;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #555;
+        }
+        @media (max-width: 1024px) {
+            .cart-content {
+                grid-template-columns: 1fr;
+            }
+            .order-summary {
+                position: static;
+            }
+        }
+        @media (max-width: 768px) {
+            .cart-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .item-image {
+                margin: 0 auto;
+            }
+            .item-actions {
+                align-items: center;
+            }
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <div class="wireframe-container">
+        <div class="title">
+            <h1>SHOPPING CART WIREFRAME</h1>
+            <p>Cart management with item controls and order summary</p>
+        </div>
+        
+       <!-- Header/Navigation -->
+        <div class="header">
+            <div class="logo">LaptopHub</div>
+            <div class="nav-menu">
+                <div class="nav-item">Home</div>
+                <div class="nav-item">Laptops</div>
+                <div class="nav-item">Auctions</div>
+                <div class="nav-item">Accessories</div>
+            </div>
+            <div class="header-actions">
+               
+                <div class="icon-box">🛒</div>
+                
+                <div class="btn-signin">Sign In</div>
+                <div class="btn-sell">Sell Now</div>
+            </div>
+        </div>
+
+        <!-- Cart Content -->
+        <div class="cart-content">
+            <!-- Cart Items -->
+            <div class="cart-items">
+                <div class="cart-header" style="display: flex; align-items: center; padding-left: 15px; color: white; font-size: 14px; font-weight: 600;">Shopping Cart</div>
+
+                <!-- Cart Item 1 -->
+                <div class="cart-item">
+                    <div class="item-image" style="display: flex; align-items: center; justify-content: center; color: #888; font-size: 9px;">Product Image</div>
+                    <div class="item-details">
+                        <div class="item-title" style="display: flex; align-items: center; padding-left: 10px; color: #333; font-size: 11px; font-weight: 600;">Dell XPS 13 Plus</div>
+                        <div class="item-specs" style="display: flex; align-items: center; padding-left: 10px; color: #666; font-size: 8px;">Intel i7, 16GB RAM, 512GB SSD</div>
+                        <div class="item-specs" style="width: 60%; display: flex; align-items: center; padding-left: 10px; color: #666; font-size: 8px;">13.4" FHD Display</div>
+                        <div class="item-price" style="display: flex; align-items: center; padding-left: 10px; color: #333; font-size: 12px; font-weight: 600;">$1,299</div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-control">
+                            <div class="qty-btn" style="display: flex; align-items: center; justify-content: center; color: #555; font-size: 14px;">−</div>
+                            <div class="qty-display" style="display: flex; align-items: center; justify-content: center; color: #333; font-size: 10px; font-weight: 600;">1</div>
+                            <div class="qty-btn" style="display: flex; align-items: center; justify-content: center; color: #555; font-size: 14px;">+</div>
+                        </div>
+                        <div class="remove-btn" style="display: flex; align-items: center; justify-content: center; color: #d44; font-size: 9px;">Remove</div>
+                    </div>
+                </div>
+
+                <!-- Cart Item 2 -->
+                <div class="cart-item">
+                    <div class="item-image"></div>
+                    <div class="item-details">
+                        <div class="item-title"></div>
+                        <div class="item-specs"></div>
+                        <div class="item-specs" style="width: 60%;"></div>
+                        <div class="item-price"></div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-control">
+                            <div class="qty-btn"></div>
+                            <div class="qty-display"></div>
+                            <div class="qty-btn"></div>
+                        </div>
+                        <div class="remove-btn"></div>
+                    </div>
+                </div>
+
+                <!-- Cart Item 3 -->
+                <div class="cart-item">
+                    <div class="item-image"></div>
+                    <div class="item-details">
+                        <div class="item-title"></div>
+                        <div class="item-specs"></div>
+                        <div class="item-specs" style="width: 60%;"></div>
+                        <div class="item-price"></div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-control">
+                            <div class="qty-btn"></div>
+                            <div class="qty-display"></div>
+                            <div class="qty-btn"></div>
+                        </div>
+                        <div class="remove-btn"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <div class="summary-header" style="display: flex; align-items: center; padding-left: 15px; color: white; font-size: 13px; font-weight: 600;">Order Summary</div>
+                
+                <div class="summary-row">
+                    <div class="summary-label" style="display: flex; align-items: center; padding-left: 10px; color: #666; font-size: 9px;">Subtotal</div>
+                    <div class="summary-value" style="display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: #333; font-size: 10px; font-weight: 600;">$2,498</div>
+                </div>
+                
+                <div class="summary-row">
+                    <div class="summary-label" style="display: flex; align-items: center; padding-left: 10px; color: #666; font-size: 9px;">Tax (8%)</div>
+                    <div class="summary-value" style="display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: #333; font-size: 10px; font-weight: 600;">$199.84</div>
+                </div>
+                
+                <div class="summary-row">
+                    <div class="summary-label" style="display: flex; align-items: center; padding-left: 10px; color: #666; font-size: 9px;">Shipping</div>
+                    <div class="summary-value" style="display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: #0a0; font-size: 10px; font-weight: 600;">Free</div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="total-row">
+                    <div class="total-label" style="display: flex; align-items: center; padding-left: 10px; color: #333; font-size: 11px; font-weight: 600;">Total</div>
+                    <div class="total-value" style="display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: #333; font-size: 13px; font-weight: 700;">$2,697.84</div>
+                </div>
+                
+                <div class="checkout-btn" style="display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: 600;">Proceed to Checkout</div>
+                <div class="continue-shopping" style="display: flex; align-items: center; justify-content: center; color: #666; font-size: 9px;">Continue Shopping</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
