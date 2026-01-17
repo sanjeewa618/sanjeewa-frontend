@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Wireframe - LaptopHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0e0e0;
+            padding: 20px;
+        }
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .title {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2a2a2a;
+            padding: 60px 40px 30px;
+            border-top: 3px solid #1a1a1a;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Company Info Section */
+        .company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            background: #acabab;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            border: 3px solid #949090;
+        }
+        .support-text {
+            font-size: 11px;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        .phone-primary {
+            font-size: 16px;
+            font-weight: 700;
+            color: #6c6c6c;
+            margin: 8px 0;
+        }
+        .phone-secondary {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-bottom: 15px;
+        }
+        .company-name {
+            font-size: 12px;
+            font-weight: 700;
+            color: #f3f4f6;
+            margin-bottom: 8px;
+        }
+        .company-address {
+            font-size: 10px;
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .technical-support {
+            margin-top: 10px;
+        }
+        .tech-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #f3f4f6;
+            margin-bottom: 5px;
+        }
+        .tech-phone {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            background: #3f3f46;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d1d5db;
+            font-size: 14px;
+            cursor: pointer;
+          
+        }
+        .social-icon:hover {
+            background: #52525b;
+        }
+
+        /* Footer Columns */
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .footer-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #f9fafb;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3f3f46;
+        }
+        .footer-link {
+            font-size: 10px;
+            color: #9ca3af;
+            line-height: 1.8;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .footer-link:hover {
+            color: #e5e7eb;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 25px;
+            border-top: 1px solid #3f3f46;
+        }
+        .copyright {
+            font-size: 10px;
+            color: #6b7280;
+        }
+        .payment-methods {
+            display: flex;
+            gap: 12px;
+        }
+        .payment-card {
+            width: 50px;
+            height: 32px;
+            background: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            font-weight: 600;
+            color: #1f2937;
+            border: 1px solid #d1d5db;
+        }
+
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <div class="wireframe-container">
+        <div class="title">
+            <h1>FOOTER WIREFRAME</h1>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="company-info">
+                    <div class="company-logo">L</div>
+                    <div class="support-text">We are Here!</div>
+                    
+                    <div class="phone-secondary">+94 444 555 666</div>
+                    
+                    <div>
+                        <div class="company-name">LaptopHub (Pvt) Ltd.</div>
+                        <div class="company-address">
+                            
+                        </div>
+                    </div>
+
+                    <div class="technical-support">
+                        <div class="tech-label">Technical Support:</div>
+                        <div class="tech-phone">+94 111 200 222</div>
+                    </div>
+
+                    <div class="social-icons">
+                        <div class="social-icon"></div>
+                        <div class="social-icon"></div>
+                        <div class="social-icon"></div>
+                    </div>
+                </div>
+
+                <!-- Top Brands -->
+                <div class="footer-column">
+                    <div class="footer-title">Top Brands</div>
+                    <div class="footer-link">Apple</div>
+                    <div class="footer-link">Asus</div>
+                    <div class="footer-link">Dell</div>
+                    <div class="footer-link">HP</div>
+                    <div class="footer-link">Lenovo</div>
+                    <div class="footer-link">MSI</div>
+                    <div class="footer-link">Acer</div>
+                </div>
+
+                <!-- Find It Fast -->
+                <div class="footer-column">
+                    <div class="footer-title">Find It Fast</div>
+                    <div class="footer-link">Home</div>
+                    <div class="footer-link">Auctions</div>
+                    <div class="footer-link">About Us</div>
+                    <div class="footer-link">Our Products</div>
+                    <div class="footer-link">Contact Us</div>
+                </div>
+
+                <!-- Laptops -->
+                <div class="footer-column">
+                    <div class="footer-title">Laptops</div>
+                    <div class="footer-link">Apple Macbook</div>
+                    <div class="footer-link">AMD Laptops</div>
+                    <div class="footer-link">Intel Celeron</div>
+                    <div class="footer-link">Core i3 Laptops</div>
+                    <div class="footer-link">Core i5 Laptops</div>
+                    <div class="footer-link">Core i7 Laptops</div>
+                    <div class="footer-link">Gaming Laptops</div>
+                </div>
+
+                <!-- Accessories -->
+                <div class="footer-column">
+                    <div class="footer-title">Accessories</div>
+                    <div class="footer-link">Pendrive</div>
+                    <div class="footer-link">Headset</div>
+                    <div class="footer-link">Bags & Cases</div>
+                    <div class="footer-link">Mouse & Keyboards</div>
+                    <div class="footer-link">Virusgaurds</div>
+                    <div class="footer-link">Mouse Mat</div>
+                    <div class="footer-link">External HDD</div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">Copyright © 2025 LaptopHub.lk. All rights reserved.</div>
+                <div class="payment-methods">
+                    <div class="payment-card"></div>
+                    <div class="payment-card"></div>
+                    <div class="payment-card"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
