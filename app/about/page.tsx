@@ -15,7 +15,7 @@ export default function AboutPage() {
 					<p className="text-xl text-white/95 max-w-2xl mx-auto">Your Premier Destination for Cutting-Edge Technology</p>
 				</div>
 			</div>
-			
+			 			
 			{/* About Us Section */}
 			<div className='container mx-auto px-4 py-8'>
 				<div className='flex flex-col lg:flex-row items-start gap-12'>
