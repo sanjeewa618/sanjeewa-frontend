@@ -75,12 +75,10 @@ const auctionListings = [
     seller: 'TechDeals247',
   },
 ]
-
 export default function AuctionsPage() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-[#0A1E5B] via-[#1a3a8a] to-[#0A1E5B] border-b-4 border-orange-500 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
