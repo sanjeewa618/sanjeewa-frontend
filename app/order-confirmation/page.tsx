@@ -19,7 +19,6 @@ function OrderConfirmationContent() {
     month: 'long',
     day: 'numeric',
   })
-
   return (
     <>
       {/* Breadcrumb */}
