@@ -6,9 +6,7 @@ export default function AboutPage() {
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100'>
 			<Navbar />
-			
-
-			
+				
 			{/* About TechHub Hero Section */}
 			<div className="relative min-h-[400px] flex flex-col items-center justify-center text-center overflow-hidden" style={{background: "url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&auto=format&fit=crop') center/cover no-repeat"}}>
 				<div className="absolute inset-0 bg-[#0A1E5B]/80" />
@@ -30,6 +28,8 @@ export default function AboutPage() {
 								</div>
 								<h2 className='text-3xl font-bold text-[#0A1E5B]'>Who We Are</h2>
 							</div>
+
+				
 							<p className='text-gray-700 text-lg leading-relaxed mb-4'>
 								Welcome to <span className='font-semibold text-[#0A1E5B]'>TechHub</span>, your premier destination for high-quality laptops and computer accessories. 
 								We are committed to providing the latest technology solutions to meet all your computing needs.
