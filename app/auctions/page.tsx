@@ -20,7 +20,7 @@ const auctionListings = [
     rating: 4.8,
     seller: 'TechStore_Pro',
   },
-  
+
   {
     id: '2',
     name: 'MacBook Pro 16" M2 Max - Rare Configuration Auction',
@@ -32,6 +32,7 @@ const auctionListings = [
     rating: 4.9,
     seller: 'AppleReseller',
   },
+  
   {
     id: '3',
     name: 'Gaming Laptop Auction - RTX 4080 Beast Machine',
