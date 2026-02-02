@@ -7,6 +7,8 @@ export default function AboutPage() {
 		<div className='min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100'>
 			<Navbar />
 			
+
+			
 			{/* About TechHub Hero Section */}
 			<div className="relative min-h-[400px] flex flex-col items-center justify-center text-center overflow-hidden" style={{background: "url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&auto=format&fit=crop') center/cover no-repeat"}}>
 				<div className="absolute inset-0 bg-[#0A1E5B]/80" />
