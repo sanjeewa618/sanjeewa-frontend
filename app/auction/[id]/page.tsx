@@ -10,7 +10,6 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 
-
 export default function AuctionDetailPage() {
   const params = useParams()
   const router = useRouter()

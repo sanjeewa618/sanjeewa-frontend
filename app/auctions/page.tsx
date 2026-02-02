@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react'
 
 const auctionListings = [
   {
-    
+
     id: '1',
     name: 'Dell XPS 15 Plus Premium Edition - Limited Time Auction',
     brand: 'Dell',
@@ -20,6 +20,7 @@ const auctionListings = [
     rating: 4.8,
     seller: 'TechStore_Pro',
   },
+  
   {
     id: '2',
     name: 'MacBook Pro 16" M2 Max - Rare Configuration Auction',
