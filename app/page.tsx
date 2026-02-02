@@ -5,8 +5,8 @@ import { ProductFilters } from '@/components/product-filters'
 import { ProductCard } from '@/components/product-card'
 import { Footer } from '@/components/footer'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
 
+import { useState, useEffect } from 'react'
 const featuredProducts = [
 	{
 		id: '1',
