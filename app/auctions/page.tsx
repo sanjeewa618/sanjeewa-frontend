@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react'
 
 const auctionListings = [
   {
+    
     id: '1',
     name: 'Dell XPS 15 Plus Premium Edition - Limited Time Auction',
     brand: 'Dell',
