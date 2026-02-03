@@ -29,6 +29,7 @@ export default function AuctionDetailPage() {
     })
     router.push(`/auction/${auctionId}/bid-confirmation?${queryParams.toString()}`)
   }
+  
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
