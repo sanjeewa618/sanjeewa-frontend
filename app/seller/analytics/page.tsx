@@ -29,6 +29,8 @@ const COLORS = ['#1e3a5f', '#3b82f6', '#60a5fa', '#bfdbfe']
 export default function AnalyticsPage() {
   const metrics = [
     {
+
+
       
       title: 'Total Revenue',
       value: '$12,450',
