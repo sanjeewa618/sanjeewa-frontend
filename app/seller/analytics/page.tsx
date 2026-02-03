@@ -30,8 +30,6 @@ export default function AnalyticsPage() {
   const metrics = [
     {
 
-
-      
       title: 'Total Revenue',
       value: '$12,450',
       change: '+12.5%',

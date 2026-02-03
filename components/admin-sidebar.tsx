@@ -75,7 +75,6 @@ export function AdminSidebar() {
           })}
         </nav>
       </div>
-      
     </aside>
   )
 }
