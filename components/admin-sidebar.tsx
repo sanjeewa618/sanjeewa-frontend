@@ -22,9 +22,6 @@ export function AdminSidebar() {
     { label: 'Analytics', href: '/admin/analytics', icon: 'chart' },
     { label: 'System Settings', href: '/admin/settings', icon: 'settings' },
   ]
-
-  
-
   const getIcon = (icon: string) => {
     const icons: Record<string, React.ReactNode> = {
       grid: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h4a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h4a2 2 0 012 2v4a2 2 0 01-2 2h-4a2 2 0 01-2-2V6z" /></svg>,
@@ -78,6 +75,7 @@ export function AdminSidebar() {
           })}
         </nav>
       </div>
+      
     </aside>
   )
 }

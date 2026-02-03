@@ -29,7 +29,7 @@ export default function AuctionDetailPage() {
     })
     router.push(`/auction/${auctionId}/bid-confirmation?${queryParams.toString()}`)
   }
-  
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -51,6 +51,7 @@ export default function AuctionDetailPage() {
                   className="object-cover"
                 />
               </div>
+              
             </div>
             <div className="grid grid-cols-3 gap-2">
               {[...Array(3)].map((_, i) => (

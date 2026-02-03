@@ -21,6 +21,8 @@ export default function SellerDashboard() {
     { id: 3, name: 'Lenovo ThinkPad E14', sales: 19, revenue: '$13,281', trend: '+5%' },
   ]
 
+
+
   return (
     <>
       <Navbar />
