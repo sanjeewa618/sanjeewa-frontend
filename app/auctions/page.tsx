@@ -32,7 +32,6 @@ const auctionListings = [
     rating: 4.9,
     seller: 'AppleReseller',
   },
-  
   {
     id: '3',
     name: 'Gaming Laptop Auction - RTX 4080 Beast Machine',
