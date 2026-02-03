@@ -28,8 +28,6 @@ export default function AboutPage() {
 								</div>
 								<h2 className='text-3xl font-bold text-[#0A1E5B]'>Who We Are</h2>
 							</div>
-
-				
 							<p className='text-gray-700 text-lg leading-relaxed mb-4'>
 								Welcome to <span className='font-semibold text-[#0A1E5B]'>TechHub</span>, your premier destination for high-quality laptops and computer accessories. 
 								We are committed to providing the latest technology solutions to meet all your computing needs.
@@ -55,6 +53,7 @@ export default function AboutPage() {
 								customer service, and expert advice.
 							</p>
 						</div>
+
 
 						<div className='bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300'>
 							<div className='flex items-center gap-3 mb-6'>
